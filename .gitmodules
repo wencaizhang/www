@@ -1,0 +1,6 @@
+[submodule "content/post"]
+	path = content/post
+	url = https://gitee.com/wencaizhang/articles.git
+[submodule "themes/theme"]
+	path = themes/theme
+	url = https://gitee.com/wencaizhang/hugo-theme-wiki.git
