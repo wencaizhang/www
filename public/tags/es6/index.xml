@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>es6 on Even - A super concise theme for Hugo</title>
+    <link>/tags/es6/</link>
+    <description>Recent content in es6 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Feb 2017 00:28:21 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Array.of()</title>
+      <link>/post/oh-my-js/03-array-es6/02-array.of/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/02-array.of/</guid>
+      <description>描述 Array.of 方法用于将一组值转换为数组。基本可以用来替代 Array() 或者 new Array()，并且不存在由于参数不同而导致的重载。 参数 参数 描述 arguments 任意值，不限个数</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.find()</title>
+      <link>/post/oh-my-js/03-array-es6/04-array.find/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/04-array.find/</guid>
+      <description>描述 find 方法用于找出第一个符合条件的数组元素。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找到第一个返回值为 true 的元素，然后返回</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.includes()</title>
+      <link>/post/oh-my-js/03-array-es6/10-array.includes/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/10-array.includes/</guid>
+      <description>判断数组中是否包含某个元素，我们通常这么做： 1 2 3 4 5 6 7 var arr = [ 1, 2, 3 ] if (arr.indexOf(4) == -1) { console.log(&amp;#39;不包含&amp;#39;) } else</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.xxx()</title>
+      <link>/post/oh-my-js/03-array-es6/01-array.from/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/01-array.from/</guid>
+      <description>描述 参数 参数 描述 xxx yyy 返回值 示例 1 模拟实现 1</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.xxx()</title>
+      <link>/post/oh-my-js/03-array-es6/03-array.copywithin/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/03-array.copywithin/</guid>
+      <description>描述 参数 参数 描述 xxx yyy 返回值 示例 1 模拟实现 1</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.xxx()</title>
+      <link>/post/oh-my-js/03-array-es6/05-array.findindex/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/05-array.findindex/</guid>
+      <description>描述 参数 参数 描述 xxx yyy 返回值 示例 1 模拟实现 1</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.xxx()</title>
+      <link>/post/oh-my-js/03-array-es6/06-array.fill/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/06-array.fill/</guid>
+      <description>描述 参数 参数 描述 xxx yyy 返回值 示例 1 模拟实现 1</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.xxx()</title>
+      <link>/post/oh-my-js/03-array-es6/07-array.entries/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/07-array.entries/</guid>
+      <description>描述 参数 参数 描述 xxx yyy 返回值 示例 1 模拟实现 1</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.xxx()</title>
+      <link>/post/oh-my-js/03-array-es6/08-array.keys/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/08-array.keys/</guid>
+      <description>描述 参数 参数 描述 xxx yyy 返回值 示例 1 模拟实现 1</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.xxx()</title>
+      <link>/post/oh-my-js/03-array-es6/09-array.values/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/post/oh-my-js/03-array-es6/09-array.values/</guid>
+      <description>描述 参数 参数 描述 xxx yyy 返回值 示例 1 模拟实现 1</description>
+    </item>
+    
+  </channel>
+</rss>

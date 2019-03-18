@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>anywhere使用笔记 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="随时随地将你的当前目录变成一个静态文件服务器的根目录 场景 某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="/post/oh-my-article/javascript/launch-a-node-server-via-anywhere/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="anywhere使用笔记" />
+<meta property="og:description" content="随时随地将你的当前目录变成一个静态文件服务器的根目录 场景 某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/oh-my-article/javascript/launch-a-node-server-via-anywhere/" />
+<meta property="article:published_time" content="2018-12-13T10:51:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-12-13T10:51:00&#43;00:00"/>
+
+<meta itemprop="name" content="anywhere使用笔记">
+<meta itemprop="description" content="随时随地将你的当前目录变成一个静态文件服务器的根目录 场景 某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想">
+
+
+<meta itemprop="datePublished" content="2018-12-13T10:51:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-12-13T10:51:00&#43;00:00" />
+<meta itemprop="wordCount" content="497">
+
+
+
+<meta itemprop="keywords" content="server,node," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="anywhere使用笔记"/>
+<meta name="twitter:description" content="随时随地将你的当前目录变成一个静态文件服务器的根目录 场景 某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">anywhere使用笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-12-13 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#场景">场景</a></li>
+<li><a href="#全局安装">全局安装</a></li>
+<li><a href="#命令介绍">命令介绍</a>
+<ul>
+<li><a href="#仅有一个命令">仅有一个命令</a></li>
+<li><a href="#如果你需要指定端口">如果你需要指定端口：</a></li>
+<li><a href="#如果你不想调用让浏览器直接打开主页">如果你不想调用让浏览器直接打开主页</a></li>
+<li><a href="#如果你想指定服务器根目录">如果你想指定服务器根目录</a></li>
+<li><a href="#如果你想指定服务器首页">如果你想指定服务器首页</a></li>
+<li><a href="#如果你想指定主机名">如果你想指定主机名</a></li>
+</ul></li>
+<li><a href="#最后">最后</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<blockquote>
+<p>随时随地将你的当前目录变成一个静态文件服务器的根目录</p>
+</blockquote>
+
+<h2 id="场景">场景</h2>
+
+<p>某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想写一些复杂的配置，仅仅是想把某个目录向外暴露，那么你还可以选择 anywhere。</p>
+
+<p>anywhere 是一个 nodejs 的 npm 包，安装和使用都非常的简单。</p>
+
+<h2 id="全局安装">全局安装</h2>
+
+<p>需要提前安装 nodejs</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install anywhere -g</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="命令介绍">命令介绍</h2>
+
+<h3 id="仅有一个命令">仅有一个命令</h3>
+
+<p>命令 <code>anywhere</code> 会将当前目录作为服务器根目录，调用默认浏览器在默认端口 8000 打开主页。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="如果你需要指定端口">如果你需要指定端口：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere -p <span class="m">1234</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>甚至你可以忽略 <code>-p</code>，命令后面直接紧跟端口号：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere <span class="m">1234</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="如果你不想调用让浏览器直接打开主页">如果你不想调用让浏览器直接打开主页</h3>
+
+<p>当你在 linux 服务器上面使用时，这会很有用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere -s</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="如果你想指定服务器根目录">如果你想指定服务器根目录</h3>
+
+<p>根目录默认是命令行当前目录，但你也可以自己指定</p>
+
+<p>可以指定绝对路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere /home</code></pre></td></tr></table>
+</div>
+</div>
+<p>也可以指定相对路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere ./www</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="如果你想指定服务器首页">如果你想指定服务器首页</h3>
+
+<p><code>anywhere</code> 命令会默认打开根目录下的 index.html 当做首页，你可以手动指定另外一个 html 文件当做首页。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere -f login.html</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="如果你想指定主机名">如果你想指定主机名</h3>
+
+<p><code>anywhere</code> 启动的服务器默认主机名是本机的 ip 地址，你可以指定为 <code>localhost</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">anywhere -h localhost</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="最后">最后</h2>
+
+<p>如果你忘记某个参数，随时可以使用 <code>anywhere --help</code> 查看帮助手册。</p>
+
+<p>或者查看 anywhere 文档：<a href="https://www.npmjs.com/package/anywhere">https://www.npmjs.com/package/anywhere</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-12-13
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/server/">server</a>
+          <a href="/tags/node/">node</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/oh-my-article/javascript/transform-timestamp-to-format-time/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">将时间戳转换为格式化日期</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/oh-my-article/javascript/%E6%8C%89%E9%92%AE%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%90%8D%E8%87%AA%E5%8A%A8%E5%8F%98loading%E5%8A%A8%E7%94%BB%E7%89%88/">
+            <span class="next-text nav-default">按钮添加一个类名自动变loading动画版</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1052642137@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wencaizhang" class="iconfont icon-github" title="github"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

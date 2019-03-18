@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="title: 近期用到的 jQuery 方法整理 tags: - javascript - jquery
+date: 2017-05-27 22:22:53 好久不用 jQuery，已经快忘得差不多了。最近用 jQuery 写了不少页面，趁机总结一下。毕竟，好记性不如烂笔头。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="/post/oh-my-article/javascript/some-function-of-jquery/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: 近期用到的 jQuery 方法整理
+tags:
+  - javascript
+  - jquery
+
+date: 2017-05-27 22:22:53
+
+好久不用 jQuery，已经快忘得差不多了。最近用 jQuery 写了不少页面，趁机总结一下。毕竟，好记性不如烂笔头。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/oh-my-article/javascript/some-function-of-jquery/" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: 近期用到的 jQuery 方法整理
+tags:
+  - javascript
+  - jquery
+
+date: 2017-05-27 22:22:53
+
+好久不用 jQuery，已经快忘得差不多了。最近用 jQuery 写了不少页面，趁机总结一下。毕竟，好记性不如烂笔头。">
+
+
+
+<meta itemprop="wordCount" content="150">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: 近期用到的 jQuery 方法整理
+tags:
+  - javascript
+  - jquery
+
+date: 2017-05-27 22:22:53
+
+好久不用 jQuery，已经快忘得差不多了。最近用 jQuery 写了不少页面，趁机总结一下。毕竟，好记性不如烂笔头。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#date-2017-05-27-22-22-53">date: 2017-05-27 22:22:53</a></li>
+<li><a href="#一-选择器部分">一、选择器部分</a></li>
+<li><a href="#二-插入和删除元素">二、插入和删除元素</a>
+<ul>
+<li><a href="#1-插入">1. 插入</a></li>
+<li><a href="#2-删除">2. 删除</a></li>
+</ul></li>
+<li><a href="#三-设置元素样式">三、设置元素样式</a></li>
+<li><a href="#四-动画">四、动画</a>
+<ul>
+<li><a href="#1-animate-动画使用固定值">1. <code>animate</code> 动画使用固定值</a></li>
+<li><a href="#2-animate-动画使用相对值">2. <code>animate</code> 动画使用相对值</a></li>
+<li><a href="#3-判断当前是否有动画尚未执行完毕">3. 判断当前是否有动画尚未执行完毕</a></li>
+</ul></li>
+<li><a href="#五-获取和设置元素的值">五、获取和设置元素的值</a></li>
+<li><a href="#六-其他的一些方法">六、其他的一些方法</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>title: 近期用到的 jQuery 方法整理
+tags:
+  - javascript
+  - jquery</p>
+
+<h2 id="date-2017-05-27-22-22-53">date: 2017-05-27 22:22:53</h2>
+
+<p>好久不用 jQuery，已经快忘得差不多了。最近用 jQuery 写了不少页面，趁机总结一下。毕竟，好记性不如烂笔头。</p>
+
+<h2 id="一-选择器部分">一、选择器部分</h2>
+
+<ol>
+<li><p><code>$(&quot;input[type='radio']&quot;)</code> 选择不同 <code>type</code> 的 <code>input</code></p></li>
+
+<li><p><code>$(&quot;input[type='radio']:checked&quot;)</code> 选择被选中的 <code>radio</code></p></li>
+
+<li><p>选择父类元素</p>
+
+<ul>
+<li><code>$ele.parent('td')</code> 仅限于直接父类元素 <code>parent</code></li>
+<li><code>$ele.parents('.content')</code> 只要是父类元素即可，能向父级多级查找 <code>parents</code></li>
+</ul></li>
+
+<li><p>选择子类元素</p>
+
+<ul>
+<li><code>$ele.children('p.tip');</code></li>
+<li><code>$ele.find('textarea')</code></li>
+</ul></li>
+
+<li><p>选择兄弟元素 <code>$ele.parent('td').siblings('.title')</code></p></li>
+</ol>
+
+<h2 id="二-插入和删除元素">二、插入和删除元素</h2>
+
+<h3 id="1-插入">1. 插入</h3>
+
+<ol>
+<li><p>在被选元素的结尾插入内容
+&gt; <code>$ele.append(&quot;&lt;p class='tip red'&gt; &amp;nbsp;&amp;nbsp;请选择&lt;/p&gt;&quot;);</code></p></li>
+
+<li><p>在被选元素的开头插入内容
+&gt; <code>$ele.prepend(&quot;&lt;span class='red star'&gt;*&amp;nbsp;&lt;/span&gt;&quot;);</code></p></li>
+
+<li><p>在被选元素之前插入内容
+&gt; <code>$ele.before($('.milestone'));</code></p></li>
+
+<li><p>在被选元素之后插入内容
+&gt; <code>$ele.after($('.milestone'));</code></p></li>
+</ol>
+
+<h3 id="2-删除">2. 删除</h3>
+
+<ol>
+<li><p><code>remove()</code> 删除被选元素（及其子元素），可传入参数（选择器）作为过滤条件
+&gt; <code>$ele.remove()</code> 或 <code>$ele.remove(&quot;.italic&quot;);</code></p></li>
+
+<li><p><code>empty()</code> 删除被选元素的子元素
+&gt; <code>$ele.empty()</code></p></li>
+</ol>
+
+<h2 id="三-设置元素样式">三、设置元素样式</h2>
+
+<h2 id="四-动画">四、动画</h2>
+
+<h3 id="1-animate-动画使用固定值">1. <code>animate</code> 动画使用固定值</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$ele</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span>
+    <span class="nx">top</span><span class="o">:</span> <span class="s2">&#34;60px&#34;</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="2-animate-动画使用相对值">2. <code>animate</code> 动画使用相对值</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$ele</span><span class="p">.</span><span class="nx">animate</span><span class="p">({</span>
+    <span class="nx">top</span><span class="o">:</span> <span class="s2">&#34;-=60px&#34;</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="3-判断当前是否有动画尚未执行完毕">3. 判断当前是否有动画尚未执行完毕</h3>
+
+<ul>
+<li>如果正在执行动画返回 <code>true</code>
+&gt; <code>$ele.is(&quot;:animated&quot;)</code></li>
+</ul>
+
+<h2 id="五-获取和设置元素的值">五、获取和设置元素的值</h2>
+
+<ol>
+<li><p>获取文本域的输入的内容
+&gt; <code>var $val = $ele.val();</code></p></li>
+
+<li><p>获取属性值
+&gt; <code>var id = $ele.attr('id');</code></p></li>
+</ol>
+
+<h2 id="六-其他的一些方法">六、其他的一些方法</h2>
+
+<ol>
+<li><p>清空被选中的 <code>radio</code>
+&gt; <code>$(&quot;input[type='radio']&quot;).removeAttr('checked');</code></p></li>
+
+<li><p>判断 <code>radio</code> 是否被选中
+&gt; <code>$(this).is(&quot;:checked&quot;)</code></p></li>
+
+<li><p>判断元素是否具有指定的类名
+&gt; <code>$(this).hasClass(&quot;bad&quot;)</code></p></li>
+
+<li><p><code>jQuery</code> 对象有 <code>length</code> 属性，该属性表示选中的 <code>DOM</code> 元素的个数
+&gt; <code>if($radiosChecked.length != 2) {}</code></p></li>
+
+<li><p>判断选中元素是否为 <code>display:none</code> 状态
+&gt; <code>if(!$(this).is(&quot;:hidden&quot;)) {}</code></p></li>
+
+<li><p>序列化表单数据，用于 <code>ajax</code> 提交表单数据
+&gt; <code>$('form').serialize()</code></p></li>
+
+<li><p>输入框失去焦点
+&gt; <code>$('input').blur(function () {});</code></p></li>
+</ol>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/oh-my-article/javascript/serialize-and-unserialize-of-javascript/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/oh-my-article/javascript/the-difference-of-get-and-post-method/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1052642137@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wencaizhang" class="iconfont icon-github" title="github"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

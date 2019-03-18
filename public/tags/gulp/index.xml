@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gulp on Even - A super concise theme for Hugo</title>
+    <link>/tags/gulp/</link>
+    <description>Recent content in gulp on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Nov 2017 21:30:53 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/gulp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gulp 调试小技巧</title>
+      <link>/post/oh-my-article/todoxxx/gulp-debug/</link>
+      <pubDate>Tue, 28 Nov 2017 21:30:53 +0000</pubDate>
+      
+      <guid>/post/oh-my-article/todoxxx/gulp-debug/</guid>
+      <description>&lt;p&gt;编写 gulp 任务时，经常会遇到错误的情况，导致任务执行过程被中断，可以通过事件监听的方式打印错误，并让任务继续往下执行。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

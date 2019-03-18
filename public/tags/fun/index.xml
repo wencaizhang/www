@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fun on Even - A super concise theme for Hugo</title>
+    <link>/tags/fun/</link>
+    <description>Recent content in fun on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 17 Nov 2018 21:39:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>教练也是十分可爱了</title>
+      <link>/post/oh-my-article/fun/such-a-cuty-coach/</link>
+      <pubDate>Sat, 17 Nov 2018 21:39:00 +0000</pubDate>
+      
+      <guid>/post/oh-my-article/fun/such-a-cuty-coach/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

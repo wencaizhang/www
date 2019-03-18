@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>正则表达式使用案例 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="隐藏手机号码中间 4 位数字： 前三位数字：^(\d{3}) 中间 4 位数字：\d{4} 最后 4 位数字：(\d{4})$ 子表达式：() 中的内容是一个子表" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="/post/oh-my-js/06-regexp/100-regexp-demos/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="正则表达式使用案例" />
+<meta property="og:description" content="隐藏手机号码中间 4 位数字： 前三位数字：^(\d{3}) 中间 4 位数字：\d{4} 最后 4 位数字：(\d{4})$ 子表达式：() 中的内容是一个子表" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/oh-my-js/06-regexp/100-regexp-demos/" />
+<meta property="article:published_time" content="2017-02-20T00:28:21&#43;00:00"/>
+<meta property="article:modified_time" content="2017-02-20T00:28:21&#43;00:00"/>
+
+<meta itemprop="name" content="正则表达式使用案例">
+<meta itemprop="description" content="隐藏手机号码中间 4 位数字： 前三位数字：^(\d{3}) 中间 4 位数字：\d{4} 最后 4 位数字：(\d{4})$ 子表达式：() 中的内容是一个子表">
+
+
+<meta itemprop="datePublished" content="2017-02-20T00:28:21&#43;00:00" />
+<meta itemprop="dateModified" content="2017-02-20T00:28:21&#43;00:00" />
+<meta itemprop="wordCount" content="741">
+
+
+
+<meta itemprop="keywords" content="js,regexp," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="正则表达式使用案例"/>
+<meta name="twitter:description" content="隐藏手机号码中间 4 位数字： 前三位数字：^(\d{3}) 中间 4 位数字：\d{4} 最后 4 位数字：(\d{4})$ 子表达式：() 中的内容是一个子表"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">正则表达式使用案例</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-02-20 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#隐藏手机号码中间-4-位数字">隐藏手机号码中间 4 位数字：</a></li>
+<li><a href="#判断字符串是否为数字">判断字符串是否为数字</a></li>
+<li><a href="#汉字">汉字</a></li>
+<li><a href="#取出指定字符">取出指定字符</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="隐藏手机号码中间-4-位数字">隐藏手机号码中间 4 位数字：</h2>
+
+<ul>
+<li>前三位数字：<code>^(\d{3})</code></li>
+<li>中间 4 位数字：<code>\d{4}</code></li>
+<li>最后 4 位数字：<code>(\d{4})$</code></li>
+<li>子表达式：<code>()</code> 中的内容是一个子表达式，<code>$1</code> 表示第一个子表达式，<code>$2</code> 表示第二个子表达式，依次类推。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">&#39;18012345678&#39;</span>
+<span class="kd">var</span> <span class="nx">newStr</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^(\d{3})\d{4}(\d{4})$/</span><span class="p">,</span> <span class="s1">&#39;$1****$2&#39;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newStr</span><span class="p">)</span>  <span class="c1">// 180****5678
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="判断字符串是否为数字">判断字符串是否为数字</h2>
+
+<p>要考虑的问题：</p>
+
+<ul>
+<li>数字有正负</li>
+<li>数字有整数和小数之分</li>
+<li>特殊数字 <code>0</code></li>
+</ul>
+
+<p>进一步分析：</p>
+
+<ul>
+<li>正负：以 <code>-</code> 开头为负数，直接以数字开头为正数，因此可以确定正则开头部分为 <code>/^-?/</code>；</li>
+<li>整数：整数的第一位应当是大于 0 的数字，如果是多位整数，则后面几位数字范围是 <code>0-9</code> ，对应的正则为 <code>/[1-9][0-9]*$/</code></li>
+<li>小数：小数有整数部分和小数部分，通过小数点 <code>.</code> 分隔开。通过上面分析，整数部分应该是 <code>/[1-9][0-9]*/</code> 。而小数点需转义为 <code>/\./</code> 。小数部分可以全为 <code>0</code> ，如 <code>10.00</code> ，因此小数部分无需过多限制，对应的正则为 <code>/[0-9]+/</code> 。</li>
+<li><code>0</code>：对应的正则是 <code>/0/</code> 。</li>
+</ul>
+
+<p>整数、小数、<code>0</code> 三种情况的逻辑关系为“或”，因此需要将他们使用 <code>|</code> 连接合并起来:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">regNum</span> <span class="o">=</span> <span class="sr">/(^-?[1-9][0-9]*$)|(^-?[1-9][0-9]*\.[0-9]+)|(^-?0$)/</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>另外，元字符 <code>\d</code> 等价于 <code>[0-9]</code>，上面正则也可以写成这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">regNum</span> <span class="o">=</span> <span class="sr">/(^-?[1-9]\d*$)|(^-?[1-9]\d*\.\d+)|(^-?0$)/</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="汉字">汉字</h2>
+
+<p>只能是中文 最少输入两个字</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/^([\u4e00-\u9fa5]){2,}$/</span>
+
+<span class="nx">reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;哈哈的&#39;</span><span class="p">);</span> <span class="c1">// true
+</span><span class="c1"></span>
+<span class="nx">reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;哈&#39;</span><span class="p">);</span> <span class="c1">// false
+</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="取出指定字符">取出指定字符</h2>
+
+<p>有这样一个字符串，穿插着“【男播】”、“【女播】”、“【正文】”、“同期声”、“【CLIP】”五个随机出现的词组，现在需要对这个字符串进行一些操作。</p>
+
+<p>提取“【男播】”与下一个相邻词组之间的内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;【男播】aaa【男播】bbb【女播】ccc【正文】ddd【同期声】ccc【CLIP】ddd【男播】eee【女播】fff【男播】ggg&#34;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/男播】([^【]*)【|男播】([^【]*)$/gi</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">reg</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">match</span><span class="p">,</span> <span class="nx">$1</span><span class="p">,</span> <span class="nx">$2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$1</span> <span class="o">?</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">$1</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="nx">$2</span> <span class="o">?</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">$2</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="p">})</span>
+<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2017-02-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/js/">js</a>
+          <a href="/tags/regexp/">regexp</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/oh-my-js/06-regexp/00-regexp/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">正则表达式</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/oh-my-js/06-regexp/01-regexp.lastindex/">
+            <span class="next-text nav-default">正则表达式的 lastIndex 属性</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1052642137@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wencaizhang" class="iconfont icon-github" title="github"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

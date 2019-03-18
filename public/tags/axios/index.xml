@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>axios on Even - A super concise theme for Hugo</title>
+    <link>/tags/axios/</link>
+    <description>Recent content in axios on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Nov 2017 20:20:53 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/axios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>axios 封装</title>
+      <link>/post/oh-my-article/vue/07-axios-%E5%B0%81%E8%A3%85/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/post/oh-my-article/vue/07-axios-%E5%B0%81%E8%A3%85/</guid>
+      <description>拦截器 如果你想要在每次发送 ajax 请求或者收到 ajax 响应的时候进行一些处理，那么你可以使用 axios 请求拦截器和响应拦截器 请求拦截器 1 2 3 4 5 6 7 8 9 10 11 // 添</description>
+    </item>
+    
+  </channel>
+</rss>

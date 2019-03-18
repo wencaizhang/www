@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="title: GET 和 POST 的区别 tags: - javascript
+date: 2017-11-25 23:31:23 从表象上看：  GET 参数通过 URL 传递，POST 放在 Request body 中。 GET 产生的 URL 地址可以被记录到浏览器历史中，而 POST 不可以。 GET 比 POST 更不安全，因为参数直接暴露在 URL 上，所以不能用来传递敏感信息。 GET 请求在URL中传送的参数是有长度限制的，而 POST 没有。  底层来看： 无区别
+解释如下： 1. 给 GET 加上 request body，给 POST 带上 url 参数，技术上是完全行的通的 2. 为了给不同的区别不同类型的请求，才定义了 GET、POST、PUT、DELETE，依次对应 查、改、增、删 3. 业界不成文的规定是，（大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url。超过的部分，恕不处理。" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="/post/oh-my-article/javascript/the-difference-of-get-and-post-method/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: GET 和 POST 的区别 tags: - javascript
+date: 2017-11-25 23:31:23 从表象上看：  GET 参数通过 URL 传递，POST 放在 Request body 中。 GET 产生的 URL 地址可以被记录到浏览器历史中，而 POST 不可以。 GET 比 POST 更不安全，因为参数直接暴露在 URL 上，所以不能用来传递敏感信息。 GET 请求在URL中传送的参数是有长度限制的，而 POST 没有。  底层来看： 无区别
+解释如下： 1. 给 GET 加上 request body，给 POST 带上 url 参数，技术上是完全行的通的 2. 为了给不同的区别不同类型的请求，才定义了 GET、POST、PUT、DELETE，依次对应 查、改、增、删 3. 业界不成文的规定是，（大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url。超过的部分，恕不处理。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/oh-my-article/javascript/the-difference-of-get-and-post-method/" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="title: GET 和 POST 的区别 tags: - javascript
+date: 2017-11-25 23:31:23 从表象上看：  GET 参数通过 URL 传递，POST 放在 Request body 中。 GET 产生的 URL 地址可以被记录到浏览器历史中，而 POST 不可以。 GET 比 POST 更不安全，因为参数直接暴露在 URL 上，所以不能用来传递敏感信息。 GET 请求在URL中传送的参数是有长度限制的，而 POST 没有。  底层来看： 无区别
+解释如下： 1. 给 GET 加上 request body，给 POST 带上 url 参数，技术上是完全行的通的 2. 为了给不同的区别不同类型的请求，才定义了 GET、POST、PUT、DELETE，依次对应 查、改、增、删 3. 业界不成文的规定是，（大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url。超过的部分，恕不处理。">
+
+
+
+<meta itemprop="wordCount" content="62">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: GET 和 POST 的区别 tags: - javascript
+date: 2017-11-25 23:31:23 从表象上看：  GET 参数通过 URL 传递，POST 放在 Request body 中。 GET 产生的 URL 地址可以被记录到浏览器历史中，而 POST 不可以。 GET 比 POST 更不安全，因为参数直接暴露在 URL 上，所以不能用来传递敏感信息。 GET 请求在URL中传送的参数是有长度限制的，而 POST 没有。  底层来看： 无区别
+解释如下： 1. 给 GET 加上 request body，给 POST 带上 url 参数，技术上是完全行的通的 2. 为了给不同的区别不同类型的请求，才定义了 GET、POST、PUT、DELETE，依次对应 查、改、增、删 3. 业界不成文的规定是，（大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url。超过的部分，恕不处理。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#date-2017-11-25-23-31-23">date: 2017-11-25 23:31:23</a></li>
+<li><a href="#从表象上看">从表象上看：</a></li>
+<li><a href="#底层来看">底层来看：</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>title: GET 和 POST 的区别
+tags:
+  - javascript</p>
+
+<h2 id="date-2017-11-25-23-31-23">date: 2017-11-25 23:31:23</h2>
+
+<h2 id="从表象上看">从表象上看：</h2>
+
+<ol>
+<li><code>GET</code> 参数通过 URL 传递，<code>POST</code> 放在 <code>Request body</code> 中。</li>
+<li><code>GET</code> 产生的 URL 地址可以被记录到浏览器历史中，而 <code>POST</code> 不可以。</li>
+<li><code>GET</code> 比 <code>POST</code> 更不安全，因为参数直接暴露在 <code>URL</code> 上，所以不能用来传递敏感信息。</li>
+<li><code>GET</code> 请求在URL中传送的参数是有长度限制的，而 <code>POST</code> 没有。</li>
+</ol>
+
+<!-- more -->
+
+<h2 id="底层来看">底层来看：</h2>
+
+<p><strong>无区别</strong></p>
+
+<p>解释如下：
+1. 给 <code>GET</code> 加上 <code>request body</code>，给 <code>POST</code> 带上 url 参数，技术上是完全行的通的
+2. 为了给不同的区别不同类型的请求，才定义了 <code>GET</code>、<code>POST</code>、<code>PUT</code>、<code>DELETE</code>，依次对应 查、改、增、删
+3. 业界不成文的规定是，（大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url。超过的部分，恕不处理。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        0001-01-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/oh-my-article/javascript/some-function-of-jquery/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/oh-my-article/javascript/toggle-title-on-focus-and-blur/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1052642137@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/wencaizhang" class="iconfont icon-github" title="github"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
