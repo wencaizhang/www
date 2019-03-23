@@ -1,6 +1,6 @@
-[submodule "content/post"]
-	path = content/post
-	url = https://gitee.com/wencaizhang/articles.git
-[submodule "themes/theme"]
-	path = themes/theme
-	url = https://gitee.com/wencaizhang/hugo-theme-wiki.git
+[submodule "source/_posts"]
+	path = source/_posts
+	url = https://gitee.com/wencaizhang_admin/articles.git
+[submodule "themes/hexo-theme"]
+	path = themes/hexo-theme
+	url = https://gitee.com/wencaizhang/hexo-theme-wikitten.git

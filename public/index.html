@@ -1,275 +1,1099 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Even - A super concise theme for Hugo</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="olOwOlo" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
-
-
-<link rel="canonical" href="/" />
-  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
-  <link href="/index.xml" rel="feed" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:title" content="Even - A super concise theme for Hugo" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/" />
-
-<meta property="og:updated_time" content="2019-02-27T20:28:21&#43;00:00"/>
-
-<meta itemprop="name" content="Even - A super concise theme for Hugo">
-<meta itemprop="description" content="Hugo theme even example site.">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/docker/docker%E5%92%8Cdocker-compose%E7%9A%84%E5%AE%89%E8%A3%85/">docker 和 docker-compose 的安装</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-02-27 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      docker 安装 直接执行脚本即可： 1 curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh 查看Docker的版本 1 docker version 安装 docker-compose 直接执行脚本即可： 1 curl -L &#34;https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose 安装完成之后设置权限 1 chmod +x /usr/local/bin/docker-compose
-    </div>
-    <div class="read-more">
-      <a href="/post/docker/docker%E5%92%8Cdocker-compose%E7%9A%84%E5%AE%89%E8%A3%85/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/oh-my-article/vue/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/vue-prop-and-event/">vue中父级组件通过Prop向自组件传递数据</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-01-08 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Props 以按钮组件 &lt;g-button&gt; 的 disabled 属性为例： 1 2 3 4 5 6 7 8 9 10 11 12 13 &lt;template&gt; &lt;button :disabled=&#34;disabled&#34;&gt;&lt;/button&gt; &lt;/template&gt; &lt;script&gt; export default { props: { disabled: { type: Boolean, default: false }, } } &lt;/script&gt; 在某父组件中使用该按钮组件： 1 2 3 4 5 &lt;template&gt; &lt;div&gt; &lt;a-button disabled&gt;Primary&lt;/a-button&gt;
-    </div>
-    <div class="read-more">
-      <a href="/post/oh-my-article/vue/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/vue-prop-and-event/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/oh-my-git/01-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/08-remote/">Git远程仓库</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-12-29 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      远程仓库 远程仓库是存在于提供 git 版本管理功能的远程服务器的仓库，每个人都将代码提及到远程仓库，并从远程仓库获取最新代码。 查看远程仓库 1 git remote 查看
-    </div>
-    <div class="read-more">
-      <a href="/post/oh-my-git/01-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/08-remote/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/oh-my-article/tool/type-git-open-to-open-repo-website-in-your-browser/">在命令行中直接打开项目的 GitHub 页面</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-12-28 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      在命令行中直接打开项目的 GitHub 页面 用法 1 git open [remote-name] [branch-name] git-open 命令支持我们常用的 GitHub 和 GitLab，以及公司和个人自行搭建的 GitLab。另外，国内的码云也是
-    </div>
-    <div class="read-more">
-      <a href="/post/oh-my-article/tool/type-git-open-to-open-repo-website-in-your-browser/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/oh-my-article/vue/vue-element-table-sort-by-prop/">ElementUI（Vue）中按照百分比对表格排序</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-12-26 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      首先，Element Vue 的表格组件支持排序功能，并且支持自定义排序。 然后，需求是让表格可以按照某一列（百分比）排序。 因为默认提供的排序功能实际
-    </div>
-    <div class="read-more">
-      <a href="/post/oh-my-article/vue/vue-element-table-sort-by-prop/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
     
-    <a class="next" href="/page/2/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
+    <title>Hexo</title>
+    
+    
+        <meta name="keywords" content="Hexo">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <!-- <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css"> -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <script src="/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <!-- <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?d33dd688273c3b2789b38b67a6cb659d";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main">
+        <article id="post-docker/docker 安装 jenkins" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <p>使用 docker 安装 Jenkins：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -u root \</span><br><span class="line">  --rm \</span><br><span class="line">  -d \</span><br><span class="line">  -p 8080:8080 \</span><br><span class="line">  -p 50000:50000 \</span><br><span class="line">  -v jenkins-data:/var/jenkins_home \</span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock \</span><br><span class="line">  jenkinsci/blueocean</span><br></pre></td></tr></table></figure>
+<p>安装成功之后进入设置向导（访问 <code>域名:8080</code>），需要输入密码来解锁 Jenkins。密码会在 Jenkins 控制台日志中打印出来，如果是使用 docker 安装的 Jenkins，可以通过 docker 日志来访问 Jenkins 的控制台日志。</p>
+<p>简而言之就是通过查看 docker 日志得到密码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">log</span> &lt;container-id&gt;</span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/docker/docker 安装 jenkins.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/docker/docker 安装 jenkins.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/docker/docker 安装 jenkins.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-JavaScript/浮点数陷阱" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><p>JavaScript 中的浮点数计算比较调皮，不经意间我们就会得到一些并不想要的结果，例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span> = <span class="number">0.30000000000000004</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.0</span> - <span class="number">0.9</span> = <span class="number">0.09999999999999998</span></span><br><span class="line"></span><br><span class="line"><span class="number">0.105</span>.toFixed(<span class="number">2</span>) = <span class="number">0.1</span> <span class="comment">// not 0.11</span></span><br><span class="line"></span><br><span class="line"><span class="number">182.92</span> * <span class="number">10000</span> = <span class="number">1829199.9999999998</span></span><br></pre></td></tr></table></figure>
+<p>如果涉及到金额计算，尽管看起来代码运算结果和真实结果仅仅相差了零点零零零零零零零 1，那也是不得了的事情。</p>
+<p>至于这背后的原因，我是不知道滴~，不过有人已经写文章解释了：<a href="https://github.com/camsong/blog/issues/9" target="_blank" rel="noopener">JavaScript 浮点数陷阱及解法</a></p>
+<p>那么如何解决浮点数计算出现的问题呢，我是直接使用的第三方库 <a href="https://github.com/nefe/number-precision，完美支持浮点数的加减乘除、四舍五入等运算。非常小只有1K，远小于绝大多数同类库（如Math.js、BigDecimal.js），100%测试全覆盖，代码可读性强，不妨在你的应用里用起来！" target="_blank" rel="noopener">https://github.com/nefe/number-precision，完美支持浮点数的加减乘除、四舍五入等运算。非常小只有1K，远小于绝大多数同类库（如Math.js、BigDecimal.js），100%测试全覆盖，代码可读性强，不妨在你的应用里用起来！</a></p>
+<p>
+                
+            
+        
+        
+            </p></div>
+            <div class="article-more-link">
+                <a href="/2019-03-23/JavaScript/浮点数陷阱/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/JavaScript/浮点数陷阱.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/JavaScript/浮点数陷阱.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/JavaScript/浮点数陷阱.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-JavaScript/小程序的mixins" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        <div style="display: flex; float: right;">
+                            
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019-03-23/JavaScript/小程序的mixins/">
+            <time datetime="2019-03-23T11:27:24.237Z" itemprop="datePublished">2019-03-23</time>
+        </a>
+    </div>
+
+
+                            <div style="margin-left: 10px;">
+                                
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019-03-23/JavaScript/小程序的mixins/">小程序 的 mixins</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+        
+        
+            
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/mixins/">mixins</a>, <a class="tag-link" href="/tags/小程序/">小程序</a>
+    </div>
+
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/JavaScript/小程序的mixins.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/JavaScript/小程序的mixins.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/JavaScript/小程序的mixins.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-JavaScript/vue的使用" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        <div style="display: flex; float: right;">
+                            
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019-03-23/JavaScript/vue的使用/">
+            <time datetime="2019-03-23T11:27:24.236Z" itemprop="datePublished">2019-03-23</time>
+        </a>
+    </div>
+
+
+                            <div style="margin-left: 10px;">
+                                
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019-03-23/JavaScript/vue的使用/">vue中动态监听数据变化——vm.$set</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <p>先来看这样一个案例</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>选择你最爱吃的蔬菜：<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-for</span>=<span class="string">"item in list"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:key</span>=<span class="string">"item.id"</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">click</span>=<span class="string">"handleClick(item)"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:class</span>=<span class="string">"&#123;active: item.checked&#125;"</span></span></span><br><span class="line"><span class="tag">  &gt;</span></span><br><span class="line">    &#123;&#123;item.name&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      list: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;</span><br><span class="line">    <span class="keyword">this</span>.fetch()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    fetch () &#123;</span><br><span class="line">      <span class="comment">// 假设 list 是从服务端请求得到的数据</span></span><br><span class="line">      <span class="keyword">const</span> list = [</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'土豆'</span>, <span class="attr">checked</span>: <span class="literal">false</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'番茄'</span>, <span class="attr">checked</span>: <span class="literal">false</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">'黄瓜'</span>, <span class="attr">checked</span>: <span class="literal">false</span> &#125;,</span><br><span class="line">      ]</span><br><span class="line">      list[<span class="number">0</span>].checked = <span class="literal">true</span></span><br><span class="line">      <span class="keyword">this</span>.list = list</span><br><span class="line">    &#125;,</span><br><span class="line">    handleClick (item) &#123;</span><br><span class="line">      <span class="keyword">this</span>.list.forEach(<span class="function"><span class="params">item</span> =&gt;</span> item.checked = <span class="literal">false</span>)</span><br><span class="line">      item.checked = <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/vue/">vue</a>
+    </div>
+
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/JavaScript/vue的使用.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/JavaScript/vue的使用.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/JavaScript/vue的使用.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-JavaScript/vue-ls" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><p>vue-ls 官网地址：<a href="https://www.npmjs.com/package/vue-ls" target="_blank" rel="noopener">https://www.npmjs.com/package/vue-ls</a></p>
+<p>vue-ls 是一款管理 localStorage, sesstionStorage 和 cookie 的 vue 插件。</p>
+<p>这三者的 API 文档如下：</p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">Window.localStorage</a></li>
+<p>
+                
+            
+        
+        
+            </p></ul></div>
+            <div class="article-more-link">
+                <a href="/2019-03-23/JavaScript/vue-ls/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/JavaScript/vue-ls.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/JavaScript/vue-ls.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/JavaScript/vue-ls.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-JavaScript/Vue的mixins特性" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        <div style="display: flex; float: right;">
+                            
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019-03-23/JavaScript/Vue的mixins特性/">
+            <time datetime="2019-03-23T11:27:24.235Z" itemprop="datePublished">2019-03-23</time>
+        </a>
+    </div>
+
+
+                            <div style="margin-left: 10px;">
+                                
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019-03-23/JavaScript/Vue的mixins特性/">Vue 的 mixins 特性</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+        
+        
+            
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/mixins/">mixins</a>, <a class="tag-link" href="/tags/vue/">vue</a>
+    </div>
+
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/JavaScript/Vue的mixins特性.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/JavaScript/Vue的mixins特性.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/JavaScript/Vue的mixins特性.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-JavaScript/JS数组去重" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        <div style="display: flex; float: right;">
+                            
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019-03-23/JavaScript/JS数组去重/">
+            <time datetime="2019-03-23T11:27:24.234Z" itemprop="datePublished">2019-03-23</time>
+        </a>
+    </div>
+
+
+                            <div style="margin-left: 10px;">
+                                
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019-03-23/JavaScript/JS数组去重/">JS 数组去重</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <p>利用 ES6 的新特性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">uniq</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> [...new <span class="built_in">Set</span>(arr)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/js/">js</a>, <a class="tag-link" href="/tags/去重/">去重</a>, <a class="tag-link" href="/tags/数组/">数组</a>
+    </div>
+
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/JavaScript/JS数组去重.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/JavaScript/JS数组去重.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/JavaScript/JS数组去重.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-docker/docker和docker-compose的安装" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        <div style="display: flex; float: right;">
+                            
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019-02-27/docker/docker和docker-compose的安装/">
+            <time datetime="2019-02-27T12:28:21.000Z" itemprop="datePublished">2019-02-27</time>
+        </a>
+    </div>
+
+
+                            <div style="margin-left: 10px;">
+                                
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019-02-27/docker/docker和docker-compose的安装/">docker 和 docker-compose 的安装</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h3 id="docker-安装"><a href="#docker-安装" class="headerlink" title="docker 安装"></a>docker 安装</h3><p>直接执行脚本即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh</span><br></pre></td></tr></table></figure>
+<p>查看Docker的版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+<h3 id="安装-docker-compose"><a href="#安装-docker-compose" class="headerlink" title="安装 docker-compose"></a>安装 docker-compose</h3><p>直接执行脚本即可：</p>
+<p>
+                
+            
+        
+        
+            </p></div>
+            <div class="article-more-link">
+                <a href="/2019-02-27/docker/docker和docker-compose的安装/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/docker/">docker</a>, <a class="tag-link" href="/tags/docker-compose/">docker-compose</a>
+    </div>
+
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/docker/docker和docker-compose的安装.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/docker/docker和docker-compose的安装.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/docker/docker和docker-compose的安装.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-oh-my-article/javascript/对象数组按属性排序的JS处理" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        <div style="display: flex; float: right;">
+                            
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019-01-22/oh-my-article/javascript/对象数组按属性排序的JS处理/">
+            <time datetime="2019-01-22T10:31:23.000Z" itemprop="datePublished">2019-01-22</time>
+        </a>
+    </div>
+
+
+                            <div style="margin-left: 10px;">
+                                
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019-01-22/oh-my-article/javascript/对象数组按属性排序的JS处理/">对象数组按属性排序的JS处理</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <p>通常在使用表格展示数据时，会有一项按照某一列排序的功能</p>
+<p>// bool 为 true 时正序排列，默认为 true</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortArrByProp</span> (<span class="params">array, prop, bool</span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">prop</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">obj1,obj2</span>)</span>&#123;</span><br><span class="line">		</span><br><span class="line">      <span class="keyword">var</span> v1 = obj1[prop];</span><br><span class="line">      <span class="keyword">var</span> v2 = obj2[prop];</span><br><span class="line">      bool = <span class="keyword">typeof</span> bool === <span class="string">'boolean'</span> ? bool : <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> bool ? v1 - v2 : v2 - v1;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> array.sort(compare(prop));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'张三'</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'李四'</span>, <span class="attr">age</span>: <span class="number">16</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'王五'</span>, <span class="attr">age</span>: <span class="number">28</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">'赵六'</span>, <span class="attr">age</span>: <span class="number">21</span> &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">sortArrByProp(arr, <span class="string">'age'</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/javascript/">javascript</a>
+    </div>
+
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/oh-my-article/javascript/对象数组按属性排序的JS处理.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/oh-my-article/javascript/对象数组按属性排序的JS处理.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/oh-my-article/javascript/对象数组按属性排序的JS处理.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-oh-my-article/vue/vue组件通信/vue-Prop-and-event" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        <div style="display: flex; float: right;">
+                            
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019-01-08/oh-my-article/vue/vue组件通信/vue-Prop-and-event/">
+            <time datetime="2019-01-08T06:22:53.000Z" itemprop="datePublished">2019-01-08</time>
+        </a>
+    </div>
+
+
+                            <div style="margin-left: 10px;">
+                                
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019-01-08/oh-my-article/vue/vue组件通信/vue-Prop-and-event/">vue中父级组件通过Prop向自组件传递数据</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h3 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h3><p>以按钮组件 <code>&lt;g-button&gt;</code> 的 <code>disabled</code> 属性为例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">:disabled</span>=<span class="string">"disabled"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">    props: &#123;</span></span><br><span class="line"><span class="undefined">      disabled: &#123;</span></span><br><span class="line"><span class="javascript">        type: <span class="built_in">Boolean</span>,</span></span><br><span class="line"><span class="javascript">        <span class="keyword">default</span>: <span class="literal">false</span></span></span><br><span class="line"><span class="undefined">      &#125;,</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在某父组件中使用该按钮组件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a-button</span> <span class="attr">disabled</span>&gt;</span>Primary<span class="tag">&lt;/<span class="name">a-button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>按钮组件中定义了是否禁用 <code>disabled</code> 属性，它由父级传入，通过 <code>props</code> 选项接收。</p>
+<p>
+                
+            
+        
+        
+            </p></div>
+            <div class="article-more-link">
+                <a href="/2019-01-08/oh-my-article/vue/vue组件通信/vue-Prop-and-event/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+            <div style="display: inline-block;">
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/vue/">vue</a>
+    </div>
+
+            </div>
+            <div class="meta" style="float: right;">
+            
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/commits/master/source/_posts/oh-my-article/vue/vue组件通信/vue-Prop-and-event.md"> History </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/raw/master/source/_posts/oh-my-article/vue/vue组件通信/vue-Prop-and-event.md"> Source </a>
+                </div>
+                <div class="article-meta-button">
+                    <a href="https://gitee.com/wencaizhang/wiki/edit/master/source/_posts/oh-my-article/vue/vue组件通信/vue-Prop-and-event.md"> Edit </a>
+                </div>
+            
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/">Siguiente  &raquo;</a>
+        </nav>
+    
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            wencaizhang &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
         
 
-      </div>
-    </main>
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
 
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:1052642137@qq.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://github.com/wencaizhang" class="iconfont icon-github" title="github"></a>
-  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
 
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
 
-  
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
 
-  <span class="copyright-year">
-    &copy; 
-    2017 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
     </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
-
-
-
-
-
-
-
-
 </body>
 </html>
