@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ehlxr - A responsive and simple theme for Hugo on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/</link>
+    <description>Recent content in Ehlxr - A responsive and simple theme for Hugo on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Feb 2019 20:28:21 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>docker 和 docker-compose 的安装</title>
+      <link>/2019/02/27/docker-%E5%92%8C-docker-compose-%E7%9A%84%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 27 Feb 2019 20:28:21 +0000</pubDate>
+      
+      <guid>/2019/02/27/docker-%E5%92%8C-docker-compose-%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
+      <description>
+
+&lt;h3 id=&#34;docker-安装&#34;&gt;docker 安装&lt;/h3&gt;
+
+&lt;p&gt;直接执行脚本即可：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -fsSL https://get.docker.com -o get-docker.sh &amp;amp;&amp;amp; sudo sh get-docker.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;查看Docker的版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;安装-docker-compose&#34;&gt;安装 docker-compose&lt;/h3&gt;
+
+&lt;p&gt;直接执行脚本即可：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -L &amp;quot;https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)&amp;quot; -o /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完成之后设置权限&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod +x /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;查看Docker Compose的版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker-compose version
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用 docker 安装 Jenkins</title>
+      <link>/2019/02/20/%E4%BD%BF%E7%94%A8-docker-%E5%AE%89%E8%A3%85-jenkins/</link>
+      <pubDate>Wed, 20 Feb 2019 00:28:21 +0000</pubDate>
+      
+      <guid>/2019/02/20/%E4%BD%BF%E7%94%A8-docker-%E5%AE%89%E8%A3%85-jenkins/</guid>
+      <description>&lt;p&gt;使用 docker 安装 Jenkins：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run \
+  -u root \
+  --rm \
+  -d \
+  -p 8080:8080 \
+  -p 50000:50000 \
+  -v jenkins-data:/var/jenkins_home \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  jenkinsci/blueocean
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装成功之后进入设置向导（访问 &lt;code&gt;域名:8080&lt;/code&gt;），需要输入密码来解锁 Jenkins。密码会在 Jenkins 控制台日志中打印出来，如果是使用 docker 安装的 Jenkins，可以通过 docker 日志来访问 Jenkins 的控制台日志。&lt;/p&gt;
+
+&lt;p&gt;简而言之就是通过查看 docker 日志得到密码。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker log &amp;lt;container-id&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>vue中父级组件通过Prop向自组件传递数据</title>
+      <link>/2019/01/08/vue%E4%B8%AD%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87prop%E5%90%91%E8%87%AA%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Tue, 08 Jan 2019 14:22:53 +0000</pubDate>
+      
+      <guid>/2019/01/08/vue%E4%B8%AD%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87prop%E5%90%91%E8%87%AA%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/</guid>
+      <description>
+
+&lt;h3 id=&#34;props&#34;&gt;Props&lt;/h3&gt;
+
+&lt;p&gt;以按钮组件 &lt;code&gt;&amp;lt;g-button&amp;gt;&lt;/code&gt; 的 &lt;code&gt;disabled&lt;/code&gt; 属性为例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;template&amp;gt;
+  &amp;lt;button :disabled=&amp;quot;disabled&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+&amp;lt;/template&amp;gt;
+&amp;lt;script&amp;gt;
+  export default {
+    props: {
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+    }
+  }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在某父组件中使用该按钮组件：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;template&amp;gt;
+  &amp;lt;div&amp;gt;
+    &amp;lt;a-button disabled&amp;gt;Primary&amp;lt;/a-button&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;按钮组件中定义了是否禁用 &lt;code&gt;disabled&lt;/code&gt; 属性，它由父级传入，通过 &lt;code&gt;props&lt;/code&gt; 选项接收。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;props&lt;/code&gt; 选项可以是一个字符串数组，元素为属性名，如 &lt;code&gt;[&#39;disabled&#39;]&lt;/code&gt;，也可以是一个对象，推荐使用对象格式，因为这样可以对属性进行更多的处理：类型检查、必填校验、自定义校验和指定默认值。&lt;/p&gt;
+
+&lt;p&gt;例如这里的 &lt;code&gt;disabled&lt;/code&gt; 属性，它的默认值就是 &lt;code&gt;false&lt;/code&gt;，它的类型就是布尔值，如果在父组件中使用时传入一个字符串则会在控制台产生一个警告。&lt;/p&gt;
+
+&lt;p&gt;上面例子展示了如何在父组件中向子组件传递数据以及如何接收数据。关于 Prop 详细的使用可以参考&lt;a href=&#34;https://cn.vuejs.org/v2/guide/components-props.html&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git远程仓库</title>
+      <link>/2018/12/29/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Sat, 29 Dec 2018 00:28:21 +0000</pubDate>
+      
+      <guid>/2018/12/29/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+      <description>
+
+&lt;h3 id=&#34;远程仓库&#34;&gt;远程仓库&lt;/h3&gt;
+
+&lt;p&gt;远程仓库是存在于提供 git 版本管理功能的远程服务器的仓库，每个人都将代码提及到远程仓库，并从远程仓库获取最新代码。&lt;/p&gt;
+
+&lt;h3 id=&#34;查看远程仓库&#34;&gt;查看远程仓库&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;查看远程仓库详细信息&#34;&gt;查看远程仓库详细信息&lt;/h3&gt;
+
+&lt;p&gt;增加 &lt;code&gt;-v&lt;/code&gt; 或者 &lt;code&gt;--verbose&lt;/code&gt; 参数即可。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;添加远程仓库&#34;&gt;添加远程仓库&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add [remote-name] [remote-url]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;删除远程仓库&#34;&gt;删除远程仓库&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote remove [remote-name]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;重命名远程仓库&#34;&gt;重命名远程仓库&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote rename [remote-name] [new-remote-name]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>在命令行中直接打开项目的 GitHub 页面</title>
+      <link>/2018/12/28/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84-github-%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Fri, 28 Dec 2018 21:24:53 +0000</pubDate>
+      
+      <guid>/2018/12/28/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84-github-%E9%A1%B5%E9%9D%A2/</guid>
+      <description>
+
+&lt;p&gt;在命令行中直接打开项目的 GitHub 页面&lt;/p&gt;
+
+&lt;h3 id=&#34;用法&#34;&gt;用法&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git open [remote-name] [branch-name]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;git-open&lt;/code&gt; 命令支持我们常用的 GitHub 和 GitLab，以及公司和个人自行搭建的 GitLab。另外，国内的&lt;a href=&#34;https://gitee.com/&#34;&gt;码云&lt;/a&gt;也是支持的。&lt;/p&gt;
+
+&lt;p&gt;完整列表如下（来源：官网文档）:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;github.com&lt;/li&gt;
+&lt;li&gt;gist.github.com&lt;/li&gt;
+&lt;li&gt;gitlab.com&lt;/li&gt;
+&lt;li&gt;GitLab custom hosted (see below)&lt;/li&gt;
+&lt;li&gt;bitbucket.org&lt;/li&gt;
+&lt;li&gt;Atlassian Bitbucket Server (formerly Atlassian Stash)&lt;/li&gt;
+&lt;li&gt;Visual Studio Team Services&lt;/li&gt;
+&lt;li&gt;Team Foundation Server (on-premises)&lt;/li&gt;
+&lt;li&gt;AWS Code Commit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;示例&#34;&gt;示例&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;默认打开 origin 的 master 分支&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git open
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;指定 remote&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git open someremote
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;指定分支，指定 remote&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git open someremote somebranch
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;打开 Issues 页面&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git open --issue
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;安装方式&#34;&gt;安装方式&lt;/h3&gt;
+
+&lt;p&gt;这里介绍使用 npm 命令安装的方式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install -g git-open
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;它还支持更多安装方式，详情请看&lt;a href=&#34;https://github.com/paulirish/git-open#installation&#34;&gt;文档&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ElementUI（Vue）中按照百分比对表格排序</title>
+      <link>/2018/12/26/elementuivue%E4%B8%AD%E6%8C%89%E7%85%A7%E7%99%BE%E5%88%86%E6%AF%94%E5%AF%B9%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Wed, 26 Dec 2018 18:20:53 +0000</pubDate>
+      
+      <guid>/2018/12/26/elementuivue%E4%B8%AD%E6%8C%89%E7%85%A7%E7%99%BE%E5%88%86%E6%AF%94%E5%AF%B9%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F/</guid>
+      <description>
+
+&lt;p&gt;首先，Element Vue 的&lt;a href=&#34;http://element-cn.eleme.io/#/zh-CN/component/table#pai-xu&#34;&gt;表格组件&lt;/a&gt;支持排序功能，并且支持自定义排序。&lt;/p&gt;
+
+&lt;p&gt;然后，需求是让表格可以按照某一列（百分比）排序。&lt;/p&gt;
+
+&lt;p&gt;因为默认提供的排序功能实际上是 Array.prototype.sort() 来实现的，它是按照字符串 Unicode 码点进行排序，而我们是要根据百分比的大小排序。所以只能自定义一个排序的规则。&lt;/p&gt;
+
+&lt;p&gt;排序方法的实现如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;sortPercentMethod(obj1, obj2, prop) {
+  let v1 = parseFloat(obj1[prop]);
+  let v2 = parseFloat(obj2[prop]);
+  return v1 - v2;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Element Vue 的&lt;a href=&#34;http://element-cn.eleme.io/#/zh-CN/component/table#pai-xu&#34;&gt;表格组件&lt;/a&gt;提供了指定排序方法的属性 &lt;code&gt;sort-method&lt;/code&gt; ，所以可以这样来指定排序方法:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;:sort-method=&amp;quot;(a, b) =&amp;gt; { return sortPercentMethod(a, b, &#39;percent&#39;) }&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里没有直接将 &lt;code&gt;sort-method&lt;/code&gt; 属性值指定为 &lt;code&gt;sortPercentMethod&lt;/code&gt;，而是指定为一个匿名函数，在匿名函数中将 &lt;code&gt;sortPercentMethod&lt;/code&gt; 的执行结果返回。其主要目的是为了让其他的需要按照这一排序规则的列也能够共用此排序方法。&lt;/p&gt;
+
+&lt;h3 id=&#34;完整实例&#34;&gt;完整实例&lt;/h3&gt;
+
+&lt;p&gt;示例代码如下，在配置 vue 和 element-ui 的项目中可以直接拷贝查看效果。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;template&amp;gt;
+  &amp;lt;el-table
+    :data=&amp;quot;tableData&amp;quot;
+    style=&amp;quot;width: 100%&amp;quot;
+    &amp;gt;
+    &amp;lt;el-table-column
+      prop=&amp;quot;name&amp;quot;
+      label=&amp;quot;姓名&amp;quot;
+      sortable
+      width=&amp;quot;180&amp;quot;&amp;gt;
+    &amp;lt;/el-table-column&amp;gt;
+    &amp;lt;el-table-column
+      prop=&amp;quot;percent&amp;quot;
+      label=&amp;quot;百分比&amp;quot;
+      sortable
+      :sort-method=&amp;quot;(a, b) =&amp;gt; { return sortPercentMethod(a, b, &#39;percent&#39;) }&amp;quot;
+      width=&amp;quot;180&amp;quot;&amp;gt;
+    &amp;lt;/el-table-column&amp;gt;
+  &amp;lt;/el-table&amp;gt;
+&amp;lt;/template&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;&amp;lt;script&amp;gt;
+  export default {
+    data() {
+      return {
+        tableData: [{
+          name: &#39;王大虎&#39;,
+          percent: &#39;10%&#39;,
+        }, {
+          name: &#39;王二虎&#39;,
+          percent: &#39;20%&#39;,
+        }, {
+          name: &#39;王三虎&#39;,
+          percent: &#39;30%&#39;,
+        }, {
+          name: &#39;王四虎&#39;,
+          percent: &#39;40%&#39;,
+        }]
+      }
+    },
+    methods: {
+      sortPercentMethod(obj1, obj2, prop) {
+        let v1 = parseFloat(obj1[prop]);
+        let v2 = parseFloat(obj2[prop]);
+        return v1 - v2;
+      }
+    }
+  }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>将时间戳转换为格式化日期</title>
+      <link>/2018/12/14/%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Fri, 14 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/14/%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F/</guid>
+      <description>&lt;p&gt;&lt;code&gt;timestamp&lt;/code&gt; 缺省表示使用当前时间戳，&lt;code&gt;formats&lt;/code&gt; 默认格式是 &lt;code&gt;YYYY-MM-DD HH:mm:ss&lt;/code&gt;，例如 &lt;code&gt;2000-01-01 12:00:00&lt;/code&gt;。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;/*
+* 时间戳转换成指定格式日期
+* eg. 
+* dateFormat(11111111111111, &#39;YYYY年MM月DD日 HH时mm分&#39;)
+* → &amp;quot;2322年02月06日 03时45分&amp;quot;
+*/
+function dateFormat (timestamp, formats) {
+  formats = formats || &#39;YYYY-MM-DD HH:mm:ss&#39;
+  var date = timestamp ? new Date(timestamp) : new Date()
+  
+  var zero = function (num) {
+    if (num &amp;lt; 10) {
+      return &#39;0&#39; + num
+    }
+    return num
+  }
+
+  var dateObj = {
+    YYYY: date.getFullYear(),
+    MM: zero(date.getMonth() + 1),
+    DD: zero(date.getDate()),
+    HH: zero(date.getHours()),
+    mm: zero(date.getMinutes()),
+    ss: zero(date.getSeconds()),
+  }
+
+  return formats.replace(/YYYY|MM|DD|HH|mm|ss/ig, function (matches) {
+    return dateObj[matches]
+  })
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>anywhere使用笔记</title>
+      <link>/2018/12/13/anywhere%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/anywhere%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;随时随地将你的当前目录变成一个静态文件服务器的根目录&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
+
+&lt;p&gt;某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想写一些复杂的配置，仅仅是想把某个目录向外暴露，那么你还可以选择 anywhere。&lt;/p&gt;
+
+&lt;p&gt;anywhere 是一个 nodejs 的 npm 包，安装和使用都非常的简单。&lt;/p&gt;
+
+&lt;h2 id=&#34;全局安装&#34;&gt;全局安装&lt;/h2&gt;
+
+&lt;p&gt;需要提前安装 nodejs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install anywhere -g
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;命令介绍&#34;&gt;命令介绍&lt;/h2&gt;
+
+&lt;h3 id=&#34;仅有一个命令&#34;&gt;仅有一个命令&lt;/h3&gt;
+
+&lt;p&gt;命令 &lt;code&gt;anywhere&lt;/code&gt; 会将当前目录作为服务器根目录，调用默认浏览器在默认端口 8000 打开主页。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;如果你需要指定端口&#34;&gt;如果你需要指定端口：&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere -p 1234
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;甚至你可以忽略 &lt;code&gt;-p&lt;/code&gt;，命令后面直接紧跟端口号：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere 1234
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;如果你不想调用让浏览器直接打开主页&#34;&gt;如果你不想调用让浏览器直接打开主页&lt;/h3&gt;
+
+&lt;p&gt;当你在 linux 服务器上面使用时，这会很有用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere -s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;如果你想指定服务器根目录&#34;&gt;如果你想指定服务器根目录&lt;/h3&gt;
+
+&lt;p&gt;根目录默认是命令行当前目录，但你也可以自己指定&lt;/p&gt;
+
+&lt;p&gt;可以指定绝对路径&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere /home
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;也可以指定相对路径&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere ./www
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;如果你想指定服务器首页&#34;&gt;如果你想指定服务器首页&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;anywhere&lt;/code&gt; 命令会默认打开根目录下的 index.html 当做首页，你可以手动指定另外一个 html 文件当做首页。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere -f login.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;如果你想指定主机名&#34;&gt;如果你想指定主机名&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;anywhere&lt;/code&gt; 启动的服务器默认主机名是本机的 ip 地址，你可以指定为 &lt;code&gt;localhost&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;anywhere -h localhost
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+
+&lt;p&gt;如果你忘记某个参数，随时可以使用 &lt;code&gt;anywhere --help&lt;/code&gt; 查看帮助手册。&lt;/p&gt;
+
+&lt;p&gt;或者查看 anywhere 文档：&lt;a href=&#34;https://www.npmjs.com/package/anywhere&#34;&gt;https://www.npmjs.com/package/anywhere&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>按钮添加一个类名自动变loading动画版</title>
+      <link>/2018/12/13/%E6%8C%89%E9%92%AE%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%90%8D%E8%87%AA%E5%8A%A8%E5%8F%98loading%E5%8A%A8%E7%94%BB%E7%89%88/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/%E6%8C%89%E9%92%AE%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%90%8D%E8%87%AA%E5%8A%A8%E5%8F%98loading%E5%8A%A8%E7%94%BB%E7%89%88/</guid>
+      <description>&lt;p&gt;有了下面的 css 代码，给&lt;strong&gt;任意的标签&lt;/strong&gt;（button、a、span等等）加上一个类名 &lt;code&gt;spin-loading&lt;/code&gt;，就能使标签自动变成 loading 状态，方便快捷效果好。&lt;/p&gt;
+
+&lt;p&gt;PS: 小程序中的 &lt;code&gt;view&lt;/code&gt; 和 &lt;code&gt;text&lt;/code&gt; 标签也同样适用。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;/* 按钮loading */
+.spin-loading {
+  position: relative;
+}
+
+.spin-loading::before {
+  /* 定位：水平垂直居中 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  /* 基本样式 */
+  width: 4px;
+  height: 4px;
+  content: &#39;&#39;;
+  border-radius: 100%;
+
+  /* 动画 */
+  animation: spinZoom 1s steps(8) infinite;
+  /* 小圆点 */
+  box-shadow:
+    0 -10px 0 1px currentColor,
+    10px 0 currentColor,
+    0 10px currentColor,
+    -10px 0 currentColor,
+    -7px -7px 0 .5px currentColor,
+    7px -7px 0 1.5px currentColor,
+    7px 7px currentColor,
+    -7px 7px currentColor;
+}
+
+@keyframes spinZoom {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>时间戳显示为多少分钟前，多少天前的JS处理</title>
+      <link>/2018/12/13/%E6%97%B6%E9%97%B4%E6%88%B3%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%A4%9A%E5%B0%91%E5%88%86%E9%92%9F%E5%89%8D%E5%A4%9A%E5%B0%91%E5%A4%A9%E5%89%8D%E7%9A%84js%E5%A4%84%E7%90%86/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/%E6%97%B6%E9%97%B4%E6%88%B3%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%A4%9A%E5%B0%91%E5%88%86%E9%92%9F%E5%89%8D%E5%A4%9A%E5%B0%91%E5%A4%A9%E5%89%8D%E7%9A%84js%E5%A4%84%E7%90%86/</guid>
+      <description>
+
+&lt;p&gt;方法名为 &lt;code&gt;getTimeAgoAt&lt;/code&gt;，支持一个时间戳参数 &lt;code&gt;stamptime&lt;/code&gt;（必需）。&lt;/p&gt;
+
+&lt;h3 id=&#34;先上代码&#34;&gt;先上代码&lt;/h3&gt;
+
+&lt;p&gt;因为后端返回时间戳通常精确到秒（10位），而 JS 获取时间戳精确到毫秒（13位），本方法处理以秒进行计算。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function getTimeAgoAt(stamptime) {
+  var currentStamptime = Date.parse(new Date()) / 1000;
+  var agoAt = &#39;刚刚&#39;;
+  var diff = currentStamptime - stamptime;
+  var points = [
+    { value: 365 * 24 * 60 * 60, suffix: &#39;年前&#39;, max: 2 },
+    { value: 30 * 24 * 60 * 60, suffix: &#39;月前&#39;, max: 11 },
+    { value: 7 * 24 * 60 * 60, suffix: &#39;周前&#39;, max: 4 },
+    { value: 24 * 60 * 60, suffix: &#39;天前&#39;, max: 6 },
+    { value: 60 * 60, suffix: &#39;小时前&#39;, max: 23 },
+    { value: 10 * 60, suffix: &#39;0分钟前&#39;, max: 5 }
+  ];
+
+  for (var i = 0; i &amp;lt; points.length; i++) {
+    var item = points[i];
+    var mode = Math.floor(diff / item.value);
+    if (mode &amp;gt;= 1) {
+      agoAt = Math.min(mode, item.max) + item.suffix;
+      break;
+    }
+  }
+  return agoAt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;代码解析&#34;&gt;代码解析&lt;/h3&gt;
+
+&lt;p&gt;为了帮助大家理解，同时也为了备忘，这里简单解释一下子。&lt;/p&gt;
+
+&lt;p&gt;本方法分为两部分，数据部分（ 数组 &lt;code&gt;points&lt;/code&gt;）和逻辑部分（遍历）。&lt;/p&gt;
+
+&lt;p&gt;数组 &lt;code&gt;points&lt;/code&gt; 中每项元素都是一个时间点（对象），它拥有三个属性：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;suffix&lt;/code&gt;: 最终结果的文字后缀部分，例如最终结果是“2年前”，则“年前”由 &lt;code&gt;suffix&lt;/code&gt; 属性而来，2 是后面的计算得来；另外，它还有指代时间单位的功能，例如通过“年前”，就可以看出其时间单位是“年”。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;value&lt;/code&gt;: 将 &lt;code&gt;suffix&lt;/code&gt; 指代的时间单位换算成秒&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;max&lt;/code&gt;: 当前时间单位的最大值，例如时间单位是“小时前”的时候，因为一天只有24小时，所以 &lt;code&gt;max&lt;/code&gt; 应当是 23，它和它的更大一级的时间单位有关。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;另外可以看到 &lt;code&gt;points&lt;/code&gt; 的元素顺序按照时间单位由大到小排序，分别是“年”，“月”，“周”等等。&lt;/p&gt;
+
+&lt;p&gt;而逻辑部分（&lt;code&gt;for&lt;/code&gt; 循环），则是逐个判断当前时间和通过参数传入的时间差和每个时间单位的商是否大于或等于 1 。如果商大于或等于 1，那么就直接对商进行处理，拼接成我们想要的结果，然后跳出循环。&lt;/p&gt;
+
+&lt;p&gt;拼接的时候取的是商和 &lt;code&gt;max&lt;/code&gt; 属性值的较小者，事实上直接取商的值就可以，但是考虑到一些特殊情况，比如本方法中以“年”为单位的时候其 &lt;code&gt;max&lt;/code&gt; 属性值为 2，其用意是当实际时间远大于“2两年前”的时候，不管是“3年前”还是“4年前”，返回的结果一律都是“2年前”。因此这里使用了商和 &lt;code&gt;max&lt;/code&gt; 属性值的较小者和 &lt;code&gt;suffix&lt;/code&gt; 进行拼接。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>教练也是十分可爱了</title>
+      <link>/2018/11/17/%E6%95%99%E7%BB%83%E4%B9%9F%E6%98%AF%E5%8D%81%E5%88%86%E5%8F%AF%E7%88%B1%E4%BA%86/</link>
+      <pubDate>Sat, 17 Nov 2018 21:39:00 +0000</pubDate>
+      
+      <guid>/2018/11/17/%E6%95%99%E7%BB%83%E4%B9%9F%E6%98%AF%E5%8D%81%E5%88%86%E5%8F%AF%E7%88%B1%E4%BA%86/</guid>
+      <description>&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=35734360&amp;cid=62689681&amp;page=1&#34; scrolling=&#34;no&#34; style=&#34;width:100%; height: 500px;&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt; &lt;/iframe&gt;</description>
+    </item>
+    
+    <item>
+      <title>为 Markdown 写作配置七牛云图床</title>
+      <link>/2018/10/12/%E4%B8%BA-markdown-%E5%86%99%E4%BD%9C%E9%85%8D%E7%BD%AE%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 12 Oct 2018 20:20:51 +0000</pubDate>
+      
+      <guid>/2018/10/12/%E4%B8%BA-markdown-%E5%86%99%E4%BD%9C%E9%85%8D%E7%BD%AE%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-this&#34;&gt;What is This&lt;/h2&gt;
+
+&lt;p&gt;使用 Markdown 写作大家带来了很大的方便，但是如何处理图片一直是个问题，这里分享一个我使用的解决方案。&lt;/p&gt;
+
+&lt;h2 id=&#34;如何使用&#34;&gt;如何使用&lt;/h2&gt;
+
+&lt;p&gt;首先要拥有一个七牛云的账号（&lt;a href=&#34;https://portal.qiniu.com/signup?code=3ln23pc0t2xci&#34;&gt;七牛云注册地址&lt;/a&gt;），然后通过 Chrome 网上应用商店安装 qiniu upload files 插件（&lt;a href=&#34;https://chrome.google.com/webstore/detail/qiniu-upload-files/emmfkgdgapbjphdolealbojmcmnphdcc?utm_source=chrome-ntp-icon&#34;&gt;点击这里进行安装&lt;/a&gt;）。&lt;/p&gt;
+
+&lt;p&gt;插件安装之后进行配置（截图如下）：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;AccessKey 和 SecretKey 可以从七牛云网站个人面板下的密钥管理界面获取&lt;/li&gt;
+&lt;li&gt;域名末尾记得加上 &lt;code&gt;/&lt;/code&gt;，否则插件生成的链接可能有问题&lt;/li&gt;
+&lt;li&gt;bucket 是创建的储存空间的名字&lt;/li&gt;
+&lt;li&gt;其他配置项可以不填&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://qiniu.wencaizhang.com/qiniu-upload-files-config.png&#34; alt=&#34;插件配置&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;可能有用的链接&#34;&gt;可能有用的链接：&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/qiniu-upload-files/emmfkgdgapbjphdolealbojmcmnphdcc?utm_source=chrome-ntp-icon&#34;&gt;qiniu upload files 插件下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://portal.qiniu.com/signup?code=3ln23pc0t2xci&#34;&gt;七牛云注册地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>小程序列表页的上拉加载</title>
+      <link>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/</link>
+      <pubDate>Sat, 06 Oct 2018 15:43:23 +0000</pubDate>
+      
+      <guid>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/</guid>
+      <description>&lt;p&gt;上拉刷新，我们可以使用 &lt;code&gt;onReachBottom()&lt;/code&gt; 方法，&lt;a href=&#34;https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#%E9%A1%B5%E9%9D%A2%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0&#34;&gt;小程序文档&lt;/a&gt;是这么说的：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;监听用户上拉触底事件。&lt;/li&gt;
+&lt;li&gt;可以在 &lt;code&gt;app.json&lt;/code&gt; 的 &lt;code&gt;window&lt;/code&gt; 选项中或页面配置中设置触发距离 &lt;code&gt;onReachBottomDistance&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在触发距离内滑动期间，本事件只会被触发一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;代码实例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;Page({
+  data: {
+    pageSize: 10,
+    currPage: 0,
+    list: []
+  },
+  onLoad () {
+    this.fetchData();
+  },
+
+  onReachBottom () {
+    this.fetchData();
+  },
+
+  fetchData () {
+    // 这个方法用于请求数据
+    
+    const self = this;
+    const { pageSize, currPage, list } = this.data;
+    
+    wx.request({
+      url: &#39;test.php&#39;, // 仅为示例，并非真实的接口地址
+      data: {
+        pageSize,
+        currPage: currPage + 1,
+      },
+      success(res) {
+        console.log(res.list)
+        self.setData({
+          list: list.concat(res.list),
+          currPage: currPage + 1
+        })
+      }
+    })
+  }
+})
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>小程序列表页的下拉刷新</title>
+      <link>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/</link>
+      <pubDate>Sat, 06 Oct 2018 15:43:23 +0000</pubDate>
+      
+      <guid>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/</guid>
+      <description>
+
+&lt;p&gt;下拉刷新，我们可以使用 &lt;code&gt;onPullDownRefresh()&lt;/code&gt; 方法，对此小程序文档是这么说的：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;需要在 app.json 的 &lt;a href=&#34;https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#window&#34;&gt;window&lt;/a&gt; 选项中或&lt;a href=&#34;https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE&#34;&gt;页面配置&lt;/a&gt;中开启 enablePullDownRefresh。&lt;/li&gt;
+&lt;li&gt;可以通过 &lt;a href=&#34;https://developers.weixin.qq.com/miniprogram/dev/api/wx.startPullDownRefresh.html&#34;&gt;&lt;code&gt;wx.startPullDownRefresh&lt;/code&gt;&lt;/a&gt; 触发下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。&lt;/li&gt;
+&lt;li&gt;当处理完数据刷新后，&lt;a href=&#34;https://developers.weixin.qq.com/miniprogram/dev/api/wx.stopPullDownRefresh.html&#34;&gt;&lt;code&gt;wx.stopPullDownRefresh&lt;/code&gt;&lt;/a&gt; 可以停止当前页面的下拉刷新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;代码实例&#34;&gt;代码实例&lt;/h3&gt;
+
+&lt;h4 id=&#34;第一步-开启-enablepulldownrefresh&#34;&gt;第一步：开启 enablePullDownRefresh&lt;/h4&gt;
+
+&lt;p&gt;配置 &lt;code&gt;app.json&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;window: {
+  enablePullDownRefresh: true,
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或者修改页面配置&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;enablePullDownRefresh&amp;quot;: true
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;第二步-监听下拉刷新事件&#34;&gt;第二步：监听下拉刷新事件&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;Page({
+  data: {
+    pageSize: 10,
+    currPage: 0,
+    list: []
+  },
+  onLoad() {
+    this.fetchData();
+  },
+
+  onPullDownRefresh() {
+    this.fetchData();
+  },
+
+  fetchData() {
+    const self = this;
+    const { pageSize, currPage, list } = this.data;
+    // 这个方法用于请求数据，
+    wx.request({
+      url: &amp;quot;test.php&amp;quot;, // 仅为示例，并非真实的接口地址
+      data: {
+        pageSize,
+        currPage: currPage + 1
+      },
+      success(res) {
+        console.log(res.data);
+        self.setData({
+          list: list.concat(res.data),
+          currPage: currPage + 1
+        });
+        // 处理完成后，终止下拉刷新
+        wx.stopPullDownRefresh();
+      }
+    });
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>小程序的传参方案</title>
+      <link>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BC%A0%E5%8F%82%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sat, 06 Oct 2018 15:43:23 +0000</pubDate>
+      
+      <guid>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BC%A0%E5%8F%82%E6%96%B9%E6%A1%88/</guid>
+      <description>
+
+&lt;h3 id=&#34;一-点击事件传参&#34;&gt;一、点击事件传参&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-通过-data-属性指定参数&#34;&gt;1. 通过 &lt;code&gt;data-*&lt;/code&gt; 属性指定参数&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;view class=&amp;quot;block&amp;quot; bindtap=&amp;quot;playTap&amp;quot; data-id=&amp;quot;{{modle.id}}&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-通过事件对象-e-获取参数&#34;&gt;2. 通过事件对象 &lt;code&gt;e&lt;/code&gt; 获取参数&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;playTap (e) {
+    const dataset = e.currentTarget.dataset;
+    console.log(dataset.id)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;二-页面跳转传参&#34;&gt;二、页面跳转传参&lt;/h3&gt;
+
+&lt;p&gt;小程序页面和普通的 html 相似，都可以通过查询字符串（例如 &lt;code&gt;?a=1&amp;amp;b=2&lt;/code&gt; 的形式）传递参数。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-通过查询字符串传参&#34;&gt;1. 通过查询字符串传参&lt;/h4&gt;
+
+&lt;p&gt;还是上面的例子，获取到 &lt;code&gt;id&lt;/code&gt; 之后，跳转到新页面并将 &lt;code&gt;id&lt;/code&gt; 传递到新页面，那么就可以这么写：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;playTap (e) {
+    const dataset = e.currentTarget.dataset;
+    console.log(dataset.id);
+    wx.navigateTo({
+        url: &#39;../play/index/?id=&#39; + dataset.id
+    })
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-在生命周期函数-onload-中获取参数&#34;&gt;2. 在生命周期函数 &lt;code&gt;onLoad&lt;/code&gt; 中获取参数：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;onLoad (options) {
+    console.log(options)
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

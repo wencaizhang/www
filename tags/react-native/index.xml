@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React Native on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/react-native/</link>
+    <description>Recent content in React Native on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Sep 2018 19:30:13 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>网络请求接口-fetch</title>
+      <link>/2018/09/30/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3-fetch/</link>
+      <pubDate>Sun, 30 Sep 2018 19:30:13 +0000</pubDate>
+      
+      <guid>/2018/09/30/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3-fetch/</guid>
+      <description>fetch 简介 最简单的 fetch 请求如下 fetch(&#39;http://example.com/movies.json&#39;) .then(function(resp) { return resp.json(); }) .then(function(data) { console.log(data); }); fetch 请求 封装 1 GET 请求 getData (url) { return fetch(url) } 2 POST 请求 以 form-data 形式提交数据 postData (url, payload) { return fetch(url, { method: &#39;POST&#39;, body: JSON.stringify(payload), headers: new Headers({ &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39; }) }) } 以 json</description>
+    </item>
+    
+  </channel>
+</rss>

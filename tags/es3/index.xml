@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Es3 on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/es3/</link>
+    <description>Recent content in Es3 on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Feb 2017 00:28:21 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/es3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Array.prototype.concat()</title>
+      <link>/oh-my-js/01-array-es3/01-array.concat/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/01-array.concat/</guid>
+      <description>描述 方法 concat() 将创建并返回一个新数组，这个方法将所有参数都添加到新数组中。它并不修改原数组 。如果要进行 concat() 操作的参数是一个数组，那么添加的是数组中</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.join()</title>
+      <link>/oh-my-js/01-array-es3/02-array.join/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/02-array.join/</guid>
+      <description>描述 所有的数组元素都被转化成字符串，再用一个分隔符将这些字符串连接起来。如果元素是 undefined 或者 null，则会被转换成空字符串。 参数 参数 描述 separator 可选。</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.pop()</title>
+      <link>/oh-my-js/01-array-es3/04-array.pop/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/04-array.pop/</guid>
+      <description>描述 从一个数组中删除并返回最后一个元素。（修改原数组） 参数 无 返回值 从数组中删除的元素（当数组为空时返回 undefined） 示例 var arr = [ 1, 2, 3</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.push()</title>
+      <link>/oh-my-js/01-array-es3/03-array.push/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/03-array.push/</guid>
+      <description>描述 将一个或多个元素添加到数组的末尾，并返回新数组的长度（对原数组进行修改） 参数 参数 描述 elementN 必需，个数为至少一个。被添加到数组末尾的元素。 返回</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.reverse()</title>
+      <link>/oh-my-js/01-array-es3/09-array.reverse/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/09-array.reverse/</guid>
+      <description>描述 reverse() 方法用于颠倒数组中元素的顺序。（修改原数组） 参数 无 返回值 返回颠倒顺序后的数组。 示例 var numbers = [1, 2, 3, 4]; numbers.reverse(); console.log(numbers); // [4, 3, 2, 1]</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.shift()</title>
+      <link>/oh-my-js/01-array-es3/05-array.shift/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/05-array.shift/</guid>
+      <description>描述 从一个数组中删除并返回第一个元素。（修改原数组） 参数 无 返回值 从数组中删除的元素（当数组为空时返回 undefined） 示例 var arr = [ 1, 2, 3 ];</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.slice()</title>
+      <link>/oh-my-js/01-array-es3/07-array.slice/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/07-array.slice/</guid>
+      <description>描述 不修改原数组，只返回一个浅复制了原数组中的元素的一个新数组。原数组的元素会按照下述规则拷贝： 如果该元素是个对象引用（不是实际的对象）， slice</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.sort()</title>
+      <link>/oh-my-js/01-array-es3/10-array.sort/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/10-array.sort/</guid>
+      <description>描述 对数组的元素进行排序，并返回数组，默认排序顺序是根据字符串 Unicode 码点。（修改原数组） 为了实现排序，sort() 方法会调用每个数组项的 toString() 方法，</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.splice()</title>
+      <link>/oh-my-js/01-array-es3/08-array.splice/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/08-array.splice/</guid>
+      <description>描述 通过删除现有元素或者添加新元素来更改一个数组的内容 参数 start 指定修改的开始位置。如果超出了数组的长度，则从数组末尾开始添加内容，如果是负值，</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.unshift()</title>
+      <link>/oh-my-js/01-array-es3/06-array.unshift/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/01-array-es3/06-array.unshift/</guid>
+      <description>描述 将一个或多个元素添加到数组的开头，并返回新数组的长度。（修改原数组） 参数 参数 描述 elementN 必需，个数为至少一个。要添加到数组开头的元素 返回值 从数</description>
+    </item>
+    
+  </channel>
+</rss>

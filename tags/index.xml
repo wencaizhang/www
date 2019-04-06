@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Sep 2018 19:30:13 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ajax</title>
+      <link>/tags/ajax/</link>
+      <pubDate>Sun, 30 Sep 2018 19:30:13 +0000</pubDate>
+      
+      <guid>/tags/ajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alias</title>
+      <link>/tags/alias/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/alias/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array</title>
+      <link>/tags/array/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Axios</title>
+      <link>/tags/axios/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/tags/axios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome 插件</title>
+      <link>/tags/chrome-%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Fri, 12 Oct 2018 20:20:51 +0000</pubDate>
+      
+      <guid>/tags/chrome-%E6%8F%92%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>/tags/code/</link>
+      <pubDate>Sun, 19 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Css</title>
+      <link>/tags/css/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Wed, 27 Feb 2019 20:28:21 +0000</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Compose</title>
+      <link>/tags/docker-compose/</link>
+      <pubDate>Wed, 27 Feb 2019 20:28:21 +0000</pubDate>
+      
+      <guid>/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Es3</title>
+      <link>/tags/es3/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/es3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Es5</title>
+      <link>/tags/es5/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/es5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Es6</title>
+      <link>/tags/es6/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/es6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fetch</title>
+      <link>/tags/fetch/</link>
+      <pubDate>Sun, 30 Sep 2018 19:30:13 +0000</pubDate>
+      
+      <guid>/tags/fetch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fun</title>
+      <link>/tags/fun/</link>
+      <pubDate>Sat, 17 Nov 2018 21:39:00 +0000</pubDate>
+      
+      <guid>/tags/fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>/tags/git/</link>
+      <pubDate>Wed, 20 Feb 2019 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gulp</title>
+      <link>/tags/gulp/</link>
+      <pubDate>Tue, 28 Nov 2017 21:30:53 +0000</pubDate>
+      
+      <guid>/tags/gulp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Fri, 14 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Js</title>
+      <link>/tags/js/</link>
+      <pubDate>Wed, 26 Dec 2018 18:20:53 +0000</pubDate>
+      
+      <guid>/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Loading</title>
+      <link>/tags/loading/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/tags/loading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>/tags/markdown/</link>
+      <pubDate>Fri, 12 Oct 2018 20:20:51 +0000</pubDate>
+      
+      <guid>/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mixins</title>
+      <link>/tags/mixins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mixins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node</title>
+      <link>/tags/node/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/tags/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object</title>
+      <link>/tags/object/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/object/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>/tags/react/</link>
+      <pubDate>Sun, 19 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React Native</title>
+      <link>/tags/react-native/</link>
+      <pubDate>Sun, 30 Sep 2018 19:30:13 +0000</pubDate>
+      
+      <guid>/tags/react-native/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regexp</title>
+      <link>/tags/regexp/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/regexp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>/tags/server/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Storage</title>
+      <link>/tags/storage/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/tags/storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>/tags/string/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/string/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tool</title>
+      <link>/tags/tool/</link>
+      <pubDate>Wed, 20 Feb 2019 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>/tags/vue/</link>
+      <pubDate>Tue, 08 Jan 2019 14:22:53 +0000</pubDate>
+      
+      <guid>/tags/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webpack</title>
+      <link>/tags/webpack/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/tags/webpack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>去重</title>
+      <link>/tags/%E5%8E%BB%E9%87%8D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E5%8E%BB%E9%87%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>图床</title>
+      <link>/tags/%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 12 Oct 2018 20:20:51 +0000</pubDate>
+      
+      <guid>/tags/%E5%9B%BE%E5%BA%8A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>小程序</title>
+      <link>/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Sat, 06 Oct 2018 15:43:23 +0000</pubDate>
+      
+      <guid>/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>微码</title>
+      <link>/tags/%E5%BE%AE%E7%A0%81/</link>
+      <pubDate>Thu, 22 Feb 2018 00:28:21 +0000</pubDate>
+      
+      <guid>/tags/%E5%BE%AE%E7%A0%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>排序</title>
+      <link>/tags/%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Wed, 26 Dec 2018 18:20:53 +0000</pubDate>
+      
+      <guid>/tags/%E6%8E%92%E5%BA%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数组</title>
+      <link>/tags/%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E6%95%B0%E7%BB%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>时间戳</title>
+      <link>/tags/%E6%97%B6%E9%97%B4%E6%88%B3/</link>
+      <pubDate>Fri, 14 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/tags/%E6%97%B6%E9%97%B4%E6%88%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>视频</title>
+      <link>/tags/%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Sat, 17 Nov 2018 21:39:00 +0000</pubDate>
+      
+      <guid>/tags/%E8%A7%86%E9%A2%91/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

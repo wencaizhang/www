@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数组 on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/%E6%95%B0%E7%BB%84/</link>
+    <description>Recent content in 数组 on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JS 数组去重</title>
+      <link>/1/01/01/js-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/js-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</guid>
+      <description>利用 ES6 的新特性 function uniq (arr) { return [...new Set(arr)] }</description>
+    </item>
+    
+  </channel>
+</rss>

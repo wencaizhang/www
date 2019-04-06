@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/css/</link>
+    <description>Recent content in Css on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Dec 2018 10:51:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>按钮添加一个类名自动变loading动画版</title>
+      <link>/2018/12/13/%E6%8C%89%E9%92%AE%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%90%8D%E8%87%AA%E5%8A%A8%E5%8F%98loading%E5%8A%A8%E7%94%BB%E7%89%88/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/%E6%8C%89%E9%92%AE%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%90%8D%E8%87%AA%E5%8A%A8%E5%8F%98loading%E5%8A%A8%E7%94%BB%E7%89%88/</guid>
+      <description>有了下面的 css 代码，给任意的标签（button、a、span等等）加上一个类名 spin-loading，就能使标签自动变成 loading 状态，方便快捷效果</description>
+    </item>
+    
+  </channel>
+</rss>

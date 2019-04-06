@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/git/</link>
+    <description>Recent content in Git on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Feb 2019 00:28:21 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 docker 安装 Jenkins</title>
+      <link>/2019/02/20/%E4%BD%BF%E7%94%A8-docker-%E5%AE%89%E8%A3%85-jenkins/</link>
+      <pubDate>Wed, 20 Feb 2019 00:28:21 +0000</pubDate>
+      
+      <guid>/2019/02/20/%E4%BD%BF%E7%94%A8-docker-%E5%AE%89%E8%A3%85-jenkins/</guid>
+      <description>使用 docker 安装 Jenkins： docker run \ -u root \ --rm \ -d \ -p 8080:8080 \ -p 50000:50000 \ -v jenkins-data:/var/jenkins_home \ -v /var/run/docker.sock:/var/run/docker.sock \ jenkinsci/blueocean 安装成功之后进入设置向导（访问 域名:8080），需要输入密码来解锁 J</description>
+    </item>
+    
+    <item>
+      <title>Git远程仓库</title>
+      <link>/2018/12/29/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Sat, 29 Dec 2018 00:28:21 +0000</pubDate>
+      
+      <guid>/2018/12/29/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+      <description>远程仓库 远程仓库是存在于提供 git 版本管理功能的远程服务器的仓库，每个人都将代码提及到远程仓库，并从远程仓库获取最新代码。 查看远程仓库 git remote 查看远</description>
+    </item>
+    
+    <item>
+      <title>Git 乱码</title>
+      <link>/2017/02/20/git-%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git-%E4%B9%B1%E7%A0%81/</guid>
+      <description>在 Linux 如果要提交的文件名是中文的，使用 git status 或者 git commit 的时候就会把中文显示为一串数字如下： create mode 100644 &amp;quot;\346\265\213\350\257\225&amp;quot; 解决方案 此时只需要添加相应的配置即可显示正常的中</description>
+    </item>
+    
+    <item>
+      <title>Git 拉取代码</title>
+      <link>/2017/02/20/git-%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git-%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
+      <description>第一种方法：直接 clone 假设代码库的 git 地址为 https://example.git git clone https://example.git 如果想要指定代码库的文件夹名字，可以在命令后面加上目录名 git clone https://example.git dirname 第二种方法：本地存在的目录关联</description>
+    </item>
+    
+    <item>
+      <title>Git基本工作流程</title>
+      <link>/2017/02/20/git%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/</guid>
+      <description>代码仓库已经存在 拉取代码： git pull &amp;lt;git-repo-url&amp;gt; 修改代码，不多说。 暂存 git add . 提交本地仓库 git commit 推送远程仓库 git push</description>
+    </item>
+    
+    <item>
+      <title>Git子模块</title>
+      <link>/2017/02/20/git%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
+      <description>添加子模块 git submodule add url@git 克隆含有子模块的项目 克隆一个含有子模块的项目时，默认会包含该子模块目录，但其中还没有任何文件： $ git clone url@git 使用 --recursive 参数，它就会自</description>
+    </item>
+    
+    <item>
+      <title>Git最佳实践</title>
+      <link>/2017/02/20/git%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>一、git 最佳实践的理论基础 参照英文原版 [A successful Git branching model]() 或者中文翻译 基于git的源代码管理模型——git flow 来理解整个版本管理的流程。 版本管理流程模</description>
+    </item>
+    
+    <item>
+      <title>git branch --set-upstream 本地分支关联远程分支</title>
+      <link>/2017/02/20/git-branch-set-upstream-%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git-branch-set-upstream-%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF/</guid>
+      <description>在创建新分支后，使用 git pull 的时候多次碰见下面的情况： git pull 命令并未更新代码，而是打印出了这么一段文字。 There is no tracking information for the current branch. Please specify which branch you want to merge with. See git-pull(1) for</description>
+    </item>
+    
+    <item>
+      <title>临时切换分支</title>
+      <link>/2017/02/20/%E4%B8%B4%E6%97%B6%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E4%B8%B4%E6%97%B6%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF/</guid>
+      <description>问题场景 项目发布上线之后，除了正常的迭代更新（release 分支）之外，还需要随时修复发生的重大 bug（hotfix 分支）。 Useful Link 3 Git 工具 - 储</description>
+    </item>
+    
+    <item>
+      <title>修改commit信息</title>
+      <link>/2017/02/20/%E4%BF%AE%E6%94%B9commit%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E4%BF%AE%E6%94%B9commit%E4%BF%A1%E6%81%AF/</guid>
+      <description>amend: vi.&amp;amp;vt. 修改，修订。 如果要修改最近一次 commit 信息，且这次 commit 尚未 push 到远程，可以通过参数 --amend 直接进行修改： git commit --amend -m &amp;quot;your message&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>分支</title>
+      <link>/2017/02/20/%E5%88%86%E6%94%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E5%88%86%E6%94%AF/</guid>
+      <description>一、查看分支： 1. 查看本地分支 没有参数，列出本地已经存在的分支，当前分支的分支名前会有“*”号。 git branch 2. 查看远程分支 git branch -r 3. 查看本地和远程的分支</description>
+    </item>
+    
+    <item>
+      <title>常用命令</title>
+      <link>/2017/02/20/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>设置用户名和邮箱 设置用户名 git config --global user.name &amp;quot;your name&amp;quot; 设置用户邮箱 git config --global user.email &amp;quot;your email&amp;quot; 查看用户名 git config user.name 查看邮箱 git config user.email 设置代理 设置代理 git config --global http.proxy http://demo.com:8080 查看代理 git config --global --get --global http.proxy 取</description>
+    </item>
+    
+    <item>
+      <title>查看修改和撤销修改</title>
+      <link>/2017/02/20/%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E5%92%8C%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E5%92%8C%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9/</guid>
+      <description>一、已修改，未暂存 （1）查看修改 只是简单的进行了文件修改，但是还没有做 git add 之前，希望检查一下做了哪些修改： git diff 如果只想要检查某个文件做了哪些</description>
+    </item>
+    
+    <item>
+      <title>查看提交记录</title>
+      <link>/2017/02/20/%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/</guid>
+      <description>1. 查看某个文件的提交记录 修改还未提交到暂存区的时候： git diff &amp;lt;filename&amp;gt; 提交到暂存区之后： git diff --cache &amp;lt;filename&amp;gt; 或者 git diff --staged &amp;lt;filename&amp;gt; commit 之后： git log -p &amp;lt;filename&amp;gt; 2. 查看某人的提交记录 git log --stat --author=someone</description>
+    </item>
+    
+    <item>
+      <title>标签</title>
+      <link>/2017/02/20/%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E6%A0%87%E7%AD%BE/</guid>
+      <description>一、查看标签： 标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到</description>
+    </item>
+    
+    <item>
+      <title>记住密码</title>
+      <link>/2017/02/20/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81/</guid>
+      <description>方法一：使用命令 git config --global credential.helper store 如果没有 --global 参数，则在当前项目下的 .git/config 文件中添加。 方法二：修改配置 在 Git 的配置文件 .gitconfig 里面会有你先前配好的 name 和 email，</description>
+    </item>
+    
+  </channel>
+</rss>

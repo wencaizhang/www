@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  <meta name="description" content="Hugo theme ehlxr example site.">
+  <meta name="keywords" content="[Hugo theme ehlxr]">
+  
+  <link rel="prev" href="/oh-my-js/06-regexp/01-regexp.lastindex/" />
+  <link rel="next" href="/oh-my-js/06-regexp/00-regexp/" />
+  <link rel="canonical" href="/oh-my-js/06-regexp/100-regexp-demos/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <title>
+       
+       
+           正则表达式使用案例 | Ehlxr - A responsive and simple theme for Hugo
+       
+  </title>
+  <style>
+
+ 
+.navbar {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
+ 
+
+.post-toc {
+
+position: fixed;
+
+width: 200px;
+
+margin-left: 800px;
+
+padding: 10px;
+padding-left: 0;
+
+word-wrap: break-word;
+
+box-sizing: border-box;
+border-left: 1px solid #ccc;
+
+}
+
+.post-toc .post-toc-title {
+
+margin: 0;
+
+font-weight: 400;
+
+text-transform: uppercase;
+
+}
+
+.post-toc .post-toc-content.always-active ul {
+
+display: block;
+
+}
+
+ 
+
+.post-toc .post-toc-content ul {
+
+padding-left: 0;
+
+list-style: none;
+
+}
+
+.post-toc .post-toc-content ul {
+
+padding-left: 15px;
+
+display: none;
+
+}
+
+.post-toc .post-toc-content .has-active > ul {
+
+display: block;
+
+}
+
+.post-toc .post-toc-content a:hover {
+
+color: #c05b4d;
+
+}
+
+.post-toc .post-toc-content a {
+
+display: block;
+
+line-height: 30px;
+
+overflow: hidden;
+
+white-space: nowrap;
+
+text-overflow: ellipsis;
+
+-webkit-transition-duration: .2s;
+
+transition-duration: .2s;
+
+-webkit-transition-property: -webkit-transform;
+
+transition-property: -webkit-transform;
+
+transition-property: transform;
+
+transition-property: transform, -webkit-transform;
+
+-webkit-transition-timing-function: ease-out;
+
+transition-timing-function: ease-out;
+
+
+}
+
+@media only screen and (max-width: 1224px) {
+
+.post-toc {
+
+display: none;
+
+}
+
+}
+
+.article-active {
+  
+color: #c05b4d;
+
+}
+
+.post-toc ul li.article-active {
+    border-left: 0.01rem solid #326DE6;
+    padding-left: 0.1rem;
+}
+.post-toc ul li.article-active a {
+    color: #326DE6;
+    position: relative;
+}
+
+  </style>
+
+  <meta name="title" content="正则表达式使用案例 | Ehlxr - A responsive and simple theme for Hugo">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "oh-my-js",
+    "name" : "正则表达式使用案例",
+    "headline" : "正则表达式使用案例",
+    "description" : "隐藏手机号码中间 4 位数字： 前三位数字：^(\d{3}) 中间 4 位数字：\d{4} 最后 4 位数字：(\d{4})$ 子表达式：() 中的内容是一个子表",
+    "inLanguage" : "en",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-02-20 00:28:21 &#43;0000 UTC",
+    "dateModified" : "2017-02-20 00:28:21 &#43;0000 UTC",
+    "url" : "/oh-my-js/06-regexp/100-regexp-demos/",
+    "wordCount" : "708",
+    "keywords" : [ "js","regexp", "Ehlxr - A responsive and simple theme for Hugo"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <style>
+.docs-menu{
+  position: absolute;
+  border-right: 0.01rem solid #dadada;
+}
+.docs-menu .dd-item {
+  list-style: none;
+  line-height: 3;
+}
+.docs-menu .dd-item.active>div {
+  background-color: #e6f7ff;
+  border-right: 3px solid #1890ff;
+  padding-right: 0.03rem;
+}
+.docs-menu .dd-item.active>div>a {
+    color: #5CC2F2;
+}
+      </style>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div id="container" class="container">
+
+
+
+<div class="docs-menu">
+      
+      <li data-nav-id="/oh-my-js/" class="dd-item parent haschildren">
+          <ul class="none">
+      
+      <li data-nav-id="/oh-my-js/01-array-es3/" class="dd-item haschildren">
+              <div style='padding-left: 0.32rem;'>
+                  <a href="/oh-my-js/01-array-es3/">Array-ES3</a>
+              <i class="iconfont caret-right icon-arrow-down"></i>
+              </div>
+          <ul class="none">
+      <li data-nav-id="/oh-my-js/01-array-es3/01-array.concat/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/01-array.concat/">
+              Array.prototype.concat()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/02-array.join/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/02-array.join/">
+              Array.prototype.join()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/04-array.pop/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/04-array.pop/">
+              Array.prototype.pop()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/03-array.push/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/03-array.push/">
+              Array.prototype.push()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/09-array.reverse/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/09-array.reverse/">
+              Array.prototype.reverse()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/05-array.shift/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/05-array.shift/">
+              Array.prototype.shift()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/07-array.slice/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/07-array.slice/">
+              Array.prototype.slice()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/10-array.sort/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/10-array.sort/">
+              Array.prototype.sort()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/08-array.splice/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/08-array.splice/">
+              Array.prototype.splice()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/01-array-es3/06-array.unshift/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/01-array-es3/06-array.unshift/">
+              Array.prototype.unshift()
+          </a>
+          </div>
+      </li>
+          </ul>
+      </li>
+      
+      <li data-nav-id="/oh-my-js/02-array-es5/" class="dd-item haschildren">
+              <div style='padding-left: 0.32rem;'>
+                  <a href="/oh-my-js/02-array-es5/">Array-ES3</a>
+              <i class="iconfont caret-right icon-arrow-down"></i>
+              </div>
+          <ul class="none">
+      <li data-nav-id="/oh-my-js/02-array-es5/10-array.isarray/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/10-array.isarray/">
+              Array.isArray()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/05-array.every/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/05-array.every/">
+              Array.prototype.every()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/03-array.filter/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/03-array.filter/">
+              Array.prototype.filter()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/01-array.foreach/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/01-array.foreach/">
+              Array.prototype.forEach()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/06-array.indexof/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/06-array.indexof/">
+              Array.prototype.indexOf()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/07-array.lastindexof/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/07-array.lastindexof/">
+              Array.prototype.lastIndexOf()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/02-array.map/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/02-array.map/">
+              Array.prototype.map()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/08-array.reduce/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/08-array.reduce/">
+              Array.prototype.reduce()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/09-array.reduceright/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/09-array.reduceright/">
+              Array.prototype.reduceRight()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/02-array-es5/04-array.some/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/02-array-es5/04-array.some/">
+              Array.prototype.some()
+          </a>
+          </div>
+      </li>
+          </ul>
+      </li>
+      
+      <li data-nav-id="/oh-my-js/03-array-es6/" class="dd-item haschildren">
+              <div style='padding-left: 0.32rem;'>
+                  <a href="/oh-my-js/03-array-es6/">Array-ES3</a>
+              <i class="iconfont caret-right icon-arrow-down"></i>
+              </div>
+          <ul class="none">
+      <li data-nav-id="/oh-my-js/03-array-es6/02-array.of/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/02-array.of/">
+              Array.of()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/04-array.find/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/04-array.find/">
+              Array.prototype.find()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/10-array.includes/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/10-array.includes/">
+              Array.prototype.includes()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/01-array.from/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/01-array.from/">
+              Array.prototype.xxx()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/03-array.copywithin/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/03-array.copywithin/">
+              Array.prototype.xxx()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/05-array.findindex/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/05-array.findindex/">
+              Array.prototype.xxx()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/06-array.fill/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/06-array.fill/">
+              Array.prototype.xxx()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/07-array.entries/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/07-array.entries/">
+              Array.prototype.xxx()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/08-array.keys/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/08-array.keys/">
+              Array.prototype.xxx()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/03-array-es6/09-array.values/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/03-array-es6/09-array.values/">
+              Array.prototype.xxx()
+          </a>
+          </div>
+      </li>
+          </ul>
+      </li>
+      
+      <li data-nav-id="/oh-my-js/04-string/" class="dd-item haschildren">
+              <div style='padding-left: 0.32rem;'>
+                  <a href="/oh-my-js/04-string/">Array-ES3</a>
+              <i class="iconfont caret-right icon-arrow-down"></i>
+              </div>
+          <ul class="none">
+      <li data-nav-id="/oh-my-js/04-string/001-string.tolowercase/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/04-string/001-string.tolowercase/">
+              String.prototype.toLowerCase()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/04-string/002-string.touppercase/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/04-string/002-string.touppercase/">
+              String.prototype.toUpperCase()
+          </a>
+          </div>
+      </li>
+          </ul>
+      </li>
+      
+      <li data-nav-id="/oh-my-js/05-object/" class="dd-item haschildren">
+              <div style='padding-left: 0.32rem;'>
+                  <a href="/oh-my-js/05-object/">Array-ES3</a>
+              <i class="iconfont caret-right icon-arrow-down"></i>
+              </div>
+          <ul class="none">
+      <li data-nav-id="/oh-my-js/05-object/05-object.assign/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/05-object/05-object.assign/">
+              Object.assign()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/05-object/07-object.defineproperty/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/05-object/07-object.defineproperty/">
+              Object.defineProperty()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/05-object/04-object.entries/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/05-object/04-object.entries/">
+              Object.entries()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/05-object/06-object.is/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/05-object/06-object.is/">
+              Object.is()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/05-object/02-object.keys/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/05-object/02-object.keys/">
+              Object.keys()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/05-object/01-hasownproperty/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/05-object/01-hasownproperty/">
+              Object.prototype.hasOwnProperty()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/05-object/03-object.values/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/05-object/03-object.values/">
+              Object.values()
+          </a>
+          </div>
+      </li>
+          </ul>
+      </li>
+      
+      <li data-nav-id="/oh-my-js/06-regexp/" class="dd-item parent haschildren">
+              <div style='padding-left: 0.32rem;'>
+                  <a href="/oh-my-js/06-regexp/">Array-ES3</a>
+              
+                  <i class="iconfont caret-down icon-arrow-up"></i>
+              </div>
+          <ul class="none">
+      <li data-nav-id="/oh-my-js/06-regexp/03-regexp.exec/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/03-regexp.exec/">
+              Regexp.prototype.exec()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/02-regexp.test/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/02-regexp.test/">
+              Regexp.prototype.test()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/05-string.prototype.match/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/05-string.prototype.match/">
+              String.prototype.match()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/06-string.prototype.replace/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/06-string.prototype.replace/">
+              String.prototype.replace()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/04-string.prototype.search/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/04-string.prototype.search/">
+              String.prototype.search()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/07-string.prototype.split/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/07-string.prototype.split/">
+              String.prototype.split()
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/00-regexp/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/00-regexp/">
+              正则表达式
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/100-regexp-demos/" class="dd-item active">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/100-regexp-demos/">
+              正则表达式使用案例
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/01-regexp.lastindex/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/01-regexp.lastindex/">
+              正则表达式的 lastIndex 属性
+          </a>
+          </div>
+      </li>
+      <li data-nav-id="/oh-my-js/06-regexp/0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%A2%84%E6%9F%A5/" class="dd-item">
+          <div style='padding-left: 0.48rem;'>
+          <a href="/oh-my-js/06-regexp/0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%A2%84%E6%9F%A5/">
+              正则表达式预查
+          </a>
+          </div>
+      </li>
+          </ul>
+      </li>
+          </ul>
+      </li>
+
+
+</div>
+
+
+              
+              <article class="post-warp" itemscope itemtype="http://schema.org/Article">
+                  <header class="post-header">
+                      <h1 class="post-title" itemprop="name headline">正则表达式使用案例</h1>
+                      <div class="post-meta">
+                              Written by <a itemprop="name" href="/" rel="author"></a> with ♥ 
+                              <span class="post-time">
+                              on <time datetime=2017-02-20 itemprop="datePublished">2017-02-20</time>
+                              </span>
+                              in
+                              
+                      </div>
+                  </header>
+              
+                  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title"></h2>
+    
+    <div class="post-toc-content always-active">
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#隐藏手机号码中间-4-位数字">隐藏手机号码中间 4 位数字：</a></li>
+<li><a href="#判断字符串是否为数字">判断字符串是否为数字</a></li>
+<li><a href="#汉字">汉字</a></li>
+<li><a href="#取出指定字符">取出指定字符</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+  </div>
+  
+   <script type="text/javascript">
+    window.onload = function () {
+      var fix = $('.post-toc');
+      var end = $('.post-comment');
+      var fixTop = fix.offset().top, fixHeight = fix.height();
+      var endTop, miss;
+      var offsetTop = fix[0].offsetTop;
+       $(window).scroll(function () {
+        var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+         if (end.length > 0) {
+          endTop = end.offset().top;
+          miss = endTop - docTop - fixHeight;
+        }
+         if (fixTop < docTop) {
+          fix.css({ 'position': 'fixed' });
+          if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+            fix.css({ top: miss });
+          } else {
+            fix.css({ top: 0 });
+          }
+        } else {
+          fix.css({ 'position': 'absolute' });
+          fix.css({ top: offsetTop });
+        }
+      })
+    }
+  </script> 
+              
+                  <div class="post-content">
+                      
+              
+                      
+              
+                      
+                      
+                   
+                        
+                        
+                        
+              
+                        
+                        
+                        
+              
+                        
+
+<h2 id="隐藏手机号码中间-4-位数字">隐藏手机号码中间 4 位数字：</h2>
+
+<ul>
+<li>前三位数字：<code>^(\d{3})</code></li>
+<li>中间 4 位数字：<code>\d{4}</code></li>
+<li>最后 4 位数字：<code>(\d{4})$</code></li>
+<li>子表达式：<code>()</code> 中的内容是一个子表达式，<code>$1</code> 表示第一个子表达式，<code>$2</code> 表示第二个子表达式，依次类推。</li>
+</ul>
+
+<pre><code class="language-js">var str = '18012345678'
+var newStr = str.replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2')
+console.log(newStr)  // 180****5678
+</code></pre>
+
+<h2 id="判断字符串是否为数字">判断字符串是否为数字</h2>
+
+<p>要考虑的问题：</p>
+
+<ul>
+<li>数字有正负</li>
+<li>数字有整数和小数之分</li>
+<li>特殊数字 <code>0</code></li>
+</ul>
+
+<p>进一步分析：</p>
+
+<ul>
+<li>正负：以 <code>-</code> 开头为负数，直接以数字开头为正数，因此可以确定正则开头部分为 <code>/^-?/</code>；</li>
+<li>整数：整数的第一位应当是大于 0 的数字，如果是多位整数，则后面几位数字范围是 <code>0-9</code> ，对应的正则为 <code>/[1-9][0-9]*$/</code></li>
+<li>小数：小数有整数部分和小数部分，通过小数点 <code>.</code> 分隔开。通过上面分析，整数部分应该是 <code>/[1-9][0-9]*/</code> 。而小数点需转义为 <code>/\./</code> 。小数部分可以全为 <code>0</code> ，如 <code>10.00</code> ，因此小数部分无需过多限制，对应的正则为 <code>/[0-9]+/</code> 。</li>
+<li><code>0</code>：对应的正则是 <code>/0/</code> 。</li>
+</ul>
+
+<p>整数、小数、<code>0</code> 三种情况的逻辑关系为“或”，因此需要将他们使用 <code>|</code> 连接合并起来:</p>
+
+<pre><code class="language-js">var regNum = /(^-?[1-9][0-9]*$)|(^-?[1-9][0-9]*\.[0-9]+)|(^-?0$)/
+</code></pre>
+
+<p>另外，元字符 <code>\d</code> 等价于 <code>[0-9]</code>，上面正则也可以写成这样：</p>
+
+<pre><code class="language-js">var regNum = /(^-?[1-9]\d*$)|(^-?[1-9]\d*\.\d+)|(^-?0$)/
+</code></pre>
+
+<h2 id="汉字">汉字</h2>
+
+<p>只能是中文 最少输入两个字</p>
+
+<pre><code class="language-js">var reg = /^([\u4e00-\u9fa5]){2,}$/
+
+reg.test('哈哈的'); // true
+
+reg.test('哈'); // false
+
+</code></pre>
+
+<h2 id="取出指定字符">取出指定字符</h2>
+
+<p>有这样一个字符串，穿插着“【男播】”、“【女播】”、“【正文】”、“同期声”、“【CLIP】”五个随机出现的词组，现在需要对这个字符串进行一些操作。</p>
+
+<p>提取“【男播】”与下一个相邻词组之间的内容：</p>
+
+<pre><code class="language-js">var str = &quot;【男播】aaa【男播】bbb【女播】ccc【正文】ddd【同期声】ccc【CLIP】ddd【男播】eee【女播】fff【男播】ggg&quot;;
+var reg = /男播】([^【]*)【|男播】([^【]*)$/gi;
+var arr = [];
+str.replace(reg, function (match, $1, $2) {
+    $1 ? arr.push($1) : '';
+    $2 ? arr.push($2) : '';
+})
+var result = arr.join(' ');
+console.log(result);
+</code></pre>
+
+                  </div>
+              
+                  <div class="post-copyright">
+                          
+                         
+                           
+                          <p class="copyright-item">
+                                  <span>Link:</span>
+                                  <a href=/oh-my-js/06-regexp/100-regexp-demos/>/oh-my-js/06-regexp/100-regexp-demos/</span>
+                          </p>
+                          
+                          
+                  </div>
+              
+                
+                  <div class="post-tags">
+                      
+                          <section>
+                          <i class="iconfont icon-tag"></i>Tag(s): 
+                          
+                          <span class="tag"><a href="/tags/js/">
+                                  #js</a></span>
+                          
+                          <span class="tag"><a href="/tags/regexp/">
+                                  #regexp</a></span>
+                          
+                          </section>
+                      
+                      <section>
+                              <a href="javascript:window.history.back();">back</a></span> · 
+                              <span><a href="/">home</a></span>
+                      </section>
+                  </div>
+              
+                  <div class="post-nav">
+                      
+                      <a href="/oh-my-js/06-regexp/01-regexp.lastindex/" class="prev" rel="prev" title="正则表达式的 lastIndex 属性"><i class="iconfont icon-left"></i>&nbsp;正则表达式的 lastIndex 属性</a>
+                       
+                      
+                      <a href="/oh-my-js/06-regexp/00-regexp/" class="next" rel="next" title="正则表达式">正则表达式&nbsp;<i class="iconfont icon-right"></i></a>
+                      
+                  </div>
+              
+                  <div class="post-comment">
+                        
+                               
+                        
+                  </div>
+              </article>
+
+
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+  $(function () {
+      $(document).pjax('a', '#container', { fragment: '#container' })
+
+      $(document).on('pjax:send', function() {
+          NProgress.start();
+      })
+      $(document).on('pjax:complete', function() {
+          NProgress.done();
+      })
+  })
+</script>
+<script>
+
+
+function highLightPostNav () {
+    var articlenav = $('.post-toc li');
+    var className = 'article-active';
+    articlenav.removeClass(className);
+    $("h1,h2,h3").each(function () {
+        var dis = $(this).offset().top - $(window).scrollTop();
+        if (dis < 120) {
+            articlenav.removeClass(className);
+            var currentId = $(this).attr('id');
+            $('[href="#' + currentId + '"').parent().addClass(className);
+        }
+    })
+}
+if ($(window).width() >= 768) {
+    highLightPostNav();
+    $(window).scroll(function () {
+        highLightPostNav();
+    });
+}
+  
+  
+  </script>
+     </div>
+  </body>
+</html>

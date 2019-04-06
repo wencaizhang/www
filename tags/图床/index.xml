@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图床 on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <description>Recent content in 图床 on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Oct 2018 20:20:51 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为 Markdown 写作配置七牛云图床</title>
+      <link>/2018/10/12/%E4%B8%BA-markdown-%E5%86%99%E4%BD%9C%E9%85%8D%E7%BD%AE%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 12 Oct 2018 20:20:51 +0000</pubDate>
+      
+      <guid>/2018/10/12/%E4%B8%BA-markdown-%E5%86%99%E4%BD%9C%E9%85%8D%E7%BD%AE%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</guid>
+      <description>What is This 使用 Markdown 写作大家带来了很大的方便，但是如何处理图片一直是个问题，这里分享一个我使用的解决方案。 如何使用 首先要拥有一个七牛云的账号（七牛云</description>
+    </item>
+    
+  </channel>
+</rss>

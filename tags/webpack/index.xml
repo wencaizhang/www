@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webpack on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/webpack/</link>
+    <description>Recent content in Webpack on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Nov 2017 20:20:53 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决 Invalid Host header 问题</title>
+      <link>/2017/11/24/%E8%A7%A3%E5%86%B3-invalid-host-header-%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E8%A7%A3%E5%86%B3-invalid-host-header-%E9%97%AE%E9%A2%98/</guid>
+      <description>执行命令 npm run dev 启动本地服务器之后，发现只能在本地访问，不能通过局域网ip和服务器域名来访问。 在项目的根目录的 package.json 文件中的 dev 命令字段中添加 --host 19</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in Docker on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Feb 2019 20:28:21 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>docker 和 docker-compose 的安装</title>
+      <link>/2019/02/27/docker-%E5%92%8C-docker-compose-%E7%9A%84%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 27 Feb 2019 20:28:21 +0000</pubDate>
+      
+      <guid>/2019/02/27/docker-%E5%92%8C-docker-compose-%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
+      <description>docker 安装 直接执行脚本即可： curl -fsSL https://get.docker.com -o get-docker.sh &amp;amp;&amp;amp; sudo sh get-docker.sh 查看Docker的版本 docker version 安装 docker-compose 直接执行脚本即可： curl -L &amp;quot;https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)&amp;quot; -o /usr/local/bin/docker-compose 安装完成之后设置权限 chmod +x /usr/local/bin/docker-compose 查看Do</description>
+    </item>
+    
+  </channel>
+</rss>

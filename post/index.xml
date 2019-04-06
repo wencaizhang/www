@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Feb 2019 20:28:21 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>docker 和 docker-compose 的安装</title>
+      <link>/2019/02/27/docker-%E5%92%8C-docker-compose-%E7%9A%84%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 27 Feb 2019 20:28:21 +0000</pubDate>
+      
+      <guid>/2019/02/27/docker-%E5%92%8C-docker-compose-%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
+      <description>docker 安装 直接执行脚本即可： curl -fsSL https://get.docker.com -o get-docker.sh &amp;amp;&amp;amp; sudo sh get-docker.sh 查看Docker的版本 docker version 安装 docker-compose 直接执行脚本即可： curl -L &amp;quot;https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)&amp;quot; -o /usr/local/bin/docker-compose 安装完成之后设置权限 chmod +x /usr/local/bin/docker-compose 查看Do</description>
+    </item>
+    
+    <item>
+      <title>使用 docker 安装 Jenkins</title>
+      <link>/2019/02/20/%E4%BD%BF%E7%94%A8-docker-%E5%AE%89%E8%A3%85-jenkins/</link>
+      <pubDate>Wed, 20 Feb 2019 00:28:21 +0000</pubDate>
+      
+      <guid>/2019/02/20/%E4%BD%BF%E7%94%A8-docker-%E5%AE%89%E8%A3%85-jenkins/</guid>
+      <description>使用 docker 安装 Jenkins： docker run \ -u root \ --rm \ -d \ -p 8080:8080 \ -p 50000:50000 \ -v jenkins-data:/var/jenkins_home \ -v /var/run/docker.sock:/var/run/docker.sock \ jenkinsci/blueocean 安装成功之后进入设置向导（访问 域名:8080），需要输入密码来解锁 J</description>
+    </item>
+    
+    <item>
+      <title>vue中父级组件通过Prop向自组件传递数据</title>
+      <link>/2019/01/08/vue%E4%B8%AD%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87prop%E5%90%91%E8%87%AA%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Tue, 08 Jan 2019 14:22:53 +0000</pubDate>
+      
+      <guid>/2019/01/08/vue%E4%B8%AD%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87prop%E5%90%91%E8%87%AA%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/</guid>
+      <description>Props 以按钮组件 &amp;lt;g-button&amp;gt; 的 disabled 属性为例： &amp;lt;template&amp;gt; &amp;lt;button :disabled=&amp;quot;disabled&amp;quot;&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; export default { props: { disabled: { type: Boolean, default: false }, } } &amp;lt;/script&amp;gt; 在某父组件中使用该按钮组件： &amp;lt;template&amp;gt; &amp;lt;div&amp;gt; &amp;lt;a-button disabled&amp;gt;Primary&amp;lt;/a-button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; 按钮组件中定义了是否禁用 disabled 属性，</description>
+    </item>
+    
+    <item>
+      <title>Git远程仓库</title>
+      <link>/2018/12/29/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Sat, 29 Dec 2018 00:28:21 +0000</pubDate>
+      
+      <guid>/2018/12/29/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+      <description>远程仓库 远程仓库是存在于提供 git 版本管理功能的远程服务器的仓库，每个人都将代码提及到远程仓库，并从远程仓库获取最新代码。 查看远程仓库 git remote 查看远</description>
+    </item>
+    
+    <item>
+      <title>在命令行中直接打开项目的 GitHub 页面</title>
+      <link>/2018/12/28/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84-github-%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Fri, 28 Dec 2018 21:24:53 +0000</pubDate>
+      
+      <guid>/2018/12/28/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E7%9A%84-github-%E9%A1%B5%E9%9D%A2/</guid>
+      <description>在命令行中直接打开项目的 GitHub 页面 用法 git open [remote-name] [branch-name] git-open 命令支持我们常用的 GitHub 和 GitLab，以及公司和个人自行搭建的 GitLab。另外，国内的码云也是支</description>
+    </item>
+    
+    <item>
+      <title>ElementUI（Vue）中按照百分比对表格排序</title>
+      <link>/2018/12/26/elementuivue%E4%B8%AD%E6%8C%89%E7%85%A7%E7%99%BE%E5%88%86%E6%AF%94%E5%AF%B9%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Wed, 26 Dec 2018 18:20:53 +0000</pubDate>
+      
+      <guid>/2018/12/26/elementuivue%E4%B8%AD%E6%8C%89%E7%85%A7%E7%99%BE%E5%88%86%E6%AF%94%E5%AF%B9%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F/</guid>
+      <description>首先，Element Vue 的表格组件支持排序功能，并且支持自定义排序。 然后，需求是让表格可以按照某一列（百分比）排序。 因为默认提供的排序功能实际</description>
+    </item>
+    
+    <item>
+      <title>将时间戳转换为格式化日期</title>
+      <link>/2018/12/14/%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Fri, 14 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/14/%E5%B0%86%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F/</guid>
+      <description>timestamp 缺省表示使用当前时间戳，formats 默认格式是 YYYY-MM-DD HH:mm:ss，例如 2000-01-01 12:00:00。 /* * 时间戳转换成指定格式日期 * eg. * dateFormat(11111111111111, &#39;YYYY</description>
+    </item>
+    
+    <item>
+      <title>anywhere使用笔记</title>
+      <link>/2018/12/13/anywhere%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/anywhere%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>随时随地将你的当前目录变成一个静态文件服务器的根目录 场景 某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想</description>
+    </item>
+    
+    <item>
+      <title>按钮添加一个类名自动变loading动画版</title>
+      <link>/2018/12/13/%E6%8C%89%E9%92%AE%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%90%8D%E8%87%AA%E5%8A%A8%E5%8F%98loading%E5%8A%A8%E7%94%BB%E7%89%88/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/%E6%8C%89%E9%92%AE%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%B1%BB%E5%90%8D%E8%87%AA%E5%8A%A8%E5%8F%98loading%E5%8A%A8%E7%94%BB%E7%89%88/</guid>
+      <description>有了下面的 css 代码，给任意的标签（button、a、span等等）加上一个类名 spin-loading，就能使标签自动变成 loading 状态，方便快捷效果</description>
+    </item>
+    
+    <item>
+      <title>时间戳显示为多少分钟前，多少天前的JS处理</title>
+      <link>/2018/12/13/%E6%97%B6%E9%97%B4%E6%88%B3%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%A4%9A%E5%B0%91%E5%88%86%E9%92%9F%E5%89%8D%E5%A4%9A%E5%B0%91%E5%A4%A9%E5%89%8D%E7%9A%84js%E5%A4%84%E7%90%86/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/%E6%97%B6%E9%97%B4%E6%88%B3%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%A4%9A%E5%B0%91%E5%88%86%E9%92%9F%E5%89%8D%E5%A4%9A%E5%B0%91%E5%A4%A9%E5%89%8D%E7%9A%84js%E5%A4%84%E7%90%86/</guid>
+      <description>方法名为 getTimeAgoAt，支持一个时间戳参数 stamptime（必需）。 先上代码 因为后端返回时间戳通常精确到秒（10位），而 JS 获取时</description>
+    </item>
+    
+    <item>
+      <title>教练也是十分可爱了</title>
+      <link>/2018/11/17/%E6%95%99%E7%BB%83%E4%B9%9F%E6%98%AF%E5%8D%81%E5%88%86%E5%8F%AF%E7%88%B1%E4%BA%86/</link>
+      <pubDate>Sat, 17 Nov 2018 21:39:00 +0000</pubDate>
+      
+      <guid>/2018/11/17/%E6%95%99%E7%BB%83%E4%B9%9F%E6%98%AF%E5%8D%81%E5%88%86%E5%8F%AF%E7%88%B1%E4%BA%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>为 Markdown 写作配置七牛云图床</title>
+      <link>/2018/10/12/%E4%B8%BA-markdown-%E5%86%99%E4%BD%9C%E9%85%8D%E7%BD%AE%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 12 Oct 2018 20:20:51 +0000</pubDate>
+      
+      <guid>/2018/10/12/%E4%B8%BA-markdown-%E5%86%99%E4%BD%9C%E9%85%8D%E7%BD%AE%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</guid>
+      <description>What is This 使用 Markdown 写作大家带来了很大的方便，但是如何处理图片一直是个问题，这里分享一个我使用的解决方案。 如何使用 首先要拥有一个七牛云的账号（七牛云</description>
+    </item>
+    
+    <item>
+      <title>小程序列表页的上拉加载</title>
+      <link>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/</link>
+      <pubDate>Sat, 06 Oct 2018 15:43:23 +0000</pubDate>
+      
+      <guid>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/</guid>
+      <description>上拉刷新，我们可以使用 onReachBottom() 方法，小程序文档是这么说的： 监听用户上拉触底事件。 可以在 app.json 的 window 选项中或页面配置中设置触发距离 onReachBotto</description>
+    </item>
+    
+    <item>
+      <title>小程序列表页的下拉刷新</title>
+      <link>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/</link>
+      <pubDate>Sat, 06 Oct 2018 15:43:23 +0000</pubDate>
+      
+      <guid>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8%E9%A1%B5%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0/</guid>
+      <description>下拉刷新，我们可以使用 onPullDownRefresh() 方法，对此小程序文档是这么说的： 需要在 app.json 的 window 选项中或页面配置中开启 enablePullDownRefresh。 可以通</description>
+    </item>
+    
+    <item>
+      <title>小程序的传参方案</title>
+      <link>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BC%A0%E5%8F%82%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sat, 06 Oct 2018 15:43:23 +0000</pubDate>
+      
+      <guid>/2018/10/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BC%A0%E5%8F%82%E6%96%B9%E6%A1%88/</guid>
+      <description>一、点击事件传参 1. 通过 data-* 属性指定参数 &amp;lt;view class=&amp;quot;block&amp;quot; bindtap=&amp;quot;playTap&amp;quot; data-id=&amp;quot;{{modle.id}}&amp;quot;&amp;gt; 2. 通过事件对象 e 获取参数 playTap (e) { const dataset = e.currentTarget.dataset; console.log(dataset.id) } 二、页面跳转传参 小程序页面和普通的 html 相似，都可以通过查</description>
+    </item>
+    
+    <item>
+      <title>网络请求接口-fetch</title>
+      <link>/2018/09/30/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3-fetch/</link>
+      <pubDate>Sun, 30 Sep 2018 19:30:13 +0000</pubDate>
+      
+      <guid>/2018/09/30/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3-fetch/</guid>
+      <description>fetch 简介 最简单的 fetch 请求如下 fetch(&#39;http://example.com/movies.json&#39;) .then(function(resp) { return resp.json(); }) .then(function(data) { console.log(data); }); fetch 请求 封装 1 GET 请求 getData (url) { return fetch(url) } 2 POST 请求 以 form-data 形式提交数据 postData (url, payload) { return fetch(url, { method: &#39;POST&#39;, body: JSON.stringify(payload), headers: new Headers({ &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39; }) }) } 以 json</description>
+    </item>
+    
+    <item>
+      <title>判断浏览器类型</title>
+      <link>/2018/02/22/%E5%88%A4%E6%96%AD%E6%B5%8F%E8%A7%88%E5%99%A8%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Thu, 22 Feb 2018 00:28:21 +0000</pubDate>
+      
+      <guid>/2018/02/22/%E5%88%A4%E6%96%AD%E6%B5%8F%E8%A7%88%E5%99%A8%E7%B1%BB%E5%9E%8B/</guid>
+      <description>判断是否为手机浏览器 function isMobile () { // Android if (/android/i.test(navigator.userAgent)) { return true; } // iOS if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { return true; } return false; }; 判断是否为微信浏览器 function isWeChatBroswer(){ var ua = navigator.userAgent.toLowerCase(); return /micromessenger/.test(ua) }</description>
+    </item>
+    
+    <item>
+      <title>Gulp 调试小技巧</title>
+      <link>/2017/11/28/gulp-%E8%B0%83%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Tue, 28 Nov 2017 21:30:53 +0000</pubDate>
+      
+      <guid>/2017/11/28/gulp-%E8%B0%83%E8%AF%95%E5%B0%8F%E6%8A%80%E5%B7%A7/</guid>
+      <description>&lt;p&gt;编写 gulp 任务时，经常会遇到错误的情况，导致任务执行过程被中断，可以通过事件监听的方式打印错误，并让任务继续往下执行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VScode 编辑器自定义代码段</title>
+      <link>/2017/11/24/vscode-%E7%BC%96%E8%BE%91%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%AE%B5/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vscode-%E7%BC%96%E8%BE%91%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%AE%B5/</guid>
+      <description>创建方式： vscode 编辑器中依次选择 文件 -&amp;gt; 首选项 -&amp;gt; 用户代码片段，此时会打开一个选择框，用于选择代码片段文件或者创建代码片段，在下拉框中找到对应的 vue 选</description>
+    </item>
+    
+    <item>
+      <title>axios 封装</title>
+      <link>/2017/11/24/axios-%E5%B0%81%E8%A3%85/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/axios-%E5%B0%81%E8%A3%85/</guid>
+      <description>拦截器 如果你想要在每次发送 ajax 请求或者收到 ajax 响应的时候进行一些处理，那么你可以使用 axios 请求拦截器和响应拦截器 请求拦截器 // 添加请求拦截器 axios.interceptors.request.use( config =&amp;gt; { //</description>
+    </item>
+    
+    <item>
+      <title>header和footer组件化</title>
+      <link>/2017/11/24/header%E5%92%8Cfooter%E7%BB%84%E4%BB%B6%E5%8C%96/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/header%E5%92%8Cfooter%E7%BB%84%E4%BB%B6%E5%8C%96/</guid>
+      <description>我们在建设网站时总会遇到这样的问题：在大部分的页面我们需要显示 header 和 footer，分别用于展示网站 logo、顶部导航和底部版权信息等内容。 在 vue</description>
+    </item>
+    
+    <item>
+      <title>vue 全局公用函数</title>
+      <link>/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/</guid>
+      <description>如果你需要让一个工具函数在每个组件可用，可以把方法挂载到 Vue.prototype 上。 你可以选择挂载到 Vue 上，但是这样就需要在使用之前 import Vue form &#39;vue&#39;，而挂载到 prototype 上是</description>
+    </item>
+    
+    <item>
+      <title>vue 项目中操作 dom</title>
+      <link>/2017/11/24/vue-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%93%8D%E4%BD%9C-dom/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vue-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%93%8D%E4%BD%9C-dom/</guid>
+      <description>在某些时候我们希望点击一个按钮可以让输入框获取焦点，但是 Vue 中不建议直接操作 DOM 元素，这时候可以利用 Vue 提供的 ref 属性来实现。 vue-refs: 一个对象，持有注册过</description>
+    </item>
+    
+    <item>
+      <title>vuex 状态持久化之vuex-persistedstate</title>
+      <link>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E6%8C%81%E4%B9%85%E5%8C%96%E4%B9%8Bvuex-persistedstate/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E6%8C%81%E4%B9%85%E5%8C%96%E4%B9%8Bvuex-persistedstate/</guid>
+      <description>安装 $ npm install vuex-persistedstate 使用 import createPersistedState from &amp;quot;vuex-persistedstate&amp;quot;; const store = new Vuex.Store({ // ... plugins: [createPersistedState()] }); API createPersistedState([options])：通过配置选项创建实例。 你可以通</description>
+    </item>
+    
+    <item>
+      <title>vuex 状态管理</title>
+      <link>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</guid>
+      <description>从使用的角度来看 存取状态 用户操作 异步请求 [toc] What is this Vuex 是使用 vue 开发大型项目用来管理应用状态的一个很好的选择。 这里尽量不出现各种概念，只有一些很基</description>
+    </item>
+    
+    <item>
+      <title>动态设置网页 title</title>
+      <link>/2017/11/24/%E5%8A%A8%E6%80%81%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5-title/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E5%8A%A8%E6%80%81%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5-title/</guid>
+      <description>单页面应用的一个问题就是网页 title 无法随着路由而变化，这里我们使用 vue-wechat-title 解决这个问题。 安装： npm install vue-wechat-title --save 引用 import vueRouter from &amp;quot;vue-router&amp;quot; import VueWechatTitle from &#39;vue-wechat-title&#39; Vue.use(VueWechatTitle) Vue.use(vueRouter) 调用 &amp;lt;router-view v-wechat-title=&#39;$route.meta.title&#39;&amp;gt;&amp;lt;/router-view&amp;gt; 给每个路由设置 title</description>
+    </item>
+    
+    <item>
+      <title>好用工具集合</title>
+      <link>/2017/11/24/%E5%A5%BD%E7%94%A8%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E5%A5%BD%E7%94%A8%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;工欲善其事必先利其器
+轻功不代表武功，但是速度，决定了你和我的距离&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>手机端键盘弹起优化</title>
+      <link>/2017/11/24/%E6%89%8B%E6%9C%BA%E7%AB%AF%E9%94%AE%E7%9B%98%E5%BC%B9%E8%B5%B7%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E6%89%8B%E6%9C%BA%E7%AB%AF%E9%94%AE%E7%9B%98%E5%BC%B9%E8%B5%B7%E4%BC%98%E5%8C%96/</guid>
+      <description>问题背景 页面布局大致如下 &amp;lt;template&amp;gt; &amp;lt;header&amp;gt;Logo&amp;lt;/header&amp;gt; &amp;lt;form&amp;gt; &amp;lt;input type=&amp;quot;text&amp;quot; &amp;gt; &amp;lt;input type=&amp;quot;password&amp;quot; &amp;gt; &amp;lt;button&amp;gt;提交&amp;lt;/button&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;footer&amp;gt; 版权信息 &amp;lt;/footer&amp;gt; &amp;lt;/template&amp;gt; header 和 form 都是 static 定位，f</description>
+    </item>
+    
+    <item>
+      <title>本地存储数据方案分析</title>
+      <link>/2017/11/24/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90/</guid>
+      <description>浏览器本地存储 有时候为了存储一些数据，比如用户信息，需要用到浏览器的存储能力。 浏览器本地存储数据有三种方案：cookie、localStor</description>
+    </item>
+    
+    <item>
+      <title>样式私有化</title>
+      <link>/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/</guid>
+      <description>使用 CSS modules CSS modules 因为 css 规则是全局有效的，因此特别容易发生样式冲突（污染）的问题， 使用 css modules 之前，通常为了避免冲突，会把 class 命名写长，配合父元素选择器</description>
+    </item>
+    
+    <item>
+      <title>用户登录状态管理</title>
+      <link>/2017/11/24/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</guid>
+      <description>逻辑 当用户访问站点时，在路由拦截器里判断 cookie 里面是否有 username 或者 token 或者 sessionId 之类的标识，如果有：表示“已登陆”，否则跳转到登陆页面； 如果已登陆，跳转到</description>
+    </item>
+    
+    <item>
+      <title>解决 Invalid Host header 问题</title>
+      <link>/2017/11/24/%E8%A7%A3%E5%86%B3-invalid-host-header-%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E8%A7%A3%E5%86%B3-invalid-host-header-%E9%97%AE%E9%A2%98/</guid>
+      <description>执行命令 npm run dev 启动本地服务器之后，发现只能在本地访问，不能通过局域网ip和服务器域名来访问。 在项目的根目录的 package.json 文件中的 dev 命令字段中添加 --host 19</description>
+    </item>
+    
+    <item>
+      <title>React 中阻止事件冒泡</title>
+      <link>/2017/11/19/react-%E4%B8%AD%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</link>
+      <pubDate>Sun, 19 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/19/react-%E4%B8%AD%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/</guid>
+      <description>&lt;p&gt;react 和原生 JavaScript 阻止事件冒泡的方式是否相同？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微代码</title>
+      <link>/2017/11/19/%E5%BE%AE%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sun, 19 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/19/%E5%BE%AE%E4%BB%A3%E7%A0%81/</guid>
+      <description>&lt;p&gt;常用代码段，样式代码为主。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 乱码</title>
+      <link>/2017/02/20/git-%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git-%E4%B9%B1%E7%A0%81/</guid>
+      <description>在 Linux 如果要提交的文件名是中文的，使用 git status 或者 git commit 的时候就会把中文显示为一串数字如下： create mode 100644 &amp;quot;\346\265\213\350\257\225&amp;quot; 解决方案 此时只需要添加相应的配置即可显示正常的中</description>
+    </item>
+    
+    <item>
+      <title>Git 拉取代码</title>
+      <link>/2017/02/20/git-%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git-%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
+      <description>第一种方法：直接 clone 假设代码库的 git 地址为 https://example.git git clone https://example.git 如果想要指定代码库的文件夹名字，可以在命令后面加上目录名 git clone https://example.git dirname 第二种方法：本地存在的目录关联</description>
+    </item>
+    
+    <item>
+      <title>Git基本工作流程</title>
+      <link>/2017/02/20/git%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/</guid>
+      <description>代码仓库已经存在 拉取代码： git pull &amp;lt;git-repo-url&amp;gt; 修改代码，不多说。 暂存 git add . 提交本地仓库 git commit 推送远程仓库 git push</description>
+    </item>
+    
+    <item>
+      <title>Git子模块</title>
+      <link>/2017/02/20/git%E5%AD%90%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git%E5%AD%90%E6%A8%A1%E5%9D%97/</guid>
+      <description>添加子模块 git submodule add url@git 克隆含有子模块的项目 克隆一个含有子模块的项目时，默认会包含该子模块目录，但其中还没有任何文件： $ git clone url@git 使用 --recursive 参数，它就会自</description>
+    </item>
+    
+    <item>
+      <title>Git最佳实践</title>
+      <link>/2017/02/20/git%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>一、git 最佳实践的理论基础 参照英文原版 [A successful Git branching model]() 或者中文翻译 基于git的源代码管理模型——git flow 来理解整个版本管理的流程。 版本管理流程模</description>
+    </item>
+    
+    <item>
+      <title>Linux-grep</title>
+      <link>/2017/02/20/linux-grep/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux-grep/</guid>
+      <description>grep - 强大的文本搜索工具 如果想在文件中搜索指定的文字，那么 grep 会助你一臂之力！ 使用模式大致为：grep + &amp;quot;要搜索的文本&amp;quot; + 指</description>
+    </item>
+    
+    <item>
+      <title>Linux-ls</title>
+      <link>/2017/02/20/linux-ls/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux-ls/</guid>
+      <description>ls命令用来显示目标列表 一些参数 l: 以列表形式列出内容 ls -l S: 按照由大到小排序 ls -Sl Sr: 反过来，从小到大 ls -Slr h: 如果想要将文件大小单位转化为 k 或者 M，</description>
+    </item>
+    
+    <item>
+      <title>Linux-文件下载</title>
+      <link>/2017/02/20/linux-%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux-%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</guid>
+      <description>wget wget 命令用来从指定的 URL 下载文件 curl</description>
+    </item>
+    
+    <item>
+      <title>Linux-文件传输命令 - SCP</title>
+      <link>/2017/02/20/linux-%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%91%BD%E4%BB%A4-scp/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux-%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%91%BD%E4%BB%A4-scp/</guid>
+      <description>场景：某些配置文件不适合放在代码库，但需要在多台服务器或个人电脑上配置一份。在个人电脑之间可以通过 QQ 发送文件，在服务器之间我们可以通过 scp 命令</description>
+    </item>
+    
+    <item>
+      <title>Linux-查找</title>
+      <link>/2017/02/20/linux-%E6%9F%A5%E6%89%BE/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux-%E6%9F%A5%E6%89%BE/</guid>
+      <description>一、find find 的使用格式 find &amp;lt;指定目录&amp;gt; &amp;lt;指定条件&amp;gt; &amp;lt;指定动作&amp;gt; &amp;lt;指定目录&amp;gt;：所要搜索的目录及</description>
+    </item>
+    
+    <item>
+      <title>Linux-解压</title>
+      <link>/2017/02/20/linux-%E8%A7%A3%E5%8E%8B/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux-%E8%A7%A3%E5%8E%8B/</guid>
+      <description>总结 文件类型 解压命令 *.tar tar -xvf *.gz gzip -d 或者 gunzip *.tar.gz 和 *.tgz tar -xzf *.bz2 bzip2 -d 或者 bunzip2 *.tar.bz2 tar -xjf *.Z uncompress *.tar.Z tar -xZf *.rar unrar e *.zip unzip 一、gzip 1. 命令格式：gzip 文件名 已文件 file 为例进行</description>
+    </item>
+    
+    <item>
+      <title>Linux软链接</title>
+      <link>/2017/02/20/linux%E8%BD%AF%E9%93%BE%E6%8E%A5/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux%E8%BD%AF%E9%93%BE%E6%8E%A5/</guid>
+      <description>为某一个文件（夹）在另一个位置建立一个链接（类似 windows 系统的快捷方式）。 具体用法：ln -s 源文件 目标文件。 应用场景为：如果我们在不同的目录用到相同</description>
+    </item>
+    
+    <item>
+      <title>Linux配置全局环境变量</title>
+      <link>/2017/02/20/linux%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/linux%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+      <description>1. 修改 /etc/profile 打开文件： vim /etc/profile 在文件末尾添加如下代码： export PATH=&amp;quot;变量路径&amp;quot; 2. 修改 .bashrc 打开文件： vim /root/.bashrc 在文件末尾添加如下代码： export P</description>
+    </item>
+    
+    <item>
+      <title>git branch --set-upstream 本地分支关联远程分支</title>
+      <link>/2017/02/20/git-branch-set-upstream-%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/git-branch-set-upstream-%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF/</guid>
+      <description>在创建新分支后，使用 git pull 的时候多次碰见下面的情况： git pull 命令并未更新代码，而是打印出了这么一段文字。 There is no tracking information for the current branch. Please specify which branch you want to merge with. See git-pull(1) for</description>
+    </item>
+    
+    <item>
+      <title>临时切换分支</title>
+      <link>/2017/02/20/%E4%B8%B4%E6%97%B6%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E4%B8%B4%E6%97%B6%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF/</guid>
+      <description>问题场景 项目发布上线之后，除了正常的迭代更新（release 分支）之外，还需要随时修复发生的重大 bug（hotfix 分支）。 Useful Link 3 Git 工具 - 储</description>
+    </item>
+    
+    <item>
+      <title>修改commit信息</title>
+      <link>/2017/02/20/%E4%BF%AE%E6%94%B9commit%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E4%BF%AE%E6%94%B9commit%E4%BF%A1%E6%81%AF/</guid>
+      <description>amend: vi.&amp;amp;vt. 修改，修订。 如果要修改最近一次 commit 信息，且这次 commit 尚未 push 到远程，可以通过参数 --amend 直接进行修改： git commit --amend -m &amp;quot;your message&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>分支</title>
+      <link>/2017/02/20/%E5%88%86%E6%94%AF/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E5%88%86%E6%94%AF/</guid>
+      <description>一、查看分支： 1. 查看本地分支 没有参数，列出本地已经存在的分支，当前分支的分支名前会有“*”号。 git branch 2. 查看远程分支 git branch -r 3. 查看本地和远程的分支</description>
+    </item>
+    
+    <item>
+      <title>利用 alias 简化命令</title>
+      <link>/2017/02/20/%E5%88%A9%E7%94%A8-alias-%E7%AE%80%E5%8C%96%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E5%88%A9%E7%94%A8-alias-%E7%AE%80%E5%8C%96%E5%91%BD%E4%BB%A4/</guid>
+      <description>简介 alias 命令可以将一段冗长的命令行简化成几个字母或者数字的缩写，这样就不用每次都输入那么多的字母和符号了，并且缩写完全都是自己设定的，非常的个</description>
+    </item>
+    
+    <item>
+      <title>常用命令</title>
+      <link>/2017/02/20/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>设置用户名和邮箱 设置用户名 git config --global user.name &amp;quot;your name&amp;quot; 设置用户邮箱 git config --global user.email &amp;quot;your email&amp;quot; 查看用户名 git config user.name 查看邮箱 git config user.email 设置代理 设置代理 git config --global http.proxy http://demo.com:8080 查看代理 git config --global --get --global http.proxy 取</description>
+    </item>
+    
+    <item>
+      <title>查看修改和撤销修改</title>
+      <link>/2017/02/20/%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E5%92%8C%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E5%92%8C%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9/</guid>
+      <description>一、已修改，未暂存 （1）查看修改 只是简单的进行了文件修改，但是还没有做 git add 之前，希望检查一下做了哪些修改： git diff 如果只想要检查某个文件做了哪些</description>
+    </item>
+    
+    <item>
+      <title>查看提交记录</title>
+      <link>/2017/02/20/%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/</guid>
+      <description>1. 查看某个文件的提交记录 修改还未提交到暂存区的时候： git diff &amp;lt;filename&amp;gt; 提交到暂存区之后： git diff --cache &amp;lt;filename&amp;gt; 或者 git diff --staged &amp;lt;filename&amp;gt; commit 之后： git log -p &amp;lt;filename&amp;gt; 2. 查看某人的提交记录 git log --stat --author=someone</description>
+    </item>
+    
+    <item>
+      <title>标签</title>
+      <link>/2017/02/20/%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E6%A0%87%E7%AD%BE/</guid>
+      <description>一、查看标签： 标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到</description>
+    </item>
+    
+    <item>
+      <title>记住密码</title>
+      <link>/2017/02/20/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/2017/02/20/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81/</guid>
+      <description>方法一：使用命令 git config --global credential.helper store 如果没有 --global 参数，则在当前项目下的 .git/config 文件中添加。 方法二：修改配置 在 Git 的配置文件 .gitconfig 里面会有你先前配好的 name 和 email，</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>vue-ls 官网地址：https://www.npmjs.com/package/vue-ls
+vue-ls 是一款管理 localStorage, sesstionStorage 和 cookie 的 vue 插件。
+这三者的 API 文档如下：
+ Window.localStorage Window.sessionStorage Document.cookie  vue-ls 的内部对这三中存储方式的 API 进行兼容处理，意义大致相当于 jQuery 兼容各个浏览器 API。
+下面是安装/引入/调用三部曲：
+1. 安装 npm install vue-ls --save  或者
+yarn add vue-ls  2. 在 vue 中引入 import Storage from &#39;vue-ls&#39;; options = { namespace: &#39;vuejs__&#39;, // key prefix name: &#39;ls&#39;, // name variable Vue.[ls] or this.[$ls], storage: &#39;local&#39;, // storage name session, local, memory }; Vue.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>JavaScript 中的浮点数计算比较调皮，不经意间我们就会得到一些并不想要的结果，例如：
+0.1 + 0.2 = 0.30000000000000004 1.0 - 0.9 = 0.09999999999999998 0.105.toFixed(2) = 0.1 // not 0.11 182.92 * 10000 = 1829199.9999999998  如果涉及到金额计算，尽管看起来代码运算结果和真实结果仅仅相差了零点零零零零零零零 1，那也是不得了的事情。
+至于这背后的原因，我是不知道滴~，不过有人已经写文章解释了：JavaScript 浮点数陷阱及解法
+那么如何解决浮点数计算出现的问题呢，我是直接使用的第三方库 https://github.com/nefe/number-precision，完美支持浮点数的加减乘除、四舍五入等运算。非常小只有1K，远小于绝大多数同类库（如Math.js、BigDecimal.js），100%测试全覆盖，代码可读性强，不妨在你的应用里用起来！</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description> README README README README README README README README </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: What is GitHub Pages tags: - other
+date: 2018-01-09 18:30:53  Github Pages 是 Github 的静态页面托管服务。它设计的初衷是为了用户能够直接通过 Github 仓库来托管用户个人、组织或是项目的专属页面。参考：What is GitHub Pages?
+ 友情提示：使用此功能需要对 git 及 GitHub 有一定了解
+GitHub Pages 功能介绍 使用步骤： 1. 注册 GitHub 账户 2. 创建一个仓库 3. 打开此仓库的 Settings 页签 4. 找到 GitHub Pages 部分 因为 GitHub Pages 会展示指定位置（分支）的 index.html 或者 README.md，因此 Source 用于指定分支。
+Source 字段有 4 个选项： 1. 默认为 None ，即不显示 1. master branch，本仓库的 master 分支 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: &amp;lsquo;hexo-admin: hexo博客的后台管理工具&amp;rsquo; author: wencaizhang tags: - hexo
+date: 2018-05-18 18:01:00 零、前言  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+ Hexo 生成静态网站，我们可以很灵活的将其部署在 GitHub Pages 上或者是随便一个静态服务器上。
+但随之带来的一个问题就是无法像 wordpress 一样提供一个后台管理界面。hexo-admin 很好的解决了这一痛点需求。
+一、安装 1. 安装 hexo 并创建 blog 如已创建则跳过此步骤
+npm install -g hexo cd ~/ hexo init my-blog cd my-blog npm install  2. 安装 hexo-admin 并启动服务 npm install --save hexo-admin hexo server -d  hexo-admin 管理界面路径为 博客预览地址 + admin，即如果你的博客预览地址为 http://localhost:4000/ ，则 hexo-admin 管理界面路径为 http://localhost:4000/admin/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: hexo 基本使用备忘 author: wencaizhang tags: [blog, hexo]
+date: 2018-05-18 20:35:00 简介  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+ 安装 全局安装 hexo 脚手架：
+npm install -g hexo-cli  创建博客 在 blog 目录下新建一个网站，然后安装 npm 依赖：
+hexo init blog cd blog npm install  常用命令  生成静态网站
+hexo generate  启动服务器
+hexo server  清除缓存文件 (db.json) 和已生成的静态文件 (public)
+hexo clean  新建一篇文章
+hexo new [layout] &amp;lt;title&amp;gt;   小Tips 在 package.json 中自定义 npm scripts 脚本：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: hexo 备份 tags: [blog, hexo] author: wencaizhang
+date: 2018-01-07 23:01:00 搭建博客的思路  使用框架 Hexo 文档 将 markdown 文章解析成静态网页 借助 GitHub Pages 展示静态网页的功能，部署解析出来的静态网页（hexo 备份）  备份源文件的思路 这里写如何备份 markdown 文章源文件，至于详细的搭建步骤请自行百之谷之，不再详述
+GitHub Pages 功能可以展示三个位置的静态网页资源： 1. master 分支 2. master 分支的 docs 目录 3. gh-pages 分支
+那么，不妨利用分支功能另外创建一个 source 分支用于管理备份配置文件和博客文章源文件，如果对博客主题进行了自定义，甚至可以再创建一个 theme 分支用于管理主题。
+如此一来，将所有的文件都纳入版本控制系统，无论在哪里都可以快速创建一个相同的博客写作环境
+一键部署的思路 如果按照上面的方法做，每次预览或部署静态网页显得略微有点麻烦： 1. 预览：删除旧的解析出来的网页（hexo clean），重新解析（hexo g），最后启动本地服务器（hexo s） 1. 部署静态网页：删除旧的解析出来的网页（hexo clean），重新解析（hexo g），最后部署到 GitHub 上（hexo d） 1. 提交源文件至 source 分支 1. 如果修改了主题，还要切换目录并提交主题至 theme 分支</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 「译」从 URL 输入到页面展现发生了什么 author: wencaizhang tags: - interview - http categories: []
+date: 2018-05-22 11:26:00  本文翻译自：What really happens when you navigate to a URL
+为方便理解，本文采用意译，如有兴趣，可阅读英文原文
+ 步骤：  在浏览器中输入网址 浏览器查找域名对应的 IP 地址 浏览器向服务器发送 HTTP 请求 服务器响应并进行重定向 浏览器向真正的服务器重新发送 HTTP 请求 服务器处理 HTTP 请求 服务器响应请求，返回 HTML 页面 浏览器渲染 HTML 页面 浏览器请求静态资源，如 css 文件、图片、js 文件 浏览器发送异步请求  作为软件开发者，你肯定对 web 应用如何工作以及它工作过程中包含的技术（浏览器、HTML、web server、request handlers 等等）都有一个高水平的认知。
+这篇文章中，我们会对当你访问一个 URL 时发生的一系列事情进行深入研究。
+1. 在浏览器中输入网址 输入网址 facebook.com，故事从这里开始：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 如何查找数组中指定元素 tags: - javascript - array - es6
+date: 2018-10-09 16:51:14 场景 我们经常会遇到这样的情况：假设现在有下面这样一个数组，现在需要在该数组中找到 id 等于 2 的元素。
+const arr = [ { id: 1, text: &#39;11111&#39; }, { id: 2, text: &#39;22222&#39; }, { id: 3, text: &#39;33333&#39; }, { id: 4, text: &#39;44444&#39; }, ]  这个问题有很多解决的方法，例如：遍历然后逐个元素进行判断。
+var target; for (var i = 0; i &amp;lt; arr.length; i++) { var item = arr[i]; if (item.id == 2) { target = item } } console.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description> title: js 中使用 let 和 const 的总结 tags: - javascript - es6
+date: 2018-10-14 11:51:14 ES6 引入了 let 命令用于声明变量，引入了 const 命令用于声明常量。然而仅仅知道这些是不够的，具体哪些场景下使用 let，哪些场景使用 const 仍然令人感到疑惑。
+这两个命令的学习可参考文章：let 和 const 命令，这里只参考下面一段话：
+ const 实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const 只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。
+ 因此，我认为声明简单类型数据（数字、字符串、布尔值）的时候使用 let，而在声明引用类型（对象、数组）的时候使用 const。
+参考  let 和 const 命令 js中 let var const 的差异和使用场景  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>&lt;p&gt;title: trim 方法
+tags:
+  - javascript&lt;/p&gt;
+
+&lt;h2 id=&#34;date-2017-11-25-21-31-23&#34;&gt;date: 2017-11-25 21:31:23&lt;/h2&gt;
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;trim()&lt;/code&gt; 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR）。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;删除字符串两端的空白字符可以说是非常常见的需求&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 小tips - iframe 高度自适应 author: wencaizhang tags: - javascript - iframe
+date: 2018-01-17 21:39:00 背景 iframe 有两大烦人的东西，一是 iframe 高度问题，二是带遮罩的弹框提示。这两个问题都没什么处理经验，于是花点时间研究，基本实现了效果，于是记录下来以便备忘。
+本文为高度自适应问题的解决方案。
+实现 此方法前提条件：为方便获取 iframe 元素，需要知道该 iframe 的 id（当页面只有一个 iframe 元素时，使用类名或标签名也可以）。
+此处假设 iframe 元素的 id 为 iframe。
+为行文方便，后面将 iframe 元素指定的页面称为“子窗口或子页面”， iframe 元素所在的页面称为“父窗口”
+jQuery 版 function resizeIframeParentHeight() { $(&amp;quot;#iframe&amp;quot;, window.parent.document).css(&#39;height&#39;, $(&#39;body&#39;).outerHeight()); }   此方法在子窗口中，在初次加载完成或者页面高度发生变化时执行 $(&amp;quot;#iframe&amp;quot;, window.parent.document) 获取父窗口中的 iframe 元素 $(&#39;body&#39;).outerHeight() 获取 iframe 元素指定页面的高度  js 版 您可以狠狠点击这里：js版iframe高度自适应demo
+function resizeIframeParentHeight() { var iframeHeight = document.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: JavaScript 之深浅拷贝 tags: - javascript
+date: 2018-01-02 10:42:53 基本类型和引用类型 先来看看 JavaScript 中两种数据类型有何异同。
+基本类型和引用类型的保存方式不同。
+基本数据类型是按值访问的。基本数据类型的值保存在栈内存中，可以直接对其操作。基本数据类型包含 5 种：Undefined、 Null、 Boolean、Number 和 String。
+引用类型的值是按引用访问的。引用类型的值保存在堆内存中，另外在栈内存中会有一个引用指针指向堆内存中的对象，变量中保存的实际上是一个指针。在操作对象时，实际上是在操作对象的引用指针而不是实际的对象。
+另外，基本类型和引用类型的复制方式也不同。
+如果从一个变量向另一个变量复制基本类型的值，会在栈内存中创建一个新值，然后把值复制到新变量的位置上。例如：
+var num1 = 5; var num2 = num1;  现在，将 num1 的值复制给 num2 ，两个变量中的值相同，但是 num2 的值只是 num1 的值的一个副本，因此两者是相互独立的，不会互相影响。 当一个变量向另一个变量复制引用类型的值，同样也会将储存在变量中的值复制一份到为新变量分配的空间中。但是这个值实际上是一个指针，指向储存在堆内存中的一个对象。复制结束后，两个变量存储的指针指向同一个对象，因此改变其中一个变量，就会影响到另一个变量。
+var obj1 = { name: &#39;js&#39; } var obj2 = obj1; obj2.name = &#39;jquery&#39;; console.log( obj1.name ); // jquery  由此可见，基本数据类型的复制非常简单，直接使用赋值运算即可，无副作用。然而引用类型的复制则不能直接使用赋值运算，否则操作的仍是同一个对象，毫无意义。
+故下面讨论的拷贝都是针对引用数据类型而言。
+浅拷贝 demo 我们说的复制，其实就是希望得到一个和原有对象有相同键值对集合（属性）的新对象，那么我们可以直接遍历对象，将键值对都储存在一个新的对象下，这样新对象和原对象就有一样的键值对集合（属性），也就达到我们的目标。
+等一下，这里有个问题，如果某个属性值为引用类型，储存的值为对应的引用指针，则仍然会出现新变量和原有变量相互影响的问题。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 小tips-使用正则获取查询字符串参数 author: wencaizhang tags: - javascript - querystring - regexp
+date: 2018-01-17 21:39:00 一、什么是查询字符串 大部分开发者都应当对“查询字符串”不陌生，它随处可见。
+例如，当我们用百度搜索关键字 regexp 时，地址栏中 ? 后面的字符串就叫查询字符串。
+也就是说，https://www.baidu.com/s?ie=UTF-8&amp;amp;wd=regexp 中的 ie=UTF-8&amp;amp;wd=regexp 就是查询字符串。
+使用查询字符串的场景随处可见，如上面的网页地址中的查询字符串，还有 HTTP 协议中的 GET 请求也是将参数拼接成查询字符串的形式。
+二、解析查询字符串 前端开发过程中，通过查询字符串传递参数是一个常见的场景。那么就需要这么一个操作查询字符串的处理：从 url 中获取查询字符串，然后将查询字符串解析成方便处理的 json 对象。
+获取查询字符串并打印：
+// 假设此时的 URL 是：https://www.baidu.com/s?ie=UTF-8&amp;amp;wd=regexp var querystring = window.location.search.slice(1); console.log(querystring); // &amp;quot;ie=UTF-8&amp;amp;wd=regexp&amp;quot;  location 挂载在全局对象 window 上，其属性 search 指的是 URL 中问号 ? 之后的部分（包含 ?），即 ?ie=UTF-8&amp;amp;wd=regexp，通过 String.prototype.slice() 提取其中除 ? 之外所有内容，即可得到查询字符串。
+下面是将查询字符串解析成 json 对象的几种思路。
+方法一：split  通过 split 方法，指定 &amp;amp; 为分隔符，得到处理后的数组 [&amp;quot;ie=UTF-8&amp;quot;, &amp;quot;wd=regexp&amp;quot;] 遍历数组，同样通过 split 方法，指定 = 为分隔符，得到 [&amp;quot;ie&amp;quot;, &amp;quot;UTF-8&amp;quot;] 和 [&amp;quot;wd&amp;quot;, &amp;quot;regexp&amp;quot;] 遍历获取的数组中第一项则为键，第二项为对应的值，赋值给 json  var querystring = window.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>&lt;p&gt;title: React 点击事件为什么没有被触发？
+tags:
+  - react
+  - javascript&lt;/p&gt;
+
+&lt;h2 id=&#34;date-2017-11-19-20-20-53&#34;&gt;date: 2017-11-19 20:20:53&lt;/h2&gt;
+
+&lt;p&gt;点击事件可以说是最常用的事件了，但我在使用中却经常按照我的设想触发。Why?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 正则表达式 tags: - regexp
+date: 2018-01-02 16:27:53 元字符 元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ）
+也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）
+下面是一些常见的元字符：
+   元字符 含义     . 匹配除 \n 以外的任何字符（注意元字符是小数点）。   [abcde] 匹配 abcde 之中的任意一个字符   [a-h] 匹配 a 到 h 之间的任意一个字符   [^fgh] 不与 fgh 之中的任意一个字符匹配   \w 匹配大小写英文字符及数字 0 到 9 之间的任意一个及下划线，相当于 [a-zA-Z0-9_]   \W 不匹配大小写英文字符及数字 0 到 9 之间的任意一个，相当于 [^a-zA-Z0-9_]   \s 匹配任何空白字符，相当于 [ \f\n\r\t\v]   \S 匹配任何非空白字符，相当于 [^\s]   \d 匹配任何 0 到 9 之间的单个数字，相当于 [0-9]   \D 不匹配任何 0 到 9 之间的单个数字，相当于 [^0-9]   [\u4e00-\u9fa5] 匹配任意单个汉字（这里用的是 Unicode 编码表示汉字的 )    正则表达式限定符 上面的元字符都是针对单个字符匹配的，要想同时匹配多个字符的话，还需要借助限定符。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 小tips - 利用 localStorage 记住用户名和密码 tags: - javascript - localStorage
+date: 2018-01-16 17:35:00 一、问题背景 对于一个登录页面，通常都要支持的一个功能是记住密码，这样下次打开时就不需要重新输入，可以很好的提高用户体验。
+在对比了 cookie 和 localStorage 之后，我选择了 localStorage 用于存储用户登录信息。
+ cookie
+ 所有浏览器都支持，无兼容问题 大小限制：4k 左右 可设置失效时间 cookie 会被附加到每个 HTTP 请求中   localStorage:
+ IE8+ （现在项目也基本都不要求兼容 IE6~7 了，因此可以放心使用） 大小限制：一般 5MB 仅在客户端中保存，不参与和服务器的通信 需手动清除，否则永远有效   sessionStorage 和 localStorage 基本只有一点不同：sessionStorage 是基于会话的，页面关闭或浏览器关闭后失效
+二、demo 展示 实际的登录页面可能还需要注册，所以就单独做了一个高保真的 demo 页面。
+您可以狠狠地点击这里：HTML5 localstorage本地存储应用demo
+进入 demo 页面，您可以看到两个输入框和一个登录按钮。
+您可以随心所欲的输入一个狂拽炫酷的用户名和密码，然后点击登录按钮，由于此 demo 仅用于展示记录密码功能，因此页面并无任何提示或跳转。
+在真实的场景中，点击按钮时应验证用户名密码，验证通过之后自动跳转到网站其他页面，与本文主题无关，故不做展示
+点击登录按钮之后，刷新页面，输入框已经自动填充刷新之前点击按钮时对应的值。
+三、localStorage 提供的方法 此处只是简单介绍，详细使用请看这里</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: JavaScript 序列化与反序列化 tags: - javascript - jQuery
+date: 2018-03-02 10:51:00 一、$.param() param() 方法创建数组或对象的序列化表示。该序列化值可在进行 AJAX 请求时在 URL 查询字符串中使用。
+1. 使用示例 示例一：序列化目标是对象
+// 假设已经引入 jquery.js var obj = { username: &#39;zwc&#39; , age: 18 }; var querystring = $.param(obj); console.log(querystring); // &amp;quot;username=zwc&amp;amp;age=18&amp;quot;  示例二：序列化目标数据结构深层嵌套
+// 假设已经引入 jquery.js var myObject = { a: { one: 1, two: 2, three: 3 }, b: [1,2,3] }; var recursiveEncoded = $.param(myObject); var recursiveDecoded = decodeURIComponent($.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>&lt;p&gt;title: 近期用到的 jQuery 方法整理
+tags:
+  - javascript
+  - jquery&lt;/p&gt;
+
+&lt;h2 id=&#34;date-2017-05-27-22-22-53&#34;&gt;date: 2017-05-27 22:22:53&lt;/h2&gt;
+
+&lt;p&gt;好久不用 jQuery，已经快忘得差不多了。最近用 jQuery 写了不少页面，趁机总结一下。毕竟，好记性不如烂笔头。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: GET 和 POST 的区别 tags: - javascript
+date: 2017-11-25 23:31:23 从表象上看：  GET 参数通过 URL 传递，POST 放在 Request body 中。 GET 产生的 URL 地址可以被记录到浏览器历史中，而 POST 不可以。 GET 比 POST 更不安全，因为参数直接暴露在 URL 上，所以不能用来传递敏感信息。 GET 请求在URL中传送的参数是有长度限制的，而 POST 没有。  底层来看： 无区别
+解释如下： 1. 给 GET 加上 request body，给 POST 带上 url 参数，技术上是完全行的通的 2. 为了给不同的区别不同类型的请求，才定义了 GET、POST、PUT、DELETE，依次对应 查、改、增、删 3. 业界不成文的规定是，（大多数）浏览器通常都会限制 url 长度在 2K 个字节，而（大多数）服务器最多处理 64K 大小的 url。超过的部分，恕不处理。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 切换浏览器 tab 标签时动态设置网页 title tags: - javascript
+date: 2017-12-22 21:50:23 效果 在饿了么官网看到一个网页效果，在饿了么网页和其他标签页之间相互切换时，饿了么网页的 title，发生了变化。
+饿了么官网: https://www.ele.me/home/
+效果如下：
+代码实现 预备知识  visibilitychange 事件，会在浏览器标签页被隐藏或显示的时候会触发 document.hidden ，只读属性，返回一个布尔值标识当前页面是否隐藏 document.visibilityState，只读属性，返回 document 的可见性，有 4 个值：  visible : 此时页面内容至少是部分可见。 即此页面在前景标签页中，并且窗口没有最小化 hidden : 此时页面对用户不可见。即文档处于背景标签页或者窗口处于最小化状态，或者操作系统正处于锁屏状态 prerender : 页面此时正在渲染中， 因此是不可见的. 文档只能从此状态开始，永远不能从其他值变为此状态 unloaded : 页面从内存中卸载清除   具体实现  使用 document.hidden 属性 ```js var titleFocus = &amp;lsquo;饿了么&amp;rsquo;; var titleBlur = &amp;lsquo;记得回来哦&amp;rsquo;;  function toggleTitleHandler(bool) { document.title = bool ? titleBlur : titleFocus; }</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>&lt;p&gt;title: trim 方法
+tags:
+  - javascript&lt;/p&gt;
+
+&lt;h2 id=&#34;date-2017-11-25-21-31-23&#34;&gt;date: 2017-11-25 21:31:23&lt;/h2&gt;
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;trim()&lt;/code&gt; 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR）。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;删除字符串两端的空白字符可以说是非常常见的需求&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description> title: 对象数组按属性排序的JS处理 tags: [javascript]
+date: 2019-01-22 18:31:23 通常在使用表格展示数据时，会有一项按照某一列排序的功能
+// bool 为 true 时正序排列，默认为 true
+function sortArrByProp (array, prop, bool) { function compare(prop){ return function(obj1,obj2){ var v1 = obj1[prop]; var v2 = obj2[prop]; bool = typeof bool === &#39;boolean&#39; ? bool : true; return bool ? v1 - v2 : v2 - v1; } } return array.sort(compare(prop)); }  例：
+const arr = [ { name: &#39;张三&#39;, age: 20 }, { name: &#39;李四&#39;, age: 16 }, { name: &#39;王五&#39;, age: 28 }, { name: &#39;赵六&#39;, age: 21 }, ]; sortArrByProp(arr, &#39;age&#39;, true);  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: What is GitHub Pages tags: - other
+date: 2018-01-09 18:30:53  Github Pages 是 Github 的静态页面托管服务。它设计的初衷是为了用户能够直接通过 Github 仓库来托管用户个人、组织或是项目的专属页面。参考：What is GitHub Pages?
+ 友情提示：使用此功能需要对 git 及 GitHub 有一定了解
+GitHub Pages 功能介绍 使用步骤： 1. 注册 GitHub 账户 2. 创建一个仓库 3. 打开此仓库的 Settings 页签 4. 找到 GitHub Pages 部分 因为 GitHub Pages 会展示指定位置（分支）的 index.html 或者 README.md，因此 Source 用于指定分支。
+Source 字段有 4 个选项： 1. 默认为 None ，即不显示 1. master branch，本仓库的 master 分支 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: JavaScript 连续赋值 author: wencaizhang tags: - javascript - interview
+date: 2018-05-22 18:41:00 题目：下面代码的打印结果是什么 var a = { n: 1 }; a.x = a = { n: 2 }; console.log(a.x);  理解： 先啰嗦两句基本知识： 1. 符号 = 不叫“等于号 ”，这是赋值操作，代码从右往左执行，如 x = 10; 就读作“把 10 赋值给变量 x“ 2. 如果一个变量的数据类型是对象，那么这个变量存储的仅仅是这个对象在堆内存中的地址。
+正文开始：
+第一行代码：首先在堆内存中创建一个对象 { n: 1 }，然后在栈内存中创建一个变量 a ，a 储存的值实际上是对象 { n: 1 } 的内存地址，我们假设为 @n1（实际内存地址使用 4 位 16 进制表示）。
+第二行代码：. 表示字段访问，其优先级最高。因此首先给变量 a 增加属性 x，属性 x 在未赋值时是 undefined，然后在堆内存中创建一个对象 { n: 2 }，假设其内存地址为 @n2（如下图）。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description> title: Linux Tips tags: - linux
+date: 2017-11-26 21:20:53 积累记录一些常用 Linux 命令。
+修改普通用户对目录的读写权限 普通用户是没有文件的读写权限的，需要每次都临时获取 root 权限，但这样比较麻烦。 方便的做法是，修改/var/www目录的读写权限（777是linux中的最高权限，表示可读，可写，可执行）
+sudo chmod 777 /var/www  设置别名 alias 编辑配置文件 vim /etc/profile，在文件中添加配置代码，例如：
+alias tofe=&amp;quot;cd /var/www/rmp/spms/front-end/&amp;quot; alias gs=&amp;quot;git status&amp;quot;  设置环境变量 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>&lt;p&gt;title: React 点击事件为什么没有被触发？
+tags:
+  - react
+  - javascript&lt;/p&gt;
+
+&lt;h2 id=&#34;date-2017-11-19-20-20-53&#34;&gt;date: 2017-11-19 20:20:53&lt;/h2&gt;
+
+&lt;p&gt;点击事件可以说是最常用的事件了，但我在使用中却经常按照我的设想触发。Why?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 正则表达式 tags: - regexp
+date: 2018-01-02 16:27:53 元字符 元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ）
+也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）
+下面是一些常见的元字符：
+   元字符 含义     . 匹配除 \n 以外的任何字符（注意元字符是小数点）。   [abcde] 匹配 abcde 之中的任意一个字符   [a-h] 匹配 a 到 h 之间的任意一个字符   [^fgh] 不与 fgh 之中的任意一个字符匹配   \w 匹配大小写英文字符及数字 0 到 9 之间的任意一个及下划线，相当于 [a-zA-Z0-9_]   \W 不匹配大小写英文字符及数字 0 到 9 之间的任意一个，相当于 [^a-zA-Z0-9_]   \s 匹配任何空白字符，相当于 [ \f\n\r\t\v]   \S 匹配任何非空白字符，相当于 [^\s]   \d 匹配任何 0 到 9 之间的单个数字，相当于 [0-9]   \D 不匹配任何 0 到 9 之间的单个数字，相当于 [^0-9]   [\u4e00-\u9fa5] 匹配任意单个汉字（这里用的是 Unicode 编码表示汉字的 )    正则表达式限定符 上面的元字符都是针对单个字符匹配的，要想同时匹配多个字符的话，还需要借助限定符。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: Win下必备神器之Cmder tags: - tool
+date: 2017-12-23 13:07:23 前言 对于使用 windows 系统的，需要经常和命令行打交道的童鞋，强烈推荐一个工具：Cmder（Cmder官网: http://cmder.net/）
+ 因为好用，所以必备
+ 本该介绍 Cmder 是什么，如何安装，如何使用……，但是已经有前辈对此进行了详细介绍：
+ Win下必备神器之Cmder 介绍好用工具：Cmder ( 具有Linux 温度的Windows 命令提示字元工具 )  因此，本篇属于 Cmder 进阶篇，适合已经对 Cmder 有所了解的童鞋阅读，如果不知 Cmder 为何物，推荐先行阅读上面文章
+Cmder 如何好用 设置默认启动目录 连接服务器 因为 Cmder 支持 ssh 命令，因此可以直接连接服务器，命令为：ssh 用户名@ip，例如：
+ssh root@10.2.5.187  定义 alias 每次连接服务器都需要输入一长串命令，简直不能忍。好在 Cmder 提供了定义 alias 的功能。配置文件是 cmder\config\user-aliases.cmd，打开之后会发现，Cmder 已经默认定义了一些 alias。
+e.=explorer . gl=git log --oneline --all --graph --decorate $* ls=ls --show-control-chars -F --color $* pwd=cd clear=cls history=cat &amp;quot;%CMDER_ROOT%\config\.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: chrome 插件集 tags: - tool
+date: 2017-12-30 00:20:53 写在前面 chrome 插件离线安装方法（chrome 插件通常以 crx 格式保存）： 1. chrome 中打开 chrome://extensions/ 页面 2. 把后缀为 crx 的插件安装文件拖拽到第一步打开的页面中 3. 浏览器弹出确认安装的提示框，点击“添加扩展程序”即可
+下面的插件都在百度云盘做了备份，网盘地址：https://pan.baidu.com/s/1gfCjRTD
+插件介绍 谷歌访问助手 - 访问谷歌  免费，简单 坏处：需要设置hao123为主页  cVim - 使Chrome浏览器支持Vim的快捷键  支持 vim 快捷键，解放鼠标 preview:   JSONView - web开发 JSON 数据格式化和高亮插件  在做开发的时候，经常需要从服务器拿数据，一般返回数据都会用 json 来封装。由于一些原因，从服务器端取得的json数据，往往是经过unicode编码，没有格式化的数据，很难阅读。JSONView 正是应用与这个场景，它可以将json数据进行转码和格式化，以一种清晰的形式展示给大家 preview:   Octotree - 你的 GitHub 文档库  装了这款插件之后，可以在 GitHub 项目页面的左侧看到相应项目的树状结构图，对于项目管理以及具体的文件跳转来说非常方便。 一键下载文件：GitHub 可以让你很方便的以 .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/</guid>
+      <description>title: 调教你的Xshell tags: - tool - xshell - linux
+date: 2018-01-17 23:05:00 Xshell xshell是一款知名终端模拟软件，个人用户免费，中文界面，方便好用。
+但是一些默认设置需要手动调整之后才更顺手更好用。
+打开选项窗口 如图所示：工具 -&amp;gt; 选项即可打开选项窗口 将选中的文本自动复制到剪贴板（左键选中自动复制） 如图所示，在“键盘和鼠标”选项卡中勾选对应选项即可： 右键设置 如图所示，设置右键和中键的功能，其中下拉选项的含义如下：
+   选项 蹩脚翻译     Do nothing 什么都不做   Open the popup menu 打开弹出式菜单   Paste the clipboard contents 粘贴剪切板的内容   Open Properties dialog 打开属性窗口   Send carriage return 发送回车   Paste the selected text 粘贴被选中的文本    我的选择是，中键打开弹出式菜单，右键粘贴剪切板的内容</description>
+    </item>
+    
+    <item>
+      <title>JS 数组去重</title>
+      <link>/1/01/01/js-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/js-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</guid>
+      <description>利用 ES6 的新特性 function uniq (arr) { return [...new Set(arr)] }</description>
+    </item>
+    
+    <item>
+      <title>Vue 的 mixins 特性</title>
+      <link>/1/01/01/vue-%E7%9A%84-mixins-%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/vue-%E7%9A%84-mixins-%E7%89%B9%E6%80%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue中动态监听数据变化——vm.$set</title>
+      <link>/1/01/01/vue%E4%B8%AD%E5%8A%A8%E6%80%81%E7%9B%91%E5%90%AC%E6%95%B0%E6%8D%AE%E5%8F%98%E5%8C%96vm.set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/vue%E4%B8%AD%E5%8A%A8%E6%80%81%E7%9B%91%E5%90%AC%E6%95%B0%E6%8D%AE%E5%8F%98%E5%8C%96vm.set/</guid>
+      <description>先来看这样一个案例 &amp;lt;h3&amp;gt;选择你最爱吃的蔬菜：&amp;lt;/h3&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li v-for=&amp;quot;item in list&amp;quot; :key=&amp;quot;item.id&amp;quot; @click=&amp;quot;handleClick(item)&amp;quot; :class=&amp;quot;{active: item.checked}&amp;quot; &amp;gt; {{item.name}} &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; export default { data () { return { list: [] } }, created () { this.fetch() },</description>
+    </item>
+    
+    <item>
+      <title>小程序 的 mixins</title>
+      <link>/1/01/01/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E7%9A%84-mixins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E7%9A%84-mixins/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

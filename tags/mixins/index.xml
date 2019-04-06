@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mixins on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/mixins/</link>
+    <description>Recent content in Mixins on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="/tags/mixins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vue 的 mixins 特性</title>
+      <link>/1/01/01/vue-%E7%9A%84-mixins-%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/vue-%E7%9A%84-mixins-%E7%89%B9%E6%80%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>小程序 的 mixins</title>
+      <link>/1/01/01/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E7%9A%84-mixins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E7%9A%84-mixins/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/node/</link>
+    <description>Recent content in Node on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Dec 2018 10:51:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>anywhere使用笔记</title>
+      <link>/2018/12/13/anywhere%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 13 Dec 2018 10:51:00 +0000</pubDate>
+      
+      <guid>/2018/12/13/anywhere%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>随时随地将你的当前目录变成一个静态文件服务器的根目录 场景 某天你需要临时把自己的电脑当做一个静态服务器，你可以选择使用 nginx，但如果你不想</description>
+    </item>
+    
+  </channel>
+</rss>

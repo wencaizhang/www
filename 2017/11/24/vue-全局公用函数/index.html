@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  <meta name="description" content="Hugo theme ehlxr example site.">
+  <meta name="keywords" content="[Hugo theme ehlxr]">
+  
+  <link rel="prev" href="/2017/11/24/vue-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%93%8D%E4%BD%9C-dom/" />
+  <link rel="next" href="/2017/11/24/header%E5%92%8Cfooter%E7%BB%84%E4%BB%B6%E5%8C%96/" />
+  <link rel="canonical" href="/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <title>
+       
+       
+           vue 全局公用函数 | Ehlxr - A responsive and simple theme for Hugo
+       
+  </title>
+  <style>
+
+ 
+.navbar {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
+ 
+
+.post-toc {
+
+position: fixed;
+
+width: 200px;
+
+margin-left: 800px;
+
+padding: 10px;
+padding-left: 0;
+
+word-wrap: break-word;
+
+box-sizing: border-box;
+border-left: 1px solid #ccc;
+
+}
+
+.post-toc .post-toc-title {
+
+margin: 0;
+
+font-weight: 400;
+
+text-transform: uppercase;
+
+}
+
+.post-toc .post-toc-content.always-active ul {
+
+display: block;
+
+}
+
+ 
+
+.post-toc .post-toc-content ul {
+
+padding-left: 0;
+
+list-style: none;
+
+}
+
+.post-toc .post-toc-content ul {
+
+padding-left: 15px;
+
+display: none;
+
+}
+
+.post-toc .post-toc-content .has-active > ul {
+
+display: block;
+
+}
+
+.post-toc .post-toc-content a:hover {
+
+color: #c05b4d;
+
+}
+
+.post-toc .post-toc-content a {
+
+display: block;
+
+line-height: 30px;
+
+overflow: hidden;
+
+white-space: nowrap;
+
+text-overflow: ellipsis;
+
+-webkit-transition-duration: .2s;
+
+transition-duration: .2s;
+
+-webkit-transition-property: -webkit-transform;
+
+transition-property: -webkit-transform;
+
+transition-property: transform;
+
+transition-property: transform, -webkit-transform;
+
+-webkit-transition-timing-function: ease-out;
+
+transition-timing-function: ease-out;
+
+
+}
+
+@media only screen and (max-width: 1224px) {
+
+.post-toc {
+
+display: none;
+
+}
+
+}
+
+.article-active {
+  
+color: #c05b4d;
+
+}
+
+.post-toc ul li.article-active {
+    border-left: 0.01rem solid #326DE6;
+    padding-left: 0.1rem;
+}
+.post-toc ul li.article-active a {
+    color: #326DE6;
+    position: relative;
+}
+
+  </style>
+
+  <meta name="title" content="vue 全局公用函数 | Ehlxr - A responsive and simple theme for Hugo">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "post",
+    "name" : "vue 全局公用函数",
+    "headline" : "vue 全局公用函数",
+    "description" : "如果你需要让一个工具函数在每个组件可用，可以把方法挂载到 Vue.prototype 上。 你可以选择挂载到 Vue 上，但是这样就需要在使用之前 import Vue form 'vue'，而挂载到 prototype 上是",
+    "inLanguage" : "en",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-11-24 20:20:53 &#43;0000 UTC",
+    "dateModified" : "2017-11-24 20:20:53 &#43;0000 UTC",
+    "url" : "/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/",
+    "wordCount" : "275",
+    "keywords" : [ "vue", "Ehlxr - A responsive and simple theme for Hugo"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div id="container" class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">vue 全局公用函数</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2017-11-24 itemprop="datePublished">2017-11-24</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title"></h2>
+    
+    <div class="post-toc-content always-active">
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#注册函数">注册函数</a></li>
+<li><a href="#组件中使用">组件中使用</a></li>
+<li><a href="#应用实例">应用实例</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+  </div>
+  
+   <script type="text/javascript">
+    window.onload = function () {
+      var fix = $('.post-toc');
+      var end = $('.post-comment');
+      var fixTop = fix.offset().top, fixHeight = fix.height();
+      var endTop, miss;
+      var offsetTop = fix[0].offsetTop;
+       $(window).scroll(function () {
+        var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+         if (end.length > 0) {
+          endTop = end.offset().top;
+          miss = endTop - docTop - fixHeight;
+        }
+         if (fixTop < docTop) {
+          fix.css({ 'position': 'fixed' });
+          if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+            fix.css({ top: miss });
+          } else {
+            fix.css({ top: 0 });
+          }
+        } else {
+          fix.css({ 'position': 'absolute' });
+          fix.css({ top: offsetTop });
+        }
+      })
+    }
+  </script> 
+
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>如果你需要让一个工具函数在每个组件可用，可以把方法挂载到 <code>Vue.prototype</code> 上。</p>
+
+<p>你可以选择挂载到 <code>Vue</code> 上，但是这样就需要在使用之前 <code>import Vue form 'vue'</code>，而挂载到 <code>prototype</code> 上是为了方便组件内直接用 <code>this.$fn</code> 来使用（<code>$fn</code> 即挂载的全局函数）。</p>
+
+<p>你也可以直接用 <code>Vue.prototype.$fn</code>，这样同样可以全局使用，不过在组件内就需要再 <code>import</code> 一次 <code>Vue</code> 了。</p>
+
+<p><em>参考：<a href="https://doc.vux.li/zh-CN/development/vue-global-method.html">vue 全局公用函数</a></em></p>
+
+<h2 id="注册函数">注册函数</h2>
+
+<blockquote>
+<p>一般建议函数名使用 $ 前缀。像 vue-router 的 $route 和 $router。</p>
+</blockquote>
+
+<p>入口文件 <code>main.js</code> 中：</p>
+
+<pre><code class="language-js">Vue.prototype.$fn = function () {}
+</code></pre>
+
+<h2 id="组件中使用">组件中使用</h2>
+
+<pre><code class="language-js">export default {
+  created () {
+    this.$fn()
+  }
+}
+</code></pre>
+
+<h2 id="应用实例">应用实例</h2>
+
+<p>可以将全局提示、loading等常用功能挂载到全局方便调用，可参考 <a href="http://element-cn.eleme.io/#/zh-CN/component/message#quan-ju-fang-fa">element-ui的message组件</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/>/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/vue/">
+                    #vue</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/2017/11/24/vue-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%93%8D%E4%BD%9C-dom/" class="prev" rel="prev" title="vue 项目中操作 dom"><i class="iconfont icon-left"></i>&nbsp;vue 项目中操作 dom</a>
+         
+        
+        <a href="/2017/11/24/header%E5%92%8Cfooter%E7%BB%84%E4%BB%B6%E5%8C%96/" class="next" rel="next" title="header和footer组件化">header和footer组件化&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+  $(function () {
+      $(document).pjax('a', '#container', { fragment: '#container' })
+
+      $(document).on('pjax:send', function() {
+          NProgress.start();
+      })
+      $(document).on('pjax:complete', function() {
+          NProgress.done();
+      })
+  })
+</script>
+<script>
+
+
+function highLightPostNav () {
+    var articlenav = $('.post-toc li');
+    var className = 'article-active';
+    articlenav.removeClass(className);
+    $("h1,h2,h3").each(function () {
+        var dis = $(this).offset().top - $(window).scrollTop();
+        if (dis < 120) {
+            articlenav.removeClass(className);
+            var currentId = $(this).attr('id');
+            $('[href="#' + currentId + '"').parent().addClass(className);
+        }
+    })
+}
+if ($(window).width() >= 768) {
+    highLightPostNav();
+    $(window).scroll(function () {
+        highLightPostNav();
+    });
+}
+  
+  
+  </script>
+     </div>
+  </body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  <meta name="description" content="Hugo theme ehlxr example site.">
+  <meta name="keywords" content="[Hugo theme ehlxr]">
+  
+  <link rel="prev" href="/2017/02/20/git-%E4%B9%B1%E7%A0%81/" />
+  <link rel="next" href="/2017/11/19/react-%E4%B8%AD%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/" />
+  <link rel="canonical" href="/2017/11/19/%E5%BE%AE%E4%BB%A3%E7%A0%81/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <title>
+       
+       
+           微代码 | Ehlxr - A responsive and simple theme for Hugo
+       
+  </title>
+  <style>
+
+ 
+.navbar {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
+ 
+
+.post-toc {
+
+position: fixed;
+
+width: 200px;
+
+margin-left: 800px;
+
+padding: 10px;
+padding-left: 0;
+
+word-wrap: break-word;
+
+box-sizing: border-box;
+border-left: 1px solid #ccc;
+
+}
+
+.post-toc .post-toc-title {
+
+margin: 0;
+
+font-weight: 400;
+
+text-transform: uppercase;
+
+}
+
+.post-toc .post-toc-content.always-active ul {
+
+display: block;
+
+}
+
+ 
+
+.post-toc .post-toc-content ul {
+
+padding-left: 0;
+
+list-style: none;
+
+}
+
+.post-toc .post-toc-content ul {
+
+padding-left: 15px;
+
+display: none;
+
+}
+
+.post-toc .post-toc-content .has-active > ul {
+
+display: block;
+
+}
+
+.post-toc .post-toc-content a:hover {
+
+color: #c05b4d;
+
+}
+
+.post-toc .post-toc-content a {
+
+display: block;
+
+line-height: 30px;
+
+overflow: hidden;
+
+white-space: nowrap;
+
+text-overflow: ellipsis;
+
+-webkit-transition-duration: .2s;
+
+transition-duration: .2s;
+
+-webkit-transition-property: -webkit-transform;
+
+transition-property: -webkit-transform;
+
+transition-property: transform;
+
+transition-property: transform, -webkit-transform;
+
+-webkit-transition-timing-function: ease-out;
+
+transition-timing-function: ease-out;
+
+
+}
+
+@media only screen and (max-width: 1224px) {
+
+.post-toc {
+
+display: none;
+
+}
+
+}
+
+.article-active {
+  
+color: #c05b4d;
+
+}
+
+.post-toc ul li.article-active {
+    border-left: 0.01rem solid #326DE6;
+    padding-left: 0.1rem;
+}
+.post-toc ul li.article-active a {
+    color: #326DE6;
+    position: relative;
+}
+
+  </style>
+
+  <meta name="title" content="微代码 | Ehlxr - A responsive and simple theme for Hugo">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "post",
+    "name" : "微代码",
+    "headline" : "微代码",
+    "description" : "<p>常用代码段，样式代码为主。</p>",
+    "inLanguage" : "en",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-11-19 20:20:53 &#43;0000 UTC",
+    "dateModified" : "2017-11-19 20:20:53 &#43;0000 UTC",
+    "url" : "/2017/11/19/%E5%BE%AE%E4%BB%A3%E7%A0%81/",
+    "wordCount" : "482",
+    "keywords" : [ "code", "Ehlxr - A responsive and simple theme for Hugo"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div id="container" class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">微代码</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2017-11-19 itemprop="datePublished">2017-11-19</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title"></h2>
+    
+    <div class="post-toc-content always-active">
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#光标形状">光标形状</a></li>
+<li><a href="#c3属性-禁用-onclick-事件">C3属性 禁用 <code>onclick</code> 事件</a></li>
+<li><a href="#网页被选中文字的背景颜色">网页被选中文字的背景颜色</a></li>
+<li><a href="#修改-placeholder-文本的样式">修改<code>placeholder</code>文本的样式</a></li>
+<li><a href="#文本间距">文本间距</a></li>
+<li><a href="#去掉-input-的外边线">去掉 input 的外边线</a></li>
+<li><a href="#select-的-option-选项文本默认左对齐-通过以下是属性设置居中">select 的 option 选项文本默认左对齐，通过以下是属性设置居中</a></li>
+<li><a href="#点击自身以外的地方-关闭弹出层-待定">点击自身以外的地方，关闭弹出层(待定)</a></li>
+<li><a href="#移动端的问题">移动端的问题</a></li>
+<li><a href="#原生组件样式设置问题-如-input">原生组件样式设置问题，如 <code>input</code></a></li>
+<li><a href="#禁止用户选中文本">禁止用户选中文本</a></li>
+<li><a href="#多余文本显示省略号">多余文本显示省略号</a></li>
+<li><a href="#双伪元素清除浮动">双伪元素清除浮动</a></li>
+<li><a href="#伪元素清除浮动">伪元素清除浮动</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+  </div>
+  
+   <script type="text/javascript">
+    window.onload = function () {
+      var fix = $('.post-toc');
+      var end = $('.post-comment');
+      var fixTop = fix.offset().top, fixHeight = fix.height();
+      var endTop, miss;
+      var offsetTop = fix[0].offsetTop;
+       $(window).scroll(function () {
+        var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+         if (end.length > 0) {
+          endTop = end.offset().top;
+          miss = endTop - docTop - fixHeight;
+        }
+         if (fixTop < docTop) {
+          fix.css({ 'position': 'fixed' });
+          if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+            fix.css({ top: miss });
+          } else {
+            fix.css({ top: 0 });
+          }
+        } else {
+          fix.css({ 'position': 'absolute' });
+          fix.css({ top: offsetTop });
+        }
+      })
+    }
+  </script> 
+
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>常用代码段，样式代码为主。</p>
+
+<h3 id="光标形状">光标形状</h3>
+
+<ol>
+<li>小手  <code>cursor: pointer;</code></li>
+<li>等待  <code>cursor: wait;</code></li>
+</ol>
+
+<h3 id="c3属性-禁用-onclick-事件">C3属性 禁用 <code>onclick</code> 事件</h3>
+
+<p><a href="http://www.zhangxinxu.com/wordpress/2011/12/css3-pointer-events-none-javascript/">CSS3 pointer-events:none应用举例及扩展</a></p>
+
+<p><code>point-events: auto;</code></p>
+
+<h3 id="网页被选中文字的背景颜色">网页被选中文字的背景颜色</h3>
+
+<pre><code class="language-css">::selection {
+    background-color: green;
+    color: pink;
+}
+</code></pre>
+
+<h3 id="修改-placeholder-文本的样式">修改<code>placeholder</code>文本的样式</h3>
+
+<pre><code class="language-css">input::-webkit-input-placeholder {
+    color: #ccc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+</code></pre>
+
+<h3 id="文本间距">文本间距</h3>
+
+<p><code>letter-spacing: 2px;</code></p>
+
+<h3 id="去掉-input-的外边线">去掉 input 的外边线</h3>
+
+<p><code>outline: none;</code></p>
+
+<h3 id="select-的-option-选项文本默认左对齐-通过以下是属性设置居中">select 的 option 选项文本默认左对齐，通过以下是属性设置居中</h3>
+
+<pre><code class="language-css">select {
+    text-align: center;
+    /* 单独一个 text-align 没有效果 */
+    text-align-last: center;
+}
+</code></pre>
+
+<h3 id="点击自身以外的地方-关闭弹出层-待定">点击自身以外的地方，关闭弹出层(待定)</h3>
+
+<pre><code class="language-js">$(&quot;body&quot;).click(function() {
+    if($(&quot;.ele&quot;)){
+        $(&quot;.ele&quot;).hide();
+    }
+})
+</code></pre>
+
+<h3 id="移动端的问题">移动端的问题</h3>
+
+<ol>
+<li>iOS/安卓默认样式的不同，如select、a链接</li>
+<li>font-size 小于 10px 时候，height 等于 line-height 无法将单行文本居中</li>
+<li>input 和 fixed定位的冲突 <a href="http://efe.baidu.com/blog/mobile-fixed-layout/">Web移动端Fixed布局的解决方案</a></li>
+<li>图片</li>
+<li>长度单位(px/em/rem)</li>
+</ol>
+
+<h3 id="原生组件样式设置问题-如-input">原生组件样式设置问题，如 <code>input</code></h3>
+
+<p>主要思路为隐藏原生组件的样式，设置 <code>label</code> 标签的样式</p>
+
+<p>或者是通过定位、不透明度和层级等属性将原生组件和自定义样式的 <code>div</code> 位置重合，做一个样式的障眼法</p>
+
+<h3 id="禁止用户选中文本">禁止用户选中文本</h3>
+
+<pre><code class="language-css">div {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</code></pre>
+
+<h3 id="多余文本显示省略号">多余文本显示省略号</h3>
+
+<pre><code class="language-css">width: 100px; /* 固定宽度 */
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+</code></pre>
+
+<h3 id="双伪元素清除浮动">双伪元素清除浮动</h3>
+
+<pre><code class="language-css">.clearfix:after, .clearfix:before {
+    content: &quot;&quot;;
+    display: table;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+</code></pre>
+
+<h3 id="伪元素清除浮动">伪元素清除浮动</h3>
+
+<pre><code class="language-css">.clearfix:after {
+    content:&quot;&quot;;
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility:hidden;
+    clear:both;
+}
+.clearfix {
+    zoom: 1;/*用来兼容ie浏览器*/
+}
+</code></pre>
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/2017/11/19/%E5%BE%AE%E4%BB%A3%E7%A0%81/>/2017/11/19/%E5%BE%AE%E4%BB%A3%E7%A0%81/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/code/">
+                    #code</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/2017/02/20/git-%E4%B9%B1%E7%A0%81/" class="prev" rel="prev" title="Git 乱码"><i class="iconfont icon-left"></i>&nbsp;Git 乱码</a>
+         
+        
+        <a href="/2017/11/19/react-%E4%B8%AD%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1/" class="next" rel="next" title="React 中阻止事件冒泡">React 中阻止事件冒泡&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+  $(function () {
+      $(document).pjax('a', '#container', { fragment: '#container' })
+
+      $(document).on('pjax:send', function() {
+          NProgress.start();
+      })
+      $(document).on('pjax:complete', function() {
+          NProgress.done();
+      })
+  })
+</script>
+<script>
+
+
+function highLightPostNav () {
+    var articlenav = $('.post-toc li');
+    var className = 'article-active';
+    articlenav.removeClass(className);
+    $("h1,h2,h3").each(function () {
+        var dis = $(this).offset().top - $(window).scrollTop();
+        if (dis < 120) {
+            articlenav.removeClass(className);
+            var currentId = $(this).attr('id');
+            $('[href="#' + currentId + '"').parent().addClass(className);
+        }
+    })
+}
+if ($(window).width() >= 768) {
+    highLightPostNav();
+    $(window).scroll(function () {
+        highLightPostNav();
+    });
+}
+  
+  
+  </script>
+     </div>
+  </body>
+</html>

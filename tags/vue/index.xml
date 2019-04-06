@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/tags/vue/</link>
+    <description>Recent content in Vue on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jan 2019 14:22:53 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vue中父级组件通过Prop向自组件传递数据</title>
+      <link>/2019/01/08/vue%E4%B8%AD%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87prop%E5%90%91%E8%87%AA%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Tue, 08 Jan 2019 14:22:53 +0000</pubDate>
+      
+      <guid>/2019/01/08/vue%E4%B8%AD%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87prop%E5%90%91%E8%87%AA%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/</guid>
+      <description>Props 以按钮组件 &amp;lt;g-button&amp;gt; 的 disabled 属性为例： &amp;lt;template&amp;gt; &amp;lt;button :disabled=&amp;quot;disabled&amp;quot;&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; export default { props: { disabled: { type: Boolean, default: false }, } } &amp;lt;/script&amp;gt; 在某父组件中使用该按钮组件： &amp;lt;template&amp;gt; &amp;lt;div&amp;gt; &amp;lt;a-button disabled&amp;gt;Primary&amp;lt;/a-button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; 按钮组件中定义了是否禁用 disabled 属性，</description>
+    </item>
+    
+    <item>
+      <title>ElementUI（Vue）中按照百分比对表格排序</title>
+      <link>/2018/12/26/elementuivue%E4%B8%AD%E6%8C%89%E7%85%A7%E7%99%BE%E5%88%86%E6%AF%94%E5%AF%B9%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Wed, 26 Dec 2018 18:20:53 +0000</pubDate>
+      
+      <guid>/2018/12/26/elementuivue%E4%B8%AD%E6%8C%89%E7%85%A7%E7%99%BE%E5%88%86%E6%AF%94%E5%AF%B9%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F/</guid>
+      <description>首先，Element Vue 的表格组件支持排序功能，并且支持自定义排序。 然后，需求是让表格可以按照某一列（百分比）排序。 因为默认提供的排序功能实际</description>
+    </item>
+    
+    <item>
+      <title>axios 封装</title>
+      <link>/2017/11/24/axios-%E5%B0%81%E8%A3%85/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/axios-%E5%B0%81%E8%A3%85/</guid>
+      <description>拦截器 如果你想要在每次发送 ajax 请求或者收到 ajax 响应的时候进行一些处理，那么你可以使用 axios 请求拦截器和响应拦截器 请求拦截器 // 添加请求拦截器 axios.interceptors.request.use( config =&amp;gt; { //</description>
+    </item>
+    
+    <item>
+      <title>header和footer组件化</title>
+      <link>/2017/11/24/header%E5%92%8Cfooter%E7%BB%84%E4%BB%B6%E5%8C%96/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/header%E5%92%8Cfooter%E7%BB%84%E4%BB%B6%E5%8C%96/</guid>
+      <description>我们在建设网站时总会遇到这样的问题：在大部分的页面我们需要显示 header 和 footer，分别用于展示网站 logo、顶部导航和底部版权信息等内容。 在 vue</description>
+    </item>
+    
+    <item>
+      <title>vue 全局公用函数</title>
+      <link>/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vue-%E5%85%A8%E5%B1%80%E5%85%AC%E7%94%A8%E5%87%BD%E6%95%B0/</guid>
+      <description>如果你需要让一个工具函数在每个组件可用，可以把方法挂载到 Vue.prototype 上。 你可以选择挂载到 Vue 上，但是这样就需要在使用之前 import Vue form &#39;vue&#39;，而挂载到 prototype 上是</description>
+    </item>
+    
+    <item>
+      <title>vue 项目中操作 dom</title>
+      <link>/2017/11/24/vue-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%93%8D%E4%BD%9C-dom/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vue-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%93%8D%E4%BD%9C-dom/</guid>
+      <description>在某些时候我们希望点击一个按钮可以让输入框获取焦点，但是 Vue 中不建议直接操作 DOM 元素，这时候可以利用 Vue 提供的 ref 属性来实现。 vue-refs: 一个对象，持有注册过</description>
+    </item>
+    
+    <item>
+      <title>vuex 状态持久化之vuex-persistedstate</title>
+      <link>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E6%8C%81%E4%B9%85%E5%8C%96%E4%B9%8Bvuex-persistedstate/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E6%8C%81%E4%B9%85%E5%8C%96%E4%B9%8Bvuex-persistedstate/</guid>
+      <description>安装 $ npm install vuex-persistedstate 使用 import createPersistedState from &amp;quot;vuex-persistedstate&amp;quot;; const store = new Vuex.Store({ // ... plugins: [createPersistedState()] }); API createPersistedState([options])：通过配置选项创建实例。 你可以通</description>
+    </item>
+    
+    <item>
+      <title>vuex 状态管理</title>
+      <link>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/vuex-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</guid>
+      <description>从使用的角度来看 存取状态 用户操作 异步请求 [toc] What is this Vuex 是使用 vue 开发大型项目用来管理应用状态的一个很好的选择。 这里尽量不出现各种概念，只有一些很基</description>
+    </item>
+    
+    <item>
+      <title>动态设置网页 title</title>
+      <link>/2017/11/24/%E5%8A%A8%E6%80%81%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5-title/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E5%8A%A8%E6%80%81%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5-title/</guid>
+      <description>单页面应用的一个问题就是网页 title 无法随着路由而变化，这里我们使用 vue-wechat-title 解决这个问题。 安装： npm install vue-wechat-title --save 引用 import vueRouter from &amp;quot;vue-router&amp;quot; import VueWechatTitle from &#39;vue-wechat-title&#39; Vue.use(VueWechatTitle) Vue.use(vueRouter) 调用 &amp;lt;router-view v-wechat-title=&#39;$route.meta.title&#39;&amp;gt;&amp;lt;/router-view&amp;gt; 给每个路由设置 title</description>
+    </item>
+    
+    <item>
+      <title>手机端键盘弹起优化</title>
+      <link>/2017/11/24/%E6%89%8B%E6%9C%BA%E7%AB%AF%E9%94%AE%E7%9B%98%E5%BC%B9%E8%B5%B7%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E6%89%8B%E6%9C%BA%E7%AB%AF%E9%94%AE%E7%9B%98%E5%BC%B9%E8%B5%B7%E4%BC%98%E5%8C%96/</guid>
+      <description>问题背景 页面布局大致如下 &amp;lt;template&amp;gt; &amp;lt;header&amp;gt;Logo&amp;lt;/header&amp;gt; &amp;lt;form&amp;gt; &amp;lt;input type=&amp;quot;text&amp;quot; &amp;gt; &amp;lt;input type=&amp;quot;password&amp;quot; &amp;gt; &amp;lt;button&amp;gt;提交&amp;lt;/button&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;footer&amp;gt; 版权信息 &amp;lt;/footer&amp;gt; &amp;lt;/template&amp;gt; header 和 form 都是 static 定位，f</description>
+    </item>
+    
+    <item>
+      <title>本地存储数据方案分析</title>
+      <link>/2017/11/24/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90/</guid>
+      <description>浏览器本地存储 有时候为了存储一些数据，比如用户信息，需要用到浏览器的存储能力。 浏览器本地存储数据有三种方案：cookie、localStor</description>
+    </item>
+    
+    <item>
+      <title>样式私有化</title>
+      <link>/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/</guid>
+      <description>使用 CSS modules CSS modules 因为 css 规则是全局有效的，因此特别容易发生样式冲突（污染）的问题， 使用 css modules 之前，通常为了避免冲突，会把 class 命名写长，配合父元素选择器</description>
+    </item>
+    
+    <item>
+      <title>用户登录状态管理</title>
+      <link>/2017/11/24/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</guid>
+      <description>逻辑 当用户访问站点时，在路由拦截器里判断 cookie 里面是否有 username 或者 token 或者 sessionId 之类的标识，如果有：表示“已登陆”，否则跳转到登陆页面； 如果已登陆，跳转到</description>
+    </item>
+    
+    <item>
+      <title>解决 Invalid Host header 问题</title>
+      <link>/2017/11/24/%E8%A7%A3%E5%86%B3-invalid-host-header-%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 24 Nov 2017 20:20:53 +0000</pubDate>
+      
+      <guid>/2017/11/24/%E8%A7%A3%E5%86%B3-invalid-host-header-%E9%97%AE%E9%A2%98/</guid>
+      <description>执行命令 npm run dev 启动本地服务器之后，发现只能在本地访问，不能通过局域网ip和服务器域名来访问。 在项目的根目录的 package.json 文件中的 dev 命令字段中添加 --host 19</description>
+    </item>
+    
+    <item>
+      <title>Vue 的 mixins 特性</title>
+      <link>/1/01/01/vue-%E7%9A%84-mixins-%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/vue-%E7%9A%84-mixins-%E7%89%B9%E6%80%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue中动态监听数据变化——vm.$set</title>
+      <link>/1/01/01/vue%E4%B8%AD%E5%8A%A8%E6%80%81%E7%9B%91%E5%90%AC%E6%95%B0%E6%8D%AE%E5%8F%98%E5%8C%96vm.set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/vue%E4%B8%AD%E5%8A%A8%E6%80%81%E7%9B%91%E5%90%AC%E6%95%B0%E6%8D%AE%E5%8F%98%E5%8C%96vm.set/</guid>
+      <description>先来看这样一个案例 &amp;lt;h3&amp;gt;选择你最爱吃的蔬菜：&amp;lt;/h3&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li v-for=&amp;quot;item in list&amp;quot; :key=&amp;quot;item.id&amp;quot; @click=&amp;quot;handleClick(item)&amp;quot; :class=&amp;quot;{active: item.checked}&amp;quot; &amp;gt; {{item.name}} &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; export default { data () { return { list: [] } }, created () { this.fetch() },</description>
+    </item>
+    
+  </channel>
+</rss>

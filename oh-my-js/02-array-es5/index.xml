@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Array-ES3 on Ehlxr - A responsive and simple theme for Hugo</title>
+    <link>/oh-my-js/02-array-es5/</link>
+    <description>Recent content in Array-ES3 on Ehlxr - A responsive and simple theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Feb 2017 00:28:21 +0000</lastBuildDate>
+    
+	<atom:link href="/oh-my-js/02-array-es5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Array.isArray()</title>
+      <link>/oh-my-js/02-array-es5/10-array.isarray/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/10-array.isarray/</guid>
+      <description>描述 Array.isArray() 方法用于确定一个值是否为 Array 类型。 注意：Array.isArray() 方法只能由构造函数 Array 调用，而数组实例无法调用。 ps：严格判断 JavaScript 对象</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.every()</title>
+      <link>/oh-my-js/02-array-es5/05-array.every/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/05-array.every/</guid>
+      <description>描述 every() 方法对数组每一项运行给定函数 fn ，如果该函数对每一项都返回 true ，则 every() 方法返回 true，否则返回 false。 参数 参数 描述 fn function 类型，必需。数组</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.filter()</title>
+      <link>/oh-my-js/02-array-es5/03-array.filter/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/03-array.filter/</guid>
+      <description>filter: 过滤 描述 filter() 方法对数组中每一项运行给定函数 fn ,返回使该函数返回值为 true 的项组成的数组。 参数 参数 描述 fn function 类型，必需。数组中每个元素需要调用的函数</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.forEach()</title>
+      <link>/oh-my-js/02-array-es5/01-array.foreach/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/01-array.foreach/</guid>
+      <description>描述 forEach() 方法对数组每一项运行给定函数 fn，无返回值。另外，还可以指定函数 fn 的上下文环境（this）。 参数 参数 描述 fn function 类型，必需。数组中每个元素</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.indexOf()</title>
+      <link>/oh-my-js/02-array-es5/06-array.indexof/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/06-array.indexof/</guid>
+      <description>描述 indexOf() 方法返回在数组中可以找到一个给定元素的第一个索引（使用全等操作符），如果不存在，则返回 -1 。 参数 参数 描述 searchElement 要查找的元素 fromIndex 可选。开始查找的</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.lastIndexOf()</title>
+      <link>/oh-my-js/02-array-es5/07-array.lastindexof/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/07-array.lastindexof/</guid>
+      <description>描述 lastIndexOf() 方法返回在指定元素在数组中的最后一个的索引，如果不存在则返回 -1 。 查找方式为从数组的后面向前查找，从 fromIndex 处开始（使用全等操作符）。 参数 参数</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.map()</title>
+      <link>/oh-my-js/02-array-es5/02-array.map/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/02-array.map/</guid>
+      <description>map: 映射 描述 map() 方法对数组中每一项运行给定函数 callback ，返回值是每次 callback 函数调用的结果组成的数组。 另外可以指定函数 callback 的上下文环境（this）。 使用 map() 方法</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.reduce()</title>
+      <link>/oh-my-js/02-array-es5/08-array.reduce/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/08-array.reduce/</guid>
+      <description>reduce: 减少，缩小。但是 reduce() 方法并无此含义，而是“迭代，递归”。 描述 reduce() 方法从左向右迭代数组所有项，构建一个最终返回的值。 reduce() 方法接收两个参数：一个在每</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.reduceRight()</title>
+      <link>/oh-my-js/02-array-es5/09-array.reduceright/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/09-array.reduceright/</guid>
+      <description>描述 reduceRight() 方法从右向左迭代数组所有项，构建一个最终返回的值。 reduceRight() 方法接收两个参数：一个在每一项上调用的函数和（可选）作为迭代基础的初始值。 参数 参数</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.some()</title>
+      <link>/oh-my-js/02-array-es5/04-array.some/</link>
+      <pubDate>Mon, 20 Feb 2017 00:28:21 +0000</pubDate>
+      
+      <guid>/oh-my-js/02-array-es5/04-array.some/</guid>
+      <description>描述 some() 方法对数组每一项运行给定函数 fn ，如果该函数对任意一项返回 true ，则 some() 方法返回 true，否则返回 false。 参数 参数 描述 fn function 类型，必需。数组</description>
+    </item>
+    
+  </channel>
+</rss>

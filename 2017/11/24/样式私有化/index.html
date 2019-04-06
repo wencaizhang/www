@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  <meta name="description" content="Hugo theme ehlxr example site.">
+  <meta name="keywords" content="[Hugo theme ehlxr]">
+  
+  <link rel="prev" href="/2017/11/24/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/" />
+  <link rel="next" href="/2017/11/24/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90/" />
+  <link rel="canonical" href="/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <title>
+       
+       
+           样式私有化 | Ehlxr - A responsive and simple theme for Hugo
+       
+  </title>
+  <style>
+
+ 
+.navbar {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+
+ 
+
+.post-toc {
+
+position: fixed;
+
+width: 200px;
+
+margin-left: 800px;
+
+padding: 10px;
+padding-left: 0;
+
+word-wrap: break-word;
+
+box-sizing: border-box;
+border-left: 1px solid #ccc;
+
+}
+
+.post-toc .post-toc-title {
+
+margin: 0;
+
+font-weight: 400;
+
+text-transform: uppercase;
+
+}
+
+.post-toc .post-toc-content.always-active ul {
+
+display: block;
+
+}
+
+ 
+
+.post-toc .post-toc-content ul {
+
+padding-left: 0;
+
+list-style: none;
+
+}
+
+.post-toc .post-toc-content ul {
+
+padding-left: 15px;
+
+display: none;
+
+}
+
+.post-toc .post-toc-content .has-active > ul {
+
+display: block;
+
+}
+
+.post-toc .post-toc-content a:hover {
+
+color: #c05b4d;
+
+}
+
+.post-toc .post-toc-content a {
+
+display: block;
+
+line-height: 30px;
+
+overflow: hidden;
+
+white-space: nowrap;
+
+text-overflow: ellipsis;
+
+-webkit-transition-duration: .2s;
+
+transition-duration: .2s;
+
+-webkit-transition-property: -webkit-transform;
+
+transition-property: -webkit-transform;
+
+transition-property: transform;
+
+transition-property: transform, -webkit-transform;
+
+-webkit-transition-timing-function: ease-out;
+
+transition-timing-function: ease-out;
+
+
+}
+
+@media only screen and (max-width: 1224px) {
+
+.post-toc {
+
+display: none;
+
+}
+
+}
+
+.article-active {
+  
+color: #c05b4d;
+
+}
+
+.post-toc ul li.article-active {
+    border-left: 0.01rem solid #326DE6;
+    padding-left: 0.1rem;
+}
+.post-toc ul li.article-active a {
+    color: #326DE6;
+    position: relative;
+}
+
+  </style>
+
+  <meta name="title" content="样式私有化 | Ehlxr - A responsive and simple theme for Hugo">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "/"
+    },
+    "articleSection" : "post",
+    "name" : "样式私有化",
+    "headline" : "样式私有化",
+    "description" : "使用 CSS modules CSS modules 因为 css 规则是全局有效的，因此特别容易发生样式冲突（污染）的问题， 使用 css modules 之前，通常为了避免冲突，会把 class 命名写长，配合父元素选择器",
+    "inLanguage" : "en",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-11-24 20:20:53 &#43;0000 UTC",
+    "dateModified" : "2017-11-24 20:20:53 &#43;0000 UTC",
+    "url" : "/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/",
+    "wordCount" : "619",
+    "keywords" : [ "vue", "Ehlxr - A responsive and simple theme for Hugo"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="/">Ehlxr - A responsive and simple theme for Hugo</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/post/" title="">Archives</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div id="container" class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">样式私有化</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2017-11-24 itemprop="datePublished">2017-11-24</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title"></h2>
+    
+    <div class="post-toc-content always-active">
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#使用-css-modules">使用 CSS modules</a>
+<ul>
+<li><a href="#css-modules">CSS modules</a></li>
+<li><a href="#webpack-配置">webpack 配置</a></li>
+<li><a href="#具体使用">具体使用</a>
+<ul>
+<li><a href="#在-style-标签中添加-module-属性-表示使用-css-modules">在 <code>style</code> 标签中添加 <code>module</code> 属性，表示使用 <code>css modules</code></a></li>
+<li><a href="#在-template-中动态绑定类名-class-并使用-style-通过-调用">在 <code>template</code> 中动态绑定类名（<code>:class</code>），并使用 <code>$style</code> 通过 <code>.</code> 调用</a></li>
+<li><a href="#如果类名包含中划线-则通过中括号调用">如果类名包含中划线，则通过中括号调用</a></li>
+<li><a href="#同时拥有多个类名-可以使用数组">同时拥有多个类名，可以使用数组</a></li>
+<li><a href="#还可以使用对象-动态切换类名">还可以使用对象，动态切换类名</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+  </div>
+  
+   <script type="text/javascript">
+    window.onload = function () {
+      var fix = $('.post-toc');
+      var end = $('.post-comment');
+      var fixTop = fix.offset().top, fixHeight = fix.height();
+      var endTop, miss;
+      var offsetTop = fix[0].offsetTop;
+       $(window).scroll(function () {
+        var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+         if (end.length > 0) {
+          endTop = end.offset().top;
+          miss = endTop - docTop - fixHeight;
+        }
+         if (fixTop < docTop) {
+          fix.css({ 'position': 'fixed' });
+          if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+            fix.css({ top: miss });
+          } else {
+            fix.css({ top: 0 });
+          }
+        } else {
+          fix.css({ 'position': 'absolute' });
+          fix.css({ top: offsetTop });
+        }
+      })
+    }
+  </script> 
+
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="使用-css-modules">使用 CSS modules</h2>
+
+<h3 id="css-modules">CSS modules</h3>
+
+<p>因为 css 规则是全局有效的，因此特别容易发生样式冲突（污染）的问题，</p>
+
+<p>使用 css modules 之前，通常为了避免冲突，会把 class 命名写长，配合父元素选择器限制范围。</p>
+
+<p>使用 css modules 之后，构建工具可以帮我们把类名编译成含有哈希值的类名。</p>
+
+<pre><code class="language-html">&lt;h3 class=&quot;src-pages-WaitForExam---red---1wBGt_0&quot;&gt;注意事项&lt;/h3&gt;
+</code></pre>
+
+<p>因此我们可以不用关心样式冲突问题，只需要使用约定的格式书写即可。</p>
+
+<p>使用 <code>css modules</code></p>
+
+<h3 id="webpack-配置">webpack 配置</h3>
+
+<p>　可以使用vue-loader的cssModules选项为css-loader进行自定义的配置</p>
+
+<pre><code class="language-js">module: {
+  rules: [
+    {
+      test: '\.vue$',
+      loader: 'vue-loader',
+      options: {
+        cssModules: {
+          localIdentName: '[path][name]---[local]---[hash:base64:5]',
+          camelCase: true
+        }
+      }
+    }
+  ]
+}
+</code></pre>
+
+<h3 id="具体使用">具体使用</h3>
+
+<h4 id="在-style-标签中添加-module-属性-表示使用-css-modules">在 <code>style</code> 标签中添加 <code>module</code> 属性，表示使用 <code>css modules</code></h4>
+
+<pre><code class="language-css">&lt;style module&gt;
+.red {
+    color: red;
+}
+&lt;/style&gt;
+</code></pre>
+
+<h4 id="在-template-中动态绑定类名-class-并使用-style-通过-调用">在 <code>template</code> 中动态绑定类名（<code>:class</code>），并使用 <code>$style</code> 通过 <code>.</code> 调用</h4>
+
+<pre><code class="language-html">&lt;template&gt;
+    &lt;p :class=&quot;$style.red&quot;&gt;一个段落&lt;/p&gt;
+&lt;/template&gt;
+&lt;style module&gt;
+.red {
+    color: red;
+}
+&lt;/style&gt;
+</code></pre>
+
+<h4 id="如果类名包含中划线-则通过中括号调用">如果类名包含中划线，则通过中括号调用</h4>
+
+<pre><code class="language-html">&lt;template&gt;
+    &lt;p :class=&quot;$style['red-p']&quot;&gt;一个段落&lt;/p&gt;
+&lt;/template&gt;
+&lt;style module&gt;
+.red-p {
+    color: red;
+}
+&lt;/style&gt;
+</code></pre>
+
+<h4 id="同时拥有多个类名-可以使用数组">同时拥有多个类名，可以使用数组</h4>
+
+<pre><code class="language-html">&lt;template&gt;
+    &lt;p :class=&quot;[$style.red, $style.text]&quot;&gt;一个段落&lt;/p&gt;
+&lt;/template&gt;
+&lt;style module&gt;
+.red {
+    color: red;
+}
+.text {
+    text-align: center;
+}
+&lt;/style&gt;
+</code></pre>
+
+<h4 id="还可以使用对象-动态切换类名">还可以使用对象，动态切换类名</h4>
+
+<pre><code class="language-html">&lt;template&gt;
+    &lt;p :class=&quot;{ [$style.red] : isRed }&quot;&gt;一个段落&lt;/p&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    data() {
+        return {
+            isRed: false
+        };
+    },
+}
+&lt;/script&gt;
+&lt;style module&gt;
+.red {
+    color: red;
+}
+&lt;/style&gt;
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/>/2017/11/24/%E6%A0%B7%E5%BC%8F%E7%A7%81%E6%9C%89%E5%8C%96/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="/tags/vue/">
+                    #vue</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/2017/11/24/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/" class="prev" rel="prev" title="用户登录状态管理"><i class="iconfont icon-left"></i>&nbsp;用户登录状态管理</a>
+         
+        
+        <a href="/2017/11/24/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E6%96%B9%E6%A1%88%E5%88%86%E6%9E%90/" class="next" rel="next" title="本地存储数据方案分析">本地存储数据方案分析&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+  $(function () {
+      $(document).pjax('a', '#container', { fragment: '#container' })
+
+      $(document).on('pjax:send', function() {
+          NProgress.start();
+      })
+      $(document).on('pjax:complete', function() {
+          NProgress.done();
+      })
+  })
+</script>
+<script>
+
+
+function highLightPostNav () {
+    var articlenav = $('.post-toc li');
+    var className = 'article-active';
+    articlenav.removeClass(className);
+    $("h1,h2,h3").each(function () {
+        var dis = $(this).offset().top - $(window).scrollTop();
+        if (dis < 120) {
+            articlenav.removeClass(className);
+            var currentId = $(this).attr('id');
+            $('[href="#' + currentId + '"').parent().addClass(className);
+        }
+    })
+}
+if ($(window).width() >= 768) {
+    highLightPostNav();
+    $(window).scroll(function () {
+        highLightPostNav();
+    });
+}
+  
+  
+  </script>
+     </div>
+  </body>
+</html>
