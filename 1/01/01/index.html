@@ -9,7 +9,7 @@
   <meta name="description" content="Hugo theme ehlxr example site.">
   <meta name="keywords" content="[Hugo theme ehlxr]">
   
-  <link rel="prev" href="/1/01/01/" />
+  <link rel="prev" href="/1/01/01/js-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" />
   <link rel="next" href="/1/01/01/" />
   <link rel="canonical" href="/1/01/01/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -180,10 +180,11 @@ color: #c05b4d;
     "articleSection" : "post",
     "name" : "",
     "headline" : "",
-    "description" : "title: chrome 插件集 tags: - tool
-date: 2017-12-30 00:20:53 写在前面 chrome 插件离线安装方法（chrome 插件通常以 crx 格式保存）： 1. chrome 中打开 chrome://extensions/ 页面 2. 把后缀为 crx 的插件安装文件拖拽到第一步打开的页面中 3. 浏览器弹出确认安装的提示框，点击“添加扩展程序”即可
-下面的插件都在百度云盘做了备份，网盘地址：https://pan.baidu.com/s/1gfCjRTD
-插件介绍 谷歌访问助手 - 访问谷歌  免费，简单 坏处：需要设置hao123为主页  cVim - 使Chrome浏览器支持Vim的快捷键  支持 vim 快捷键，解放鼠标 preview:   JSONView - web开发 JSON 数据格式化和高亮插件  在做开发的时候，经常需要从服务器拿数据，一般返回数据都会用 json 来封装。由于一些原因，从服务器端取得的json数据，往往是经过unicode编码，没有格式化的数据，很难阅读。JSONView 正是应用与这个场景，它可以将json数据进行转码和格式化，以一种清晰的形式展示给大家 preview:   Octotree - 你的 GitHub 文档库  装了这款插件之后，可以在 GitHub 项目页面的左侧看到相应项目的树状结构图，对于项目管理以及具体的文件跳转来说非常方便。 一键下载文件：GitHub 可以让你很方便的以 .",
+    "description" : "title: 调教你的Xshell tags: - tool - xshell - linux
+date: 2018-01-17 23:05:00 Xshell xshell是一款知名终端模拟软件，个人用户免费，中文界面，方便好用。
+但是一些默认设置需要手动调整之后才更顺手更好用。
+打开选项窗口 如图所示：工具 -&gt; 选项即可打开选项窗口 将选中的文本自动复制到剪贴板（左键选中自动复制） 如图所示，在“键盘和鼠标”选项卡中勾选对应选项即可： 右键设置 如图所示，设置右键和中键的功能，其中下拉选项的含义如下：
+   选项 蹩脚翻译     Do nothing 什么都不做   Open the popup menu 打开弹出式菜单   Paste the clipboard contents 粘贴剪切板的内容   Open Properties dialog 打开属性窗口   Send carriage return 发送回车   Paste the selected text 粘贴被选中的文本    我的选择是，中键打开弹出式菜单，右键粘贴剪切板的内容",
     "inLanguage" : "en",
     "author" : "",
     "creator" : "",
@@ -194,7 +195,7 @@ date: 2017-12-30 00:20:53 写在前面 chrome 插件离线安装方法（chrome 
     "datePublished": "0001-01-01 00:00:00 &#43;0000 UTC",
     "dateModified" : "0001-01-01 00:00:00 &#43;0000 UTC",
     "url" : "/1/01/01/",
-    "wordCount" : "155",
+    "wordCount" : "89",
     "keywords" : [  "Ehlxr - A responsive and simple theme for Hugo"]
 }
 </script>
@@ -215,6 +216,8 @@ date: 2017-12-30 00:20:53 写在前面 chrome 插件离线安装方法（chrome 
                 
                 
                 <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/oh-my-js/" title="">oh-my-js</a>
                 
                 <a class="menu-item" href="/post/" title="">Archives</a>
                 
@@ -238,6 +241,8 @@ date: 2017-12-30 00:20:53 写在前面 chrome 插件离线安装方法（chrome 
                 
                 
                 <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/oh-my-js/" title="">oh-my-js</a>
                 
                 <a class="menu-item" href="/post/" title="">Archives</a>
                 
@@ -268,33 +273,49 @@ date: 2017-12-30 00:20:53 写在前面 chrome 插件离线安装方法（chrome 
     <h2 class="post-toc-title"></h2>
     
     <div class="post-toc-content always-active">
+      <div class="highlight-title"></div>
+      <style>
+          .post-toc-content {
+            position: relative;
+            width: 200px;
+            min-height: 400px;
+          }
+          #TableOfContents {
+            position: absolute;
+            display: block; 
+            left: 0;
+            right: 0;
+            z-index: 2;
+          }
+          .highlight-title {
+            position: absolute;
+            display: block; 
+            left: 0;
+            right: 0;
+            width: 200px;
+            height: 30px;
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 2px solid #009A61;
+            -moz-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+          }
+      </style>
       <nav id="TableOfContents">
 <ul>
 <li>
 <ul>
-<li><a href="#date-2017-12-30-00-20-53">date: 2017-12-30 00:20:53</a>
+<li><a href="#date-2018-01-17-23-05-00">date: 2018-01-17 23:05:00</a>
 <ul>
-<li><a href="#写在前面">写在前面</a></li>
-<li><a href="#插件介绍">插件介绍</a>
-<ul>
-<li><a href="#谷歌访问助手-访问谷歌">谷歌访问助手 - <strong>访问谷歌</strong></a></li>
-<li><a href="#cvim-使chrome浏览器支持vim的快捷键">cVim - 使Chrome浏览器支持Vim的快捷键</a></li>
-<li><a href="#jsonview-web开发-json-数据格式化和高亮插件">JSONView - web开发 JSON 数据格式化和高亮插件</a></li>
-<li><a href="#octotree-你的-github-文档库">Octotree - 你的 GitHub 文档库</a></li>
-<li><a href="#page-ruler-你的网页标尺">Page Ruler ：你的网页标尺</a></li>
-<li><a href="#awesome-autocomplete-for-github-属于-github-的-alfred">Awesome Autocomplete for GitHub ：属于 GitHub 的 「Alfred」</a></li>
-<li><a href="#postman-强大的-api-http-请求调试工具">Postman - 强大的 API &amp; HTTP 请求调试工具</a></li>
-<li><a href="#infinity-新标签页">Infinity 新标签页</a></li>
-<li><a href="#掘金-为设计师-程序员-产品经理每日发现优质内容">掘金 - 为设计师、程序员、产品经理每日发现优质内容</a></li>
-<li><a href="#proxy-switchysharp-轻松快捷地管理和切换多个代理设置">Proxy SwitchySharp - 轻松快捷地管理和切换多个代理设置</a></li>
-<li><a href="#web前端助手-fehelper">WEB前端助手(FeHelper)</a></li>
-<li><a href="#广告终结者">广告终结者</a></li>
-<li><a href="#猎豹翻译">猎豹翻译</a></li>
-<li><a href="#为知笔记网页剪辑器">为知笔记网页剪辑器</a></li>
-<li><a href="#新同文堂-网页简繁转换工具">新同文堂 - 网页简繁转换工具</a></li>
-<li><a href="#chrono-下载管理器">chrono 下载管理器</a></li>
-<li><a href="#listen-1-同时搜索并播放来自-网易云音乐-虾米-qq音乐-的歌曲">Listen 1 - 同时搜索并播放来自「网易云音乐，虾米，QQ音乐」的歌曲</a></li>
-</ul></li>
+<li><a href="#xshell">Xshell</a></li>
+<li><a href="#打开选项窗口">打开选项窗口</a></li>
+<li><a href="#将选中的文本自动复制到剪贴板-左键选中自动复制">将选中的文本自动复制到剪贴板（左键选中自动复制）</a></li>
+<li><a href="#右键设置">右键设置</a></li>
+<li><a href="#ctrl-c-复制"><code>Ctrl + C</code> 复制</a></li>
+<li><a href="#ctrl-v-粘贴"><code>Ctrl + V</code> 粘贴</a></li>
+<li><a href="#设置字体大小和配色方案">设置字体大小和配色方案</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -350,150 +371,115 @@ date: 2017-12-30 00:20:53 写在前面 chrome 插件离线安装方法（chrome 
 
           
 
-<p>title: chrome 插件集
+<p>title: 调教你的Xshell
 tags:
-  - tool</p>
+  - tool
+  - xshell
+  - linux</p>
 
-<h2 id="date-2017-12-30-00-20-53">date: 2017-12-30 00:20:53</h2>
+<h2 id="date-2018-01-17-23-05-00">date: 2018-01-17 23:05:00</h2>
 
-<h3 id="写在前面">写在前面</h3>
+<h3 id="xshell">Xshell</h3>
 
-<p>chrome 插件离线安装方法（chrome 插件通常以 <code>crx</code> 格式保存）：
-1. chrome 中打开 <code>chrome://extensions/</code> 页面
-2. 把后缀为 <code>crx</code> 的插件安装文件拖拽到第一步打开的页面中
-3. 浏览器弹出确认安装的提示框，点击“添加扩展程序”即可</p>
+<p>xshell是一款知名终端模拟软件，个人用户免费，中文界面，方便好用。</p>
 
-<p>下面的插件都在百度云盘做了备份，网盘地址：<a href="https://pan.baidu.com/s/1gfCjRTD">https://pan.baidu.com/s/1gfCjRTD</a></p>
+<p>但是一些默认设置需要手动调整之后才更顺手更好用。</p>
 
 <!-- more -->
 
-<h3 id="插件介绍">插件介绍</h3>
+<h3 id="打开选项窗口">打开选项窗口</h3>
 
-<h4 id="谷歌访问助手-访问谷歌">谷歌访问助手 - <strong>访问谷歌</strong></h4>
+<p>如图所示：工具 -&gt; 选项即可打开选项窗口
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-17/39941105.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<ul>
-<li>免费，简单</li>
-<li>坏处：需要设置hao123为主页</li>
-</ul>
+<h3 id="将选中的文本自动复制到剪贴板-左键选中自动复制">将选中的文本自动复制到剪贴板（左键选中自动复制）</h3>
 
-<h4 id="cvim-使chrome浏览器支持vim的快捷键">cVim - 使Chrome浏览器支持Vim的快捷键</h4>
+<p>如图所示，在“键盘和鼠标”选项卡中勾选对应选项即可：
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-17/65171353.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<ul>
-<li>支持 vim 快捷键，解放鼠标</li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://pic3.zhimg.com/725af9c97caaa38a28a67f02abad4865_r.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
+<h3 id="右键设置">右键设置</h3>
 
-<h4 id="jsonview-web开发-json-数据格式化和高亮插件">JSONView - web开发 JSON 数据格式化和高亮插件</h4>
+<p>如图所示，设置右键和中键的功能，其中下拉选项的含义如下：</p>
 
-<ul>
-<li>在做开发的时候，经常需要从服务器拿数据，一般返回数据都会用 <code>json</code> 来封装。由于一些原因，从服务器端取得的json数据，往往是经过unicode编码，没有格式化的数据，很难阅读。JSONView 正是应用与这个场景，它可以将json数据进行转码和格式化，以一种清晰的形式展示给大家</li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://images.cnblogs.com/cnblogs_com/hutaoer/2.JPG" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th align="center">蹩脚翻译</th>
+</tr>
+</thead>
 
-<h4 id="octotree-你的-github-文档库">Octotree - 你的 GitHub 文档库</h4>
+<tbody>
+<tr>
+<td>Do nothing</td>
+<td align="center">什么都不做</td>
+</tr>
 
-<ul>
-<li>装了这款插件之后，可以在 GitHub 项目页面的左侧看到相应项目的树状结构图，对于项目管理以及具体的文件跳转来说非常方便。</li>
-<li>一键下载文件：GitHub 可以让你很方便的以 .zip 格式下载所有文件，但如果只需要下载一个文件，非常麻烦。使用 Octotree 之后，点击页面左侧项目的树状结构图中对应文件的图标即可下载。</li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://pic3.zhimg.com/50/e9420e572117c016241b8d59ad92f663_hd.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
+<tr>
+<td>Open the popup menu</td>
+<td align="center">打开弹出式菜单</td>
+</tr>
 
-<h4 id="page-ruler-你的网页标尺">Page Ruler ：你的网页标尺</h4>
+<tr>
+<td>Paste the clipboard contents</td>
+<td align="center">粘贴剪切板的内容</td>
+</tr>
 
-<ul>
-<li>屏幕尺子插件，非常精确地测量出当前页面某个元素或者是整个页面的大小尺寸</li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://chromecj.com/Content/kindeditor/attached/image/20140917/20140917221507_1406.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
+<tr>
+<td>Open Properties dialog</td>
+<td align="center">打开属性窗口</td>
+</tr>
 
-<h4 id="awesome-autocomplete-for-github-属于-github-的-alfred">Awesome Autocomplete for GitHub ：属于 GitHub 的 「Alfred」</h4>
+<tr>
+<td>Send carriage return</td>
+<td align="center">发送回车</td>
+</tr>
 
-<ul>
-<li>能够让你在不离开当前项目窗口的前提下，弹窗显示出你的搜索结果，非常方便</li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://pic3.zhimg.com/50/f0e5e55e6aef53722b1f62a44f8af160_hd.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
+<tr>
+<td>Paste the selected text</td>
+<td align="center">粘贴被选中的文本</td>
+</tr>
+</tbody>
+</table>
 
-<h4 id="postman-强大的-api-http-请求调试工具">Postman - 强大的 API &amp; HTTP 请求调试工具</h4>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-17/7123508.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<ul>
-<li>官方网址：<a href="https://www.getpostman.com/">https://www.getpostman.com/</a></li>
-<li>不仅可以调试简单的 CSS、HTML、脚本等简单的网页基本信息，它还可以发送几乎所有类型的 HTTP 请求，Postman 在发送网络 HTTP 请求方面可以说是 Chrome 插件类产品中的代表产品之一</li>
-</ul>
+<p>我的选择是，中键打开弹出式菜单，右键粘贴剪切板的内容</p>
 
-<h4 id="infinity-新标签页">Infinity 新标签页</h4>
+<h3 id="ctrl-c-复制"><code>Ctrl + C</code> 复制</h3>
 
-<ul>
-<li>Chrome 新标签页应用，重绘了几百个图标，支持自定义搜索，集成天气，带有备忘与 Todo，还可以每日更换壁纸。</li>
-<li>如果你已经厌倦了日复一日的默认新标签页，那就试一试 Infinity 吧！</li>
-</ul>
+<p><code>Ctrl + C</code> 常用于结束正在进行中的命令，另外
+在设置了左键选中自动复制之后，也就不需要再额外设置复制的快捷键了。</p>
 
-<h4 id="掘金-为设计师-程序员-产品经理每日发现优质内容">掘金 - 为设计师、程序员、产品经理每日发现优质内容</h4>
+<h3 id="ctrl-v-粘贴"><code>Ctrl + V</code> 粘贴</h3>
 
-<ul>
-<li>聚合了国内外优质的互联网站点内容，在节省你的筛选成本的同时，帮你发现好内容。</li>
-</ul>
+<ol>
+<li><p>键盘和鼠标选项卡 -&gt; 编辑按钮
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-17/13626882.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
 
-<h4 id="proxy-switchysharp-轻松快捷地管理和切换多个代理设置">Proxy SwitchySharp - 轻松快捷地管理和切换多个代理设置</h4>
+<li><p>新建按钮
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-17/94066364.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
 
-<ul>
-<li>适用于需要经常切换网络代理的场景</li>
-<li>windows 平台蛋疼的代理切换方式谁用谁知道~~~</li>
-</ul>
+<li><p>同时按下 <code>Ctrl</code> 和 <code>V</code> 会自动进入编辑面板
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-17/89009725.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
 
-<h4 id="web前端助手-fehelper">WEB前端助手(FeHelper)</h4>
+<li><p><code>类型</code> 选择<code>菜单</code>，操作选择 <code>[编辑] 粘贴</code>
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-17/45371351.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
 
-<ul>
-<li>官方网站：<a href="https://www.baidufe.com/fehelper">WEB前端助手</a></li>
-<li>前端开发，你值得拥有！~</li>
-</ul>
+<li><p>最后点击确定即可</p></li>
+</ol>
 
-<h4 id="广告终结者">广告终结者</h4>
+<h3 id="设置字体大小和配色方案">设置字体大小和配色方案</h3>
 
-<ul>
-<li>谁用谁知道，自从用了广告终结者，妈妈再也不用担心我看到广告了</li>
-</ul>
+<ol>
+<li><p>文件 -&gt; 属性，或者使用快捷键 <code>Alt + P</code> 打开属性窗口
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-18/76087715.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
 
-<h4 id="猎豹翻译">猎豹翻译</h4>
+<li><p>点击左测外观，然后在右侧进行设置
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://p2btijoky.bkt.clouddn.com/18-1-18/72432945.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p></li>
 
-<ul>
-<li>英语学习药不能停！</li>
-<li>翻译类插件多如繁星，选择哪一款就看个人爱好了</li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://www.cnplugins.com/uploads/crximage/201606/www.cnplugins.com_dojgdllankdpofnmiiaodefbddmkjhna_1.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
-
-<h4 id="为知笔记网页剪辑器">为知笔记网页剪辑器</h4>
-
-<ul>
-<li>适合为知笔记用户</li>
-<li>可以很方便的把网页上有价值的内容保存到自己的笔记中</li>
-</ul>
-
-<h4 id="新同文堂-网页简繁转换工具">新同文堂 - 网页简繁转换工具</h4>
-
-<ul>
-<li>浏览一些繁体中文网站时（如<a href="http://linux.vbird.org/linux_basic/">鳥哥的 Linux 私房菜</a>）时还是很好用的</li>
-</ul>
-
-<h4 id="chrono-下载管理器">chrono 下载管理器</h4>
-
-<ul>
-<li>安装之后在浏览器的右上方可以看到其标记按钮，用户可以点击选择开始、暂停、取消等基础操作。还可以自行进行下载任务的添加，而且点击下载任务还会有对应的下载详情弹出，就像桌面上的下载软件一样。另外用户可以自行设置下载的时间顺序，甚至可以将 Chrome 默认只能同时下载 6 个文件的限制提升到 20 个</li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://chromecj.com/Content/kindeditor/attached/image/20170613/20170613180057_9843.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
-
-<h4 id="listen-1-同时搜索并播放来自-网易云音乐-虾米-qq音乐-的歌曲">Listen 1 - 同时搜索并播放来自「网易云音乐，虾米，QQ音乐」的歌曲</h4>
-
-<ul>
-<li><a href="https://sspai.com/post/34149">Listen 1，整合三大音乐平台的 Chrome 扩展 | App+1</a></li>
-<li>preview:
-<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn.sspai.com/attachment/origin/2016/05/09/326891.jpg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></li>
-</ul>
+<li><p>最后点击确定即可</p></li>
+</ol>
 
     </div>
 
@@ -520,7 +506,7 @@ tags:
 
     <div class="post-nav">
         
-        <a href="/1/01/01/" class="prev" rel="prev" title=""><i class="iconfont icon-left"></i>&nbsp;</a>
+        <a href="/1/01/01/js-%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" class="prev" rel="prev" title="JS 数组去重"><i class="iconfont icon-left"></i>&nbsp;JS 数组去重</a>
          
         
         <a href="/1/01/01/" class="next" rel="next" title="">&nbsp;<i class="iconfont icon-right"></i></a>
@@ -604,10 +590,34 @@ function highLightPostNav () {
         }
     })
 }
+function setActiveClass () {
+    var array = [];
+    var activeClassName = 'active';
+    var $container = $('.post-toc-content'); 
+    var $alink = $('.post-toc-content a'); 
+    var $hl = $('.highlight-title'); 
+
+    $alink.each(function () {
+        var id = $(this).attr('href');
+        
+        var top = $(id).offset().top - $(document).scrollTop();
+        if (top >= 0) { array.push({id: id, top: top}); }
+    });
+    $('.' + activeClassName).removeClass(activeClassName);
+    if (array.length === 0) {
+        return;
+    }
+    var $currALink = $(".post-toc-content [href='" + array[ 0 ] .id + "']");
+    $currALink.parent().addClass(activeClassName);
+    var height = $currALink.parent().height();
+    var top = $currALink.parent().offset().top - $container.offset().top;
+    $hl.css({ top: top });
+}
 if ($(window).width() >= 768) {
-    highLightPostNav();
+    
     $(window).scroll(function () {
-        highLightPostNav();
+        
+        setActiveClass();
     });
 }
   

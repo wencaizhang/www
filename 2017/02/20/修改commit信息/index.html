@@ -213,6 +213,8 @@ color: #c05b4d;
                 
                 <a class="menu-item" href="/" title="">Home</a>
                 
+                <a class="menu-item" href="/oh-my-js/" title="">oh-my-js</a>
+                
                 <a class="menu-item" href="/post/" title="">Archives</a>
                 
                 <a class="menu-item" href="/tags/" title="">Tags</a>
@@ -235,6 +237,8 @@ color: #c05b4d;
                 
                 
                 <a class="menu-item" href="/" title="">Home</a>
+                
+                <a class="menu-item" href="/oh-my-js/" title="">oh-my-js</a>
                 
                 <a class="menu-item" href="/post/" title="">Archives</a>
                 
@@ -265,6 +269,36 @@ color: #c05b4d;
     <h2 class="post-toc-title"></h2>
     
     <div class="post-toc-content always-active">
+      <div class="highlight-title"></div>
+      <style>
+          .post-toc-content {
+            position: relative;
+            width: 200px;
+            min-height: 400px;
+          }
+          #TableOfContents {
+            position: absolute;
+            display: block; 
+            left: 0;
+            right: 0;
+            z-index: 2;
+          }
+          .highlight-title {
+            position: absolute;
+            display: block; 
+            left: 0;
+            right: 0;
+            width: 200px;
+            height: 30px;
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 2px solid #009A61;
+            -moz-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+          }
+      </style>
       
     </div>
   </div>
@@ -441,10 +475,34 @@ function highLightPostNav () {
         }
     })
 }
+function setActiveClass () {
+    var array = [];
+    var activeClassName = 'active';
+    var $container = $('.post-toc-content'); 
+    var $alink = $('.post-toc-content a'); 
+    var $hl = $('.highlight-title'); 
+
+    $alink.each(function () {
+        var id = $(this).attr('href');
+        
+        var top = $(id).offset().top - $(document).scrollTop();
+        if (top >= 0) { array.push({id: id, top: top}); }
+    });
+    $('.' + activeClassName).removeClass(activeClassName);
+    if (array.length === 0) {
+        return;
+    }
+    var $currALink = $(".post-toc-content [href='" + array[ 0 ] .id + "']");
+    $currALink.parent().addClass(activeClassName);
+    var height = $currALink.parent().height();
+    var top = $currALink.parent().offset().top - $container.offset().top;
+    $hl.css({ top: top });
+}
 if ($(window).width() >= 768) {
-    highLightPostNav();
+    
     $(window).scroll(function () {
-        highLightPostNav();
+        
+        setActiveClass();
     });
 }
   
